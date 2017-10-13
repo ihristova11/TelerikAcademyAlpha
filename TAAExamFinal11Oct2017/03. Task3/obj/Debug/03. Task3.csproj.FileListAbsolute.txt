@@ -1,0 +1,5 @@
+D:\IRINA\Programming\TAAExamFinal11Oct2017\03. Task3\bin\Debug\_03.Task3.exe.config
+D:\IRINA\Programming\TAAExamFinal11Oct2017\03. Task3\bin\Debug\_03.Task3.exe
+D:\IRINA\Programming\TAAExamFinal11Oct2017\03. Task3\bin\Debug\_03.Task3.pdb
+D:\IRINA\Programming\TAAExamFinal11Oct2017\03. Task3\obj\Debug\_03.Task3.exe
+D:\IRINA\Programming\TAAExamFinal11Oct2017\03. Task3\obj\Debug\_03.Task3.pdb
