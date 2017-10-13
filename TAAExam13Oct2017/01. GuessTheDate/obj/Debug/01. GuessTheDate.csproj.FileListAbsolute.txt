@@ -1,0 +1,6 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\bin\Debug\_01.GuessTheDate.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\bin\Debug\_01.GuessTheDate.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\bin\Debug\_01.GuessTheDate.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\obj\Debug\01. GuessTheDate.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\obj\Debug\_01.GuessTheDate.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\01. GuessTheDate\obj\Debug\_01.GuessTheDate.pdb
