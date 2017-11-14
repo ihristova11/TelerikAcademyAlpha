@@ -5,13 +5,28 @@
 
     class PrimeTriangle
     {
+        static int n;
+        static StringBuilder line = new StringBuilder("1");
+        static int count = 1;
         static void Main()
         {
-            int n = int.Parse(Console.ReadLine());
-            int result = int.Parse(FindPrimeNumber(n).ToString());
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine(line); // print the first line
+            for (count = 2; count <= n; count++)
+            {
+                int result = int.Parse(FindPrimeNumber(count).ToString());
+                if (result == 1)
+                {
+                    
+                }
+                else
+                {
+
+                }
+            }
         }
 
-        // method for finding prime number
+        // method for finding if number is prime
         static bool FindPrimeNumber(int n)
         {
             if (n == 1) return false;
@@ -27,9 +42,8 @@
 
         // method for printing all numbers in a line
         static void PrintLine(int num)
-        {
-            StringBuilder line = new StringBuilder();
-            for (int i = 1; i <= num; i++)
+        {            
+            for (int i = count; i <= num; i++)
             {
                 line = line.Append(i);
             }

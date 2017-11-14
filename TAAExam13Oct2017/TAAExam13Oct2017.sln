@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. GuessTheDate", "01. GuessTheDate\01. GuessTheDate.csproj", "{F78D4AEA-13CB-416B-B08E-931B652F992E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. PrimeTriangle", "02. PrimeTriangle\02. PrimeTriangle.csproj", "{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F78D4AEA-13CB-416B-B08E-931B652F992E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F78D4AEA-13CB-416B-B08E-931B652F992E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78D4AEA-13CB-416B-B08E-931B652F992E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
