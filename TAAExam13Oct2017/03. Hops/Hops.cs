@@ -20,6 +20,7 @@
             {
                 string directions = Console.ReadLine();
                 string[] directionsArray = directions.Split(',');
+                FindSum(directionsArray);
             }
 
         }
@@ -38,14 +39,13 @@
                     currSum = sum;
                     break;
                 }
-
             }
         }
 
         // method for finding maximal sum
         static void FindMaxSum()
         {
-
+            maxSum = currSum > maxSum ? currSum : maxSum;
         }
     }
 }
