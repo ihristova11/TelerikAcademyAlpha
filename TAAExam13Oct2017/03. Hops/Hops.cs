@@ -25,7 +25,7 @@
 
         }
 
-        // method for finding greatest sum
+        // method for finding diff sums
         static void FindSum(string[] directionsArray)
         {
             int sum = 0;
@@ -37,6 +37,7 @@
                 if(position < 0 || position > field.Length - 1)
                 {
                     currSum = sum;
+                    FindMaxSum();
                     break;
                 }
             }
