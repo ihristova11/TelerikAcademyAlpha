@@ -5,7 +5,8 @@
     class Hops
     {
         static string[] field;
-
+        static int maxSum = int.MinValue;
+        static int currSum = 0;
         static void Main()
         {
             // good > 0
@@ -27,12 +28,24 @@
         static void FindSum(string[] directionsArray)
         {
             int sum = 0;
-            int hopps = 0;
+            int position = 0;
             for (int i = 0; i < directionsArray.Length; i++)
             {
-                hopps = int.Parse(directionsArray[i]);
+                sum += int.Parse(field[position]);
+                position += int.Parse(directionsArray[i]);
+                if(position < 0 || position > field.Length - 1)
+                {
+                    currSum = sum;
+                    break;
+                }
 
             }
+        }
+
+        // method for finding maximal sum
+        static void FindMaxSum()
+        {
+
         }
     }
 }
