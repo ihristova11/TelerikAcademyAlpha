@@ -7,18 +7,22 @@
     {
         static void Main()
         {
-
+            int n = int.Parse(Console.ReadLine());
+            int result = int.Parse(FindPrimeNumber(n).ToString());
         }
 
         // method for finding prime number
-        static void FindPrimeNumber(int n)
+        static bool FindPrimeNumber(int n)
         {
-            int i = 2;
-            while(n != 0)
+            if (n == 1) return false;
+            if (n == 2) return true;
+
+            if (n % 2 == 0) return false;
+            for (int i = 2;i < n; i++)
             {
-                n = n / i;
-                i++;
+                if (n % i == 0) return false;
             }
+            return true;
         }
 
         // method for printing all numbers in a line
