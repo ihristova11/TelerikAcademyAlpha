@@ -12,7 +12,11 @@
             // read the input string
             string line = Console.ReadLine();
             string[] field = line.Split(',');
-
+            int m = int.Parse(Console.ReadLine());
+            for (int i = 0; i < m; i++)
+            {
+                string directions = Console.ReadLine();
+            }
 
         }
     }
