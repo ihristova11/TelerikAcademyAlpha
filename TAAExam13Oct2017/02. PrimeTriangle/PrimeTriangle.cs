@@ -14,14 +14,15 @@
             Console.WriteLine(line); // print the first line
             for (count = 2; count <= n; count++)
             {
-                int result = int.Parse(FindPrimeNumber(count).ToString());
-                if (result == 1)
+                bool result = FindPrimeNumber(count);
+                if (result == true)
                 {
-                    
+                    line.Append(1);
+                    Console.WriteLine(line);
                 }
                 else
                 {
-
+                    line.Append(0);
                 }
             }
         }
@@ -38,15 +39,6 @@
                 if (n % i == 0) return false;
             }
             return true;
-        }
-
-        // method for printing all numbers in a line
-        static void PrintLine(int num)
-        {            
-            for (int i = count; i <= num; i++)
-            {
-                line = line.Append(i);
-            }
         }
     }
 }
