@@ -25,23 +25,22 @@ class GuessTheDate
                 // for Feb in harvest year
                 if (year % 4 == 0 && month == 2)
                 {
-                    day = days[month + 1] + 1;
+                    day = days[month - 1] + 1;
                 }
-                else
+                else 
                 {
-                    day = days[month + 1];
+                    day = days[month - 1];
                 }
             }
             else // DECEMBER case
             {
-                month = 11;
+                month = 12;
                 day = 31;
                 year = year - 1;
             }
         }
         else 
         {
-            month = month - 1;
             day = day - 1;
         }
         //output += "{0}-{1}-{2}", day, months[month + 1], year;
