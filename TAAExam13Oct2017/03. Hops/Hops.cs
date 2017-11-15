@@ -5,48 +5,45 @@
     class Hops
     {
         static string[] field;
-        static int maxSum = int.MinValue;
         static int currSum = 0;
         static void Main()
         {
             // good > 0
             // bad < 0
-
+            int maxSum = int.MinValue;
             // read the input string
             string line = Console.ReadLine();
             field = line.Split(',');
             int m = int.Parse(Console.ReadLine());
-            for (int i = 0; i < m; i++)
+            for (int j = 0; j < m; j++)
             {
                 string directions = Console.ReadLine();
                 string[] directionsArray = directions.Split(',');
-                FindSum(directionsArray);
-            }
 
-        }
+                int sum = int.Parse(field[0]);
+                int position = 0;
 
-        // method for finding diff sums
-        static void FindSum(string[] directionsArray)
-        {
-            int sum = 0;
-            int position = 0;
-            for (int i = 0; i < directionsArray.Length; i++)
-            {
-                sum += int.Parse(field[position]);
-                position += int.Parse(directionsArray[i]);
-                if(position < 0 || position > field.Length - 1)
+                for (int i = 0; i < directionsArray.Length; i++)
                 {
-                    currSum = sum;
-                    FindMaxSum();
-                    break;
+                    while (position >= 0 && position < directionsArray.Length)
+                    {
+                        if(i >= directionsArray.Length && position >= 0 && position < directionsArray.Length)
+                        {
+                            i = 0;
+                        }
+                        position += int.Parse(directionsArray[i]);
+
+                        sum += int.Parse(field[position]);
+
+                        if (maxSum < sum)
+                        {
+                            maxSum = sum;
+                        }
+                    }
                 }
             }
-        }
 
-        // method for finding maximal sum
-        static void FindMaxSum()
-        {
-            maxSum = currSum > maxSum ? currSum : maxSum;
+            Console.WriteLine(maxSum);
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. GuessTheDate", "01. Gue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. PrimeTriangle", "02. PrimeTriangle\02. PrimeTriangle.csproj", "{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Hops", "03. Hops\03. Hops.csproj", "{DAC502CA-EF03-4993-8EC8-B02C57F20BCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48C11545-8DE4-4E1B-86E8-D7E66AF8B00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC502CA-EF03-4993-8EC8-B02C57F20BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC502CA-EF03-4993-8EC8-B02C57F20BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC502CA-EF03-4993-8EC8-B02C57F20BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC502CA-EF03-4993-8EC8-B02C57F20BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
