@@ -78,6 +78,7 @@
             //        i++;
             //    }
             //}
+
             currSum = sum;
             maxSum = maxSum < currSum ? currSum : maxSum;
             // Console.WriteLine(currSum);
