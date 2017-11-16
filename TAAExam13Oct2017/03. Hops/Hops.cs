@@ -43,22 +43,42 @@
             int sum = int.Parse(field[0]);
             field[0] = "a";
             int position = 0;
-                for (int i = 0; i < directionsArray.Length; i++)
-                {
-                    position += int.Parse(directionsArray[i]);
+            int i = 0;
+            for (i = 0; i < directionsArray.Length; i++)
+            {
+                position += int.Parse(directionsArray[i]);
 
-                    if (position >= field.Length || position < 0 || field[position] == "a")
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        sum += int.Parse(field[position]);
-                        field[position] = "a";
-                        if (i == directionsArray.Length - 1) i = 0;
-                    }
+                if (position >= field.Length || position < 0 || field[position] == "a")
+                {
+                    break;
                 }
-                currSum = sum;
+                else
+                {
+                    sum += int.Parse(field[position]);
+                    field[position] = "a";
+                    if (i == directionsArray.Length - 1) i = -1;
+                }
+            }
+
+
+            //while (i >= 0 && i < directionsArray.Length)
+            //{
+            //    position += int.Parse(directionsArray[i]);
+
+            //    if (position >= field.Length || position < 0 || field[position] == "a")
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        sum += int.Parse(field[position]);
+            //        field[position] = "a";
+            //        if (i == directionsArray.Length - 1) i = 0;
+
+            //        i++;
+            //    }
+            //}
+            currSum = sum;
             maxSum = maxSum < currSum ? currSum : maxSum;
             // Console.WriteLine(currSum);
         }
