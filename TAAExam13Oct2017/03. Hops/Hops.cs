@@ -15,10 +15,10 @@
             string line = Console.ReadLine();
             field = line.Split(',');
             coppied = new string[field.Length];
-            //Console.WriteLine(field.Length);
+
             // copy the array
             Array.Copy(field, coppied, field.Length);
-            //Console.WriteLine(string.Join("-", coppied));
+
             //read the number of instructions
             int m = int.Parse(Console.ReadLine());
 
@@ -60,28 +60,8 @@
                 }
             }
 
-
-            //while (i >= 0 && i < directionsArray.Length)
-            //{
-            //    position += int.Parse(directionsArray[i]);
-
-            //    if (position >= field.Length || position < 0 || field[position] == "a")
-            //    {
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        sum += int.Parse(field[position]);
-            //        field[position] = "a";
-            //        if (i == directionsArray.Length - 1) i = 0;
-
-            //        i++;
-            //    }
-            //}
-
             currSum = sum;
             maxSum = maxSum < currSum ? currSum : maxSum;
-            // Console.WriteLine(currSum);
         }
     }
 }
