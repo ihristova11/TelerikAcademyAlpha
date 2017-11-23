@@ -10,7 +10,7 @@
         public static int[][] array;
         public static int maxLen = 0;
         public static int currLen = 1;
-        //public static int counter = 0;
+        public static string currStr;
 
         static void Main()
         {
@@ -39,14 +39,18 @@
         {
             for (int i = 0; i < rows; i++)
             {
+                currLen = 1;
+                currStr = array[i][0].ToString();
+
                 for (int j = 1; j < cols; j++)
                 {
-                    if (array[i][j - 1] == array[i][j])
+                    if (array[i][j - 1].ToString() == currStr)
                     {
                         currLen++;
                     }
                     maxLen = maxLen < currLen ? currLen : maxLen;
-                    currLen = 0;
+                    currLen = 1;
+                    currStr = array[i][0].ToString();
                 }
             }
         }
@@ -55,9 +59,11 @@
         {
             for (int i = 0; i < cols; i++)
             {
+                currLen = 1;
+                currStr = array[0][i].ToString();
                 for (int j = 1; j < rows; j++)
                 {
-                    if (array[i][j - 1] == array[i][j])
+                    if (array[i][j - 1].ToString() == currStr)
                     {
                         currLen++;
                     }
@@ -81,6 +87,11 @@
                         if (array[startR][startC] == array[startR - 1][startC - 1])
                         {
                             currLen++;
+                        }
+                        else
+                        {
+                            maxLen = maxLen < currLen ? currLen : maxLen;
+                            currLen = 0;
                         }
                     }
                     else
@@ -117,6 +128,11 @@
                         if (array[startC][startR] == array[startC - 1][startR - 1])
                         {
                             currLen++;
+                        }
+                        else
+                        {
+                            maxLen = maxLen < currLen ? currLen : maxLen;
+                            currLen = 0;
                         }
                     }
                     else
