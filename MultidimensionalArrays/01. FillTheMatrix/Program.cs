@@ -122,33 +122,37 @@
                     cols = 0;
                     counter = 1;
                     matrix[rows, cols] = counter;
-                    //counter++;
 
                     for (int bound = 0; bound < n / 2 + 1; bound++)
                     {
-                        for (; rows < n; rows++)
+                        rows = bound;
+                        cols = bound;
+                        for (; rows < n - bound; rows++)
                         {
                             matrix[rows, cols] = counter;
                             counter++;
 
                             if (rows == n - bound - 1)
                             {
-                                for (; cols < n; cols++)
+                                for (; cols < n - bound; cols++)
                                 {
                                     matrix[rows, cols] = counter;
                                     counter++;
                                 }
                             }
                         }
+
                         cols = n - bound - 1;
-                        for (rows = n - bound - 1; rows >= 0; rows--)
+                        rows = n - bound - 1;
+
+                        for (; rows >= 0; rows--)
                         {
                             matrix[rows, cols] = counter;
                             counter++;
 
                             if (rows == bound)
                             {
-                                for (cols = n - 1; cols >= 0; cols--)
+                                for (cols = n - 1; cols >= bound + 1; cols--)
                                 {
                                     matrix[rows, cols] = counter;
                                     counter++;
