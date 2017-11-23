@@ -8,6 +8,9 @@
         public static int rows;
         public static int cols;
         public static int[][] array;
+        public static int maxLen = 0;
+        public static int currLen = 0;
+
         static void Main()
         {
             //reading the input
