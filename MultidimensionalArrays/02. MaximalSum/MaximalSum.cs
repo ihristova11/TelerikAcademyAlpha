@@ -12,6 +12,8 @@
         public static int col = 0;
         public static int rows;
         public static int cols;
+        public static int i;
+        public static int j;
 
         static void Main()
         {
@@ -29,13 +31,10 @@
                 array[i] = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             }
 
-            for (int i = 0; i < rows - 3; i++)
+            for (i = 0; i <= rows - 3; i++)
             {
-                for (int j = 0; j < cols - 3; j++)
+                for (j = 0; j <= cols - 3; j++)
                 {
-                    row = i;
-                    col = j;
-
                     CalculateSum();
                 }
             }
@@ -44,14 +43,16 @@
 
         public static void CalculateSum()
         {
-            for (; row <= row + 3; row++)
+            int tempRow = i;
+            int tempCol = j;
+
+            for (row = i; row < tempRow + 3; row++)
             {
-                for (; col <= col + 3; col++)
+                for (col = j;  col < tempCol + 3; col++)
                 {
                     currSum += array[row][col];
-                }
+                }                
             }
-
             maxSum = maxSum < currSum ? currSum : maxSum;
             currSum = 0;
         }
