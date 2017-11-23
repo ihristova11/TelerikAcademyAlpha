@@ -64,7 +64,30 @@
 
         public static void CalculateDiagonal()
         {
+            for (int i = 0, j = 0; j < cols;)
+            {
+                for (int startR = i, startC = j; ; )
+                {
+                    if (((startR + 1) < rows) && ((startC + 1) < cols))
+                    {
+                        startR++;
+                        startC++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
 
+                if (i != 0)
+                {
+                    i--;
+                }
+                else
+                {
+                    j++;
+                }
+            }        
         }
     }
 }
