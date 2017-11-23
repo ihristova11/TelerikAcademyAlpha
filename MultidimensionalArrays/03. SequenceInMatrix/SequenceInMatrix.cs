@@ -9,7 +9,7 @@
         public static int cols;
         public static int[][] array;
         public static int maxLen = 0;
-        public static int currLen = 0;
+        public static int currLen = 1;
         //public static int counter = 0;
 
         static void Main()
@@ -27,7 +27,10 @@
                 array[i] = new int[cols];
                 array[i] = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             }
-
+            CalculateLine();
+            CalculateColumn();
+            //CalculateDiagonalLeft();
+            //CalculateDiagonalRight();
             Console.WriteLine(maxLen);
 
         }
@@ -102,7 +105,7 @@
 
         public static void CalculateDiagonalLeft()
         {
-            for (int i = 0, j = 0; j < cols;)
+            for (int i = rows - 1, j = cols - 1; j >= 0;)
             {
                 for (int startR = i, startC = j; ;)
                 {
