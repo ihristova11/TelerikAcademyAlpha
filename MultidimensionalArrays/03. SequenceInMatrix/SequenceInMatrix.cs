@@ -28,6 +28,8 @@
                 array[i] = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             }
 
+            Console.WriteLine(maxLen);
+
         }
 
         public static void CalculateLine()
@@ -36,7 +38,7 @@
             {
                 for (int j = 1; j < cols; j++)
                 {
-                    if(array[i][j - 1] == array[i][j])
+                    if (array[i][j - 1] == array[i][j])
                     {
                         currLen++;
                     }
@@ -62,16 +64,21 @@
             }
         }
 
-        public static void CalculateDiagonal()
+        public static void CalculateDiagonalRight()
         {
             for (int i = 0, j = 0; j < cols;)
             {
-                for (int startR = i, startC = j; ; )
+                for (int startR = i, startC = j; ;)
                 {
                     if (((startR + 1) < rows) && ((startC + 1) < cols))
                     {
                         startR++;
                         startC++;
+
+                        if (array[startR][startC] == array[startR - 1][startC - 1])
+                        {
+                            currLen++;
+                        }
                     }
                     else
                     {
@@ -87,7 +94,46 @@
                 {
                     j++;
                 }
-            }        
+
+                maxLen = maxLen < currLen ? currLen : maxLen;
+                currLen = 0;
+            }
+        }
+
+        public static void CalculateDiagonalLeft()
+        {
+            for (int i = 0, j = 0; j < cols;)
+            {
+                for (int startR = i, startC = j; ;)
+                {
+                    if (((startR + 1) < rows) && ((startC + 1) < cols))
+                    {
+                        startR++;
+                        startC++;
+
+                        if (array[startC][startR] == array[startC - 1][startR - 1])
+                        {
+                            currLen++;
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (i != 0)
+                {
+                    i--;
+                }
+                else
+                {
+                    j++;
+                }
+
+                maxLen = maxLen < currLen ? currLen : maxLen;
+                currLen = 0;
+            }
         }
     }
 }
