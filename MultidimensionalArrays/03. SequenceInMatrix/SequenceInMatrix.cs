@@ -28,5 +28,10 @@
             }
 
         }
+
+        public static void CalculateLine()
+        {
+
+        }
     }
 }

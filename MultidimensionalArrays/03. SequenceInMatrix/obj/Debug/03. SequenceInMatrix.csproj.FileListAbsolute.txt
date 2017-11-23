@@ -1,0 +1,7 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\bin\Debug\_03.SequenceInMatrix.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\bin\Debug\_03.SequenceInMatrix.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\bin\Debug\_03.SequenceInMatrix.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\obj\Debug\03. SequenceInMatrix.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\obj\Debug\03. SequenceInMatrix.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\obj\Debug\_03.SequenceInMatrix.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\03. SequenceInMatrix\obj\Debug\_03.SequenceInMatrix.pdb
