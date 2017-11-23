@@ -23,10 +23,8 @@
                     {
                         for (rows = 0; rows < n; rows++)
                         {
-                            matrix[cols, rows] = counter;
+                            matrix[rows, cols] = counter;
                             counter++;
-                            // Console.WriteLine(counter);
-                            //SetMatrixElement(matrix, rows, cols, counter);
                         }
                     }
 
@@ -44,11 +42,11 @@
                         {
                             if (cols % 2 == 0)
                             {
-                                matrix[cols, rows] = counter;
+                                matrix[rows, cols] = counter;
                             }
                             else
                             {
-                                matrix[cols, n - rows - 1] = counter;
+                                matrix[n - rows - 1, cols] = counter;
                             }
                             counter++;
                         }
@@ -69,6 +67,8 @@
 
                     for (int i = 2; i <= n; i++)
                     {
+                        cols = 0;
+                        rows = n - i;
                         downB = i - 1;
 
                         while (downB != 0)
@@ -83,6 +83,32 @@
                                 matrix[rows, cols] = counter;
                                 counter++;
                             }
+                        }
+                    }
+
+                    for (int j = n - 1; j >= 0; j--)
+                    {
+                        rows = 0;
+                        cols = n - j;
+                        downB = j - 1;
+
+                        while (downB > 0)
+                        {
+                            matrix[rows, cols] = counter;
+                            cols++;
+                            rows++;
+                            counter++;
+                            downB--;
+                            if (cols == n - 1)
+                            {
+                                matrix[rows, cols] = counter;
+                                counter++;
+                            }
+                        }
+
+                        if (rows == 0 && cols == n - 1)
+                        {
+                            matrix[rows, cols] = counter;
                         }
                     }
 
@@ -115,7 +141,7 @@
             {
                 for (cols = 0; cols < n; cols++)
                 {
-                    Console.Write(string.Join(" ", matrix[cols, rows]).PadLeft(4));
+                    Console.Write(string.Join(" ", matrix[rows, cols]).PadLeft(4));
                 }
                 Console.WriteLine();
             }
