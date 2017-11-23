@@ -129,8 +129,7 @@
                         cols = bound;
                         for (; rows < n - bound; rows++)
                         {
-                            matrix[rows, cols] = counter;
-                            counter++;
+                            
 
                             if (rows == n - bound - 1)
                             {
@@ -140,23 +139,31 @@
                                     counter++;
                                 }
                             }
+                            else
+                            {
+                                matrix[rows, cols] = counter;
+                                counter++;
+                            }
                         }
 
                         cols = n - bound - 1;
-                        rows = n - bound - 1;
+                        rows = n - bound - 2;
 
-                        for (; rows >= 0; rows--)
+                        for (; rows >= bound; rows--)
                         {
-                            matrix[rows, cols] = counter;
-                            counter++;
 
                             if (rows == bound)
                             {
-                                for (cols = n - 1; cols >= bound + 1; cols--)
+                                for (cols = n - bound - 1; cols >= bound + 1; cols--)
                                 {
                                     matrix[rows, cols] = counter;
                                     counter++;
                                 }
+                            }
+                            else
+                            {
+                                matrix[rows, cols] = counter;
+                                counter++;
                             }
                         }
                     }
@@ -166,8 +173,6 @@
                 default:
                     break;
             }
-
-            //Console.WriteLine(counter);
         }
 
 
