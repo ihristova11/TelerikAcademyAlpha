@@ -60,6 +60,7 @@
 
 
                 case 'c':
+
                     counter = 1;
                     cols = 0; rows = n - 1;
                     matrix[rows, cols] = counter;
@@ -70,7 +71,7 @@
                     {
                         downB = i - 1;
 
-                        while(downB != 0)
+                        while (downB != 0)
                         {
                             matrix[rows, cols] = counter;
                             cols++;
@@ -82,7 +83,8 @@
                                 matrix[rows, cols] = counter;
                                 counter++;
                             }
-                    }                    
+                        }
+                    }
 
                     PrintTheMatrix(matrix, n);
 
