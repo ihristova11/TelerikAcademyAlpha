@@ -15,21 +15,17 @@
 
             switch (type)
             {
-                //working
                 case 'a':
                     CalculateCaseA(matrix, n);
                     break;
-
-                //working
+                    
                 case 'b':
                     CalculateCaseB(matrix, n);
                     break;
 
-
                 case 'c':
                     CalculateCaseC(matrix, n);
                     break;
-
 
                 case 'd':
                     rows = 0;
