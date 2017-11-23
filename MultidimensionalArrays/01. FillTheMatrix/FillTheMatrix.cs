@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Program
+    class FillTheMatrix
     {
         public static int counter = 1;
         public static int rows;

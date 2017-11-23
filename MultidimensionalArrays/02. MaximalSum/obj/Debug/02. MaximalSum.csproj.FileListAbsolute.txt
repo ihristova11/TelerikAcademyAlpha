@@ -1,0 +1,7 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\bin\Debug\_02.MaximalSum.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\bin\Debug\_02.MaximalSum.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\bin\Debug\_02.MaximalSum.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\obj\Debug\02. MaximalSum.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\obj\Debug\02. MaximalSum.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\obj\Debug\_02.MaximalSum.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\02. MaximalSum\obj\Debug\_02.MaximalSum.pdb
