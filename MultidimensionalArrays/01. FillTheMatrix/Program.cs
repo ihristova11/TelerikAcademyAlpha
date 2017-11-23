@@ -131,7 +131,7 @@
                             matrix[rows, cols] = counter;
                             counter++;
 
-                            if(rows == n - bound - 1)
+                            if (rows == n - bound - 1)
                             {
                                 for (; cols < n; cols++)
                                 {
@@ -140,15 +140,15 @@
                                 }
                             }
                         }
-
-                        for (rows = n - bound - 2; rows >= 0; rows--)
+                        cols = n - bound - 1;
+                        for (rows = n - bound - 1; rows >= 0; rows--)
                         {
                             matrix[rows, cols] = counter;
                             counter++;
 
                             if (rows == bound)
                             {
-                                for (cols = n -1; cols >= 0; cols--)
+                                for (cols = n - 1; cols >= 0; cols--)
                                 {
                                     matrix[rows, cols] = counter;
                                     counter++;
