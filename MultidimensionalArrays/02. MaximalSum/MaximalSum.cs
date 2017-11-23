@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.MaximalSum
+﻿namespace _02.MaximalSum
 {
-    class Program
+    using System;
+
+    class MaximalSum
     {
-        static void Main(string[] args)
+        static void Main()
         {
         }
     }
