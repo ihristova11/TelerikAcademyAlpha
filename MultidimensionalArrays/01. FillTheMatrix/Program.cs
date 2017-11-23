@@ -129,7 +129,7 @@
                         cols = bound;
                         for (; rows < n - bound; rows++)
                         {
-                            
+
 
                             if (rows == n - bound - 1)
                             {
@@ -189,7 +189,14 @@
             {
                 for (cols = 0; cols < n; cols++)
                 {
-                    Console.Write(string.Join(" ", matrix[rows, cols]).PadLeft(4));
+                    if (cols == n - 1)
+                    {
+                        Console.Write("{0}", matrix[rows, cols]);
+                    }
+                    else
+                    {
+                        Console.Write("{0} ", matrix[rows, cols]);
+                    }
                 }
                 Console.WriteLine();
             }
