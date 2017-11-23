@@ -10,6 +10,7 @@
         public static int[][] array;
         public static int maxLen = 0;
         public static int currLen = 0;
+        //public static int counter = 0;
 
         static void Main()
         {
@@ -30,6 +31,38 @@
         }
 
         public static void CalculateLine()
+        {
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 1; j < cols; j++)
+                {
+                    if(array[i][j - 1] == array[i][j])
+                    {
+                        currLen++;
+                    }
+                    maxLen = maxLen < currLen ? currLen : maxLen;
+                    currLen = 0;
+                }
+            }
+        }
+
+        public static void CalculateColumn()
+        {
+            for (int i = 0; i < cols; i++)
+            {
+                for (int j = 1; j < rows; j++)
+                {
+                    if (array[i][j - 1] == array[i][j])
+                    {
+                        currLen++;
+                    }
+                    maxLen = maxLen < currLen ? currLen : maxLen;
+                    currLen = 0;
+                }
+            }
+        }
+
+        public static void CalculateDiagonal()
         {
 
         }
