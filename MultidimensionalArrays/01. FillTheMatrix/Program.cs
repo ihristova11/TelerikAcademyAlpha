@@ -118,6 +118,45 @@
 
 
                 case 'd':
+                    rows = 0;
+                    cols = 0;
+                    counter = 1;
+                    matrix[rows, cols] = counter;
+                    //counter++;
+
+                    for (int bound = 0; bound < n / 2 + 1; bound++)
+                    {
+                        for (; rows < n; rows++)
+                        {
+                            matrix[rows, cols] = counter;
+                            counter++;
+
+                            if(rows == n - bound - 1)
+                            {
+                                for (; cols < n; cols++)
+                                {
+                                    matrix[rows, cols] = counter;
+                                    counter++;
+                                }
+                            }
+                        }
+
+                        for (rows = n - bound - 2; rows >= 0; rows--)
+                        {
+                            matrix[rows, cols] = counter;
+                            counter++;
+
+                            if (rows == bound)
+                            {
+                                for (cols = n -1; cols >= 0; cols--)
+                                {
+                                    matrix[rows, cols] = counter;
+                                    counter++;
+                                }
+                            }
+                        }
+                    }
+                    PrintTheMatrix(matrix, n);
                     break;
 
                 default:
