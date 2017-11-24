@@ -79,24 +79,41 @@
         public static void CalculateDiagonalRight()
         {
             currLen = 1;
-            for (int i = 0; i < 2 * rows - 1; i++)
+            for (int diagonal = 1; diagonal < 2 * rows - 1; diagonal++)
             {
                 int row, col;
-                if(i < rows)
+                if(diagonal < rows)
                 {
-                    row = rows - 1 - i;
+                    row = rows - 1 - diagonal;
                     col = 0;
-                    for (int j = 0; j <= i; j++)
+                    for (int j = 0; j < diagonal; j++)
                     {
-
+                        if(array[row][col] == array[row + 1][col + 1])
+                        {
+                            currLen++;
+                        }
+                        else
+                        {
+                            currLen = 1;
+                        }
+                        //maxLen = maxLen < currLen ? currLen : maxLen;
                     }
                 }
                 else
                 {
                     row = 0;
-                    col = i - rows + 1;
-                    for (int j = 0; j < 2 * rows - i - 1; j++)
+                    col = diagonal - rows + 1;
+                    for (int j = 0; j < 2 * rows - diagonal - 1; j++)
                     {
+                        if (array[row][col] == array[row + 1][col + 1])
+                        {
+                            currLen++;
+                        }
+                        else
+                        {
+                            currLen = 1;
+                        }
+
                         row++;
                         col++;
                     }
