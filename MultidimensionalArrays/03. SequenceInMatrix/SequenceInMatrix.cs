@@ -141,53 +141,53 @@
             //    }
             //}
             
-            cols = 0; rows--;
-            array[rows][cols] = counter;
-            int downB;
+            //cols = 0; rows--;
+            //array[rows][cols] = counter;
+            //int downB;
 
-            for (int i = 2; i <= n; i++)
-            {
-                cols = 0;
-                rows = n - i;
-                downB = i - 1;
+            //for (int i = 2; i <= n; i++)
+            //{
+            //    cols = 0;
+            //    rows = n - i;
+            //    downB = i - 1;
 
-                while (downB != 0)
-                {
-                    matrix[rows, cols] = counter;
-                    cols++;
-                    rows++;
-                    counter++;
-                    downB--;
-                    if (rows == n - 1)
-                    {
-                        matrix[rows, cols] = counter;
-                        counter++;
-                    }
-                }
-            }
-            for (int j = n - 1; j >= 0; j--)
-            {
-                rows = 0;
-                cols = n - j;
-                downB = j - 1;
-                while (downB > 0)
-                {
-                    matrix[rows, cols] = counter;
-                    cols++;
-                    rows++;
-                    counter++;
-                    downB--;
-                    if (cols == n - 1)
-                    {
-                        matrix[rows, cols] = counter;
-                        counter++;
-                    }
-                }
-                if (rows == 0 && cols == n - 1)
-                {
-                    matrix[rows, cols] = counter;
-                }
-            }
+            //    while (downB != 0)
+            //    {
+            //        matrix[rows, cols] = counter;
+            //        cols++;
+            //        rows++;
+            //        counter++;
+            //        downB--;
+            //        if (rows == n - 1)
+            //        {
+            //            matrix[rows, cols] = counter;
+            //            counter++;
+            //        }
+            //    }
+            //}
+            //for (int j = n - 1; j >= 0; j--)
+            //{
+            //    rows = 0;
+            //    cols = n - j;
+            //    downB = j - 1;
+            //    while (downB > 0)
+            //    {
+            //        matrix[rows, cols] = counter;
+            //        cols++;
+            //        rows++;
+            //        counter++;
+            //        downB--;
+            //        if (cols == n - 1)
+            //        {
+            //            matrix[rows, cols] = counter;
+            //            counter++;
+            //        }
+            //    }
+            //    if (rows == 0 && cols == n - 1)
+            //    {
+            //        matrix[rows, cols] = counter;
+            //    }
+            //}
 
 
             maxLen = maxLen < currLen ? currLen : maxLen;

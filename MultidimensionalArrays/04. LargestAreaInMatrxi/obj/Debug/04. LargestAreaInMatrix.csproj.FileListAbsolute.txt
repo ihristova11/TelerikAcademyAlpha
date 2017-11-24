@@ -1,0 +1,7 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\obj\Debug\04. LargestAreaInMatrix.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\obj\Debug\04. LargestAreaInMatrix.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\bin\Debug\_04.LargestAreaInMatrxi.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\bin\Debug\_04.LargestAreaInMatrxi.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\bin\Debug\_04.LargestAreaInMatrxi.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\obj\Debug\_04.LargestAreaInMatrxi.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\MultidimensionalArrays\04. LargestAreaInMatrxi\obj\Debug\_04.LargestAreaInMatrxi.pdb
