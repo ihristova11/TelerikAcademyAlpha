@@ -77,6 +77,7 @@
 
         public static void CalculateDiagonalRight()
         {
+            currLen = 1;
             for (int i = 0, j = 0; j < cols;)
             {
                 for (int startR = i, startC = j; ;)
@@ -92,9 +93,9 @@
                         }
                         else
                         {
-                            maxLen = maxLen < currLen ? currLen : maxLen;
-                            currLen = 0;
+                            currLen = 1;
                         }
+                        maxLen = maxLen < currLen ? currLen : maxLen;
                     }
                     else
                     {
