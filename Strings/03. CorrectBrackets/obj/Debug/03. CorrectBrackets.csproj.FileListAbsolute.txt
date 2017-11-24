@@ -1,0 +1,6 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\bin\Debug\_03.CorrectBrackets.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\bin\Debug\_03.CorrectBrackets.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\bin\Debug\_03.CorrectBrackets.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\obj\Debug\03. CorrectBrackets.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\obj\Debug\_03.CorrectBrackets.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\03. CorrectBrackets\obj\Debug\_03.CorrectBrackets.pdb

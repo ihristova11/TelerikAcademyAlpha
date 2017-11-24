@@ -1,0 +1,7 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\bin\Debug\_04.SubstringInText.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\bin\Debug\_04.SubstringInText.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\bin\Debug\_04.SubstringInText.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\obj\Debug\04. SubstringInText.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\obj\Debug\04. SubstringInText.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\obj\Debug\_04.SubstringInText.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\04. SubstringInText\obj\Debug\_04.SubstringInText.pdb

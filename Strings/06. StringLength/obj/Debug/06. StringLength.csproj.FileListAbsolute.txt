@@ -1,0 +1,7 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\bin\Debug\_06.StringLength.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\bin\Debug\_06.StringLength.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\bin\Debug\_06.StringLength.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\obj\Debug\06. StringLength.csprojResolveAssemblyReference.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\obj\Debug\06. StringLength.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\obj\Debug\_06.StringLength.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\06. StringLength\obj\Debug\_06.StringLength.pdb

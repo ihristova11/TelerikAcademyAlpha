@@ -1,0 +1,6 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\bin\Debug\_23.SeriesOfLetters.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\bin\Debug\_23.SeriesOfLetters.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\bin\Debug\_23.SeriesOfLetters.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\obj\Debug\23. SeriesOfLetters.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\obj\Debug\_23.SeriesOfLetters.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\23. SeriesOfLetters\obj\Debug\_23.SeriesOfLetters.pdb

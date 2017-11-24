@@ -1,0 +1,6 @@
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\bin\Debug\_10.UnicodeCharacters.exe.config
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\bin\Debug\_10.UnicodeCharacters.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\bin\Debug\_10.UnicodeCharacters.pdb
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\obj\Debug\10. UnicodeCharacters.csproj.CoreCompileInputs.cache
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\obj\Debug\_10.UnicodeCharacters.exe
+C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\10. UnicodeCharacters\obj\Debug\_10.UnicodeCharacters.pdb
