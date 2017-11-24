@@ -86,26 +86,13 @@
                 {
                     row = rows - 1 - diagonal;
                     col = 0;
+
                     for (int j = 0; j < diagonal; j++)
                     {
-                        if(array[row][col] == array[row + 1][col + 1])
-                        {
-                            currLen++;
-                        }
-                        else
-                        {
-                            currLen = 1;
-                        }
-                        //maxLen = maxLen < currLen ? currLen : maxLen;
-                    }
-                }
-                else
-                {
-                    row = 0;
-                    col = diagonal - rows + 1;
-                    for (int j = 0; j < 2 * rows - diagonal - 1; j++)
-                    {
-                        if (array[row][col] == array[row + 1][col + 1])
+                        row++;
+                        col++;
+
+                        if(array[row][col] == array[row - 1][col -1])
                         {
                             currLen++;
                         }
@@ -114,13 +101,36 @@
                             currLen = 1;
                         }
 
+                        maxLen = maxLen < currLen ? currLen : maxLen;
+                        //currLen = 1;
+                    }
+                }
+                else
+                {
+                    row = 0;
+                    col = diagonal - rows + 1;
+
+                    for (int j = 1; j < 2 * rows - diagonal - 1; j++)
+                    {
                         row++;
                         col++;
+
+                        if (array[row][col] == array[row - 1][col - 1])
+                        {
+                            currLen++;
+                        }
+                        else
+                        {
+                            currLen = 1;
+                        }
+
+                        maxLen = maxLen < currLen ? currLen : maxLen;
+                       // currLen = 1;
                     }
                 }
             }
             maxLen = maxLen < currLen ? currLen : maxLen;
-                currLen = 0;
+            currLen = 1;
             
         }
 
