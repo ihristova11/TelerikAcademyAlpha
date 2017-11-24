@@ -17,6 +17,18 @@
 
         static void Main()
         {
+            string inputMatrix = Console.ReadLine();
+            _rows = int.Parse(inputMatrix.Split(' ')[0]);
+            _cols = int.Parse(inputMatrix.Split(' ')[1]);
+            _table = new int[_rows, _cols];
+            for (int row = 0; row < _rows; row++)
+            {
+                int[] inputRow = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+                for (int col = 0; col < _cols; col++)
+                {
+                    _table[row, col] = inputRow[col];
+                }
+            }
             Console.WriteLine(CheckMatrix(_table, _cols, _rows));
         }
 
