@@ -9,11 +9,12 @@
         {
             string input = Console.ReadLine();
             StringBuilder sb = new StringBuilder(input);
-            string copy = String.Copy(input);
+            //string copy = String.Copy(input);
             // string url = input.Substring(input.IndexOf("href");
             string url = "";
             string text = "";
             string oldStr = "";
+            int index = 0;
             string newStr = "";
             while (input.IndexOf("href") != -1)
             {
@@ -23,22 +24,11 @@
                 text = input.Substring(0, input.IndexOf("</a>"));
                 oldStr = "<a href=\"" + url + "\">" + text + "</а>";
                 newStr = "[" + text + "](" + url + ")";
-                copy = copy.Replace(oldStr, newStr);
-                //Console.WriteLine(copy);
+                index = sb.ToString().IndexOf("<a");
+                sb = sb.Remove(index, oldStr.Length);
+                sb = sb.Insert(index, newStr);
             }
-            Console.WriteLine();
-            Console.WriteLine(input);
-            Console.WriteLine();
-            Console.WriteLine(url);
-            Console.WriteLine();
-            Console.WriteLine(text);
-
-            Console.WriteLine("------COPY------------");
-            Console.WriteLine(copy);
-            Console.WriteLine();
-            Console.WriteLine("..........................");
-            Console.WriteLine(oldStr);
-            Console.WriteLine(newStr);
+            Console.WriteLine(sb);
         }
     }
 }
