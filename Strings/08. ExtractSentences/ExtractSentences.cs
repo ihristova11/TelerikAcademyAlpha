@@ -31,6 +31,7 @@
             }
 
             Console.WriteLine(string.Join(" ", res));
+
         }
     }    
 }
