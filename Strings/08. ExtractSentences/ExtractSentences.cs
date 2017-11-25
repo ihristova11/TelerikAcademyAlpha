@@ -7,19 +7,24 @@
     class ExtractSentences
     {
         static void Main()
-        {
-            //reading the input
-            //string word = Console.ReadLine();
-            //string input = Console.ReadLine();
-            string text = "some text in here intherein";
-            string pattern = @"\bin\s";
-            Regex rg = new Regex(pattern);
-            MatchCollection col = rg.Matches(text);
-            foreach (Match match in col)
-            {
+        {            
+            string searched = Console.ReadLine();
+            string sentences = Console.ReadLine();
 
-                Console.WriteLine(match.Value);
+            string wordPattern = @"(\bin\s)";
+            string sentencePattern = @"(\S.+?[.!?])(?=\s+|$)";
+            Regex sentenceRG = new Regex(sentencePattern);
+            Regex wordRG = new Regex(wordPattern);
+
+            MatchCollection matched = sentenceRG.Matches(sentences);
+            foreach (var item in matched)
+            {
+                if (wordRG.IsMatch(item.ToString()))
+                {
+                    Console.WriteLine(item);
+                }
             }
+
         }
     }
 }
