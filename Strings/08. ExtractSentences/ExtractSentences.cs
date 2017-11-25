@@ -8,15 +8,20 @@
         static void Main()
         {
             //reading the input
+            string searchedWord = Console.ReadLine();
             string input = Console.ReadLine();
 
             //constructing the pattern to be matched
             Regex rg = new Regex(@"(\S.+?[.!?])(?=\s+|$)");
-
+            Regex wordMatch = new Regex(@"^(.*?(\bpass\b)[^$]*)$");
             //iterating through the matches and printing them
             foreach (Match match in rg.Matches(input))
             {
-                Console.WriteLine(match.Value);
+                foreach (Match word in wordMatch.Matches(match.Value))
+                {
+                    Console.WriteLine(match.Value);
+                }
+                //Console.WriteLine(match.Value);
             }
         }
     }
