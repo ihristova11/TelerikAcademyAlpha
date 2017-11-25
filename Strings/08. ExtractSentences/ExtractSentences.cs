@@ -34,11 +34,11 @@
             //string searched = Console.ReadLine();
             //string sentences = Console.ReadLine();
 
-            //string wordPattern = @"(\sin\s)";
+            ////string wordPattern = @"(\s" + searched + "\s)";
             //string sentencePattern = @"(\S.+?[.!?])(?=\s+|$)";
 
             //Regex sentenceRG = new Regex(sentencePattern);
-            //Regex wordRG = new Regex(wordPattern);
+            //Regex wordRG = new Regex(@"(\s" + searched + @"\s)");
 
             //MatchCollection matched = sentenceRG.Matches(sentences);
 
@@ -50,14 +50,14 @@
             //foreach (var item in matched)
             //{
 
-            //    //if (wordRG.IsMatch(item.ToString()))
-            //    //{
-            //    //    res.Add(item.ToString());
-            //    //}
-            //    if(item.ToString().Contains(searched))
+            //    if (wordRG.IsMatch(item.ToString()))
             //    {
             //        res.Add(item.ToString());
             //    }
+            //    //if (item.ToString().Contains(searched))
+            //    //{
+            //    //    res.Add(item.ToString());
+            //    //}
             //}
 
             //Console.WriteLine(string.Join(" ", res));
