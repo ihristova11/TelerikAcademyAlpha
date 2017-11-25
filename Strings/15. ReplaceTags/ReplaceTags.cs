@@ -9,13 +9,12 @@
         {
             string input = Console.ReadLine();
             StringBuilder sb = new StringBuilder(input);
-            //string copy = String.Copy(input);
-            // string url = input.Substring(input.IndexOf("href");
             string url = "";
             string text = "";
             string oldStr = "";
             int index = 0;
             string newStr = "";
+
             while (input.IndexOf("href") != -1)
             {
                 input = input.Remove(0, input.IndexOf("href") + "href=".Length + 1);
