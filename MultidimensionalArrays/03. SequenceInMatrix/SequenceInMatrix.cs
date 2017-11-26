@@ -78,21 +78,13 @@
 
         public static void CalculateDiagonalRight()
         {
-            currLen = 1;
-            for (int diagonal = 1; diagonal < 2 * rows - 1; diagonal++)
+            for (int i = 0; i < array.GetLength(0) - 1; i++)
             {
-                int row, col;
-                if(diagonal < rows)
+                for (int j = 0; j < array.GetLength(1) - 1; j++)
                 {
-                    row = rows - 1 - diagonal;
-                    col = 0;
-
-                    for (int j = 0; j < diagonal; j++)
+                    for (int r = i, c = j; r < array.GetLength(0) - 1 && c < array.GetLength(1) - 1; r++, c++)
                     {
-                        row++;
-                        col++;
-
-                        if(array[row][col] == array[row - 1][col -1])
+                        if (array[r][c] == array[r + 1][c + 1])
                         {
                             currLen++;
                         }
@@ -100,79 +92,57 @@
                         {
                             currLen = 1;
                         }
-
                         maxLen = maxLen < currLen ? currLen : maxLen;
-                        //currLen = 1;
                     }
+                    currLen = 1;
+                }
+            }
+
+        }
+
+        public static void CalculateDiagonalLeft()
+        {
+            for (int i = rows - 1, j = cols - 1; j >= 0;)
+            {
+                for (int startR = i, startC = j; ;)
+                {
+                    if (((startR + 1) < rows) && ((startC + 1) < cols))
+                    {
+                        startR++;
+                        startC++;
+
+                        if (array[startC][startR] == array[startC - 1][startR - 1])
+                        {
+                            currLen++;
+                        }
+                        else
+                        {
+                            maxLen = maxLen < currLen ? currLen : maxLen;
+                            currLen = 0;
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (i != 0)
+                {
+                    i--;
                 }
                 else
                 {
-                    row = 0;
-                    col = diagonal - rows + 1;
-
-                    for (int j = 1; j < 2 * rows - diagonal - 1; j++)
-                    {
-                        row++;
-                        col++;
-
-                        if (array[row][col] == array[row - 1][col - 1])
-                        {
-                            currLen++;
-                        }
-                        else
-                        {
-                            currLen = 1;
-                        }
-
-                        maxLen = maxLen < currLen ? currLen : maxLen;
-                       // currLen = 1;
-                    }
+                    j++;
                 }
+
+                maxLen = maxLen < currLen ? currLen : maxLen;
+                currLen = 0;
             }
-            maxLen = maxLen < currLen ? currLen : maxLen;
-            currLen = 1;
-            
         }
 
-        //public static void CalculateDiagonalLeft()
-        //{
-        //    for (int i = rows - 1, j = cols - 1; j >= 0;)
-        //    {
-        //        for (int startR = i, startC = j; ;)
-        //        {
-        //            if (((startR + 1) < rows) && ((startC + 1) < cols))
-        //            {
-        //                startR++;
-        //                startC++;
 
-        //                if (array[startC][startR] == array[startC - 1][startR - 1])
-        //                {
-        //                    currLen++;
-        //                }
-        //                else
-        //                {
-        //                    maxLen = maxLen < currLen ? currLen : maxLen;
-        //                    currLen = 0;
-        //                }
-        //            }
-        //            else
-        //            {
-        //                break;
-        //            }
-        //        }
 
-        //        if (i != 0)
-        //        {
-        //            i--;
-        //        }
-        //        else
-        //        {
-        //            j++;
-        //        }
 
-        //        maxLen = maxLen < currLen ? currLen : maxLen;
-        //        currLen = 0;
-        //    }
-        //}
     }
 }
