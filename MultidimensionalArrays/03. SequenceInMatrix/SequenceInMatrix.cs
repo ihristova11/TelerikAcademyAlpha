@@ -129,7 +129,7 @@
                 maxLen = maxLen < currLen ? currLen : maxLen;
             }
 
-            // Top Right
+            // top right
             for (int Row = 1; Row < inputRows - 1; Row++)
             {
                 currLen = 1;
