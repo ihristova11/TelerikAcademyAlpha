@@ -9,7 +9,9 @@
         static void Main()
         {
             var text = Console.ReadLine();
-            Console.WriteLine(Regex.Replace(text, "<upcase>(.*?)</upcase>", word => word.Groups[1].Value.ToUpper()));
+            var pattern = @"<upcase>(.*?)</upcase>";
+
+            Console.WriteLine(Regex.Replace(text, pattern, word => word.Groups[1].Value.ToUpper()));
         }
     }
 }
