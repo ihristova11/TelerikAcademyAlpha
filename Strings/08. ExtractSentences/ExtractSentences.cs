@@ -33,16 +33,20 @@
 
             //string searched = Console.ReadLine();
             //string sentences = Console.ReadLine();
-
-            ////string wordPattern = @"(\s" + searched + "\s)";
-            //string sentencePattern = @"(\S)(.+?)(\sin\s)(.+?)([.?!])";
+            //string sentencePattern = @"(\S)(.+?)(\s" + searched + @"\s)(.+?)([.?!])";
+            //List<string> res = new List<string>();
 
             //Regex sentenceRG = new Regex(sentencePattern);
 
             //MatchCollection matched = sentenceRG.Matches(sentences);
 
+            //foreach (var match in matched)
+            //{
+            //    Console.WriteLine(match.ToString());
+            //    //res.Add(match.ToString());
+            //}
 
-            //Console.WriteLine(string.Join(" ", matched));
+            ////Console.WriteLine(string.Join(" ", matched));
 
         }
     }
