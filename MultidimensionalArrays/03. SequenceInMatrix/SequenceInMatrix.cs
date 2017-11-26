@@ -117,7 +117,7 @@
             {
                 currLen = 1;
 
-                for (int curMod = 1;curMod <= Math.Min(inputRows - Row - 1, inputCols - 1);curMod++)
+                for (int curMod = 1; curMod <= Math.Min(inputRows - Row - 1, inputCols - 1); curMod++)
                 {
                     if (matrix[Row + curMod][0 + curMod] ==
                         matrix[Row + (curMod - 1)][0 + (curMod - 1)])
@@ -130,15 +130,11 @@
             }
 
             // Top Right
-            for (int Row = 1;
-                     Row < inputRows - 1;
-                     Row++)
+            for (int Row = 1; Row < inputRows - 1; Row++)
             {
                 currLen = 1;
 
-                for (int curMod = 1;
-                    curMod <= Math.Min(Row - 1, inputCols - 1);
-                    curMod++)
+                for (int curMod = 1; curMod <= Math.Min(Row - 1, inputCols - 1); curMod++)
                 {
                     if (matrix[Row - curMod][(inputCols - 1) - curMod] ==
                         matrix[Row - (curMod - 1)][(inputCols - 1) - (curMod - 1)])
