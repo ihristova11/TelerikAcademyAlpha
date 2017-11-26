@@ -19,40 +19,59 @@
 
         public static void FillTheMatrix()
         {
-            int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();            
+            int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             rows = input[0];
             cols = input[1];
             matrix = new int[rows, cols];
             matrix[rows - 1, 0] = 0;
             int num = 3;
-            for (int i = rows - 2; i >= 0; i--)
+
+            for (int i = 0; i < rows * 2 - 1; i++)
             {
-                for (int index = 0; index <= Math.Min(rows - 1 - i, cols - 1); index++)
+                int row;
+                int col;
+                if (i < rows)
                 {
-                    matrix[row + index, 0 + index] = num * index;
+                    row = rows - i - 1;
+                    col = 0;
+
+                    for (int j = 0; j <= i; j++)
+                    {
+                        matrix[row, col] = counter;
+                        counter++;
+
+                        row++;
+                        col++;
+                    }
+                }
+                else
+                {
+                    row = 0;
+                    col = i - cols + 1;
+
+                    for (int j = 0; j < 2 * cols - i - 1; j++)
+                    {
+                        matrix[row, col] = counter;
+                        counter++;
+
+                        row++;
+                        col++;
+                    }
                 }
             }
 
-            for (int Row = 1; Row < rows - 1; Row++)
+            public static void Print()
             {
-
-                for (int curMod = 1; curMod <= Math.Min(Row - 1, cols - 1); curMod++)
+                for (int i = 0; i < rows; i++)
                 {
-                    matrix[Row - curMod, (cols - 1) - curMod] = num * curMod;
+                    for (int j = 0; j < cols; j++)
+                    {
+                        Console.Write(matrix[i, j] + " ");
+                    }
+                    Console.WriteLine();
                 }
-            }
-        }
-
-        public static void Print()
-        {
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    Console.Write(matrix[i, j] + " ");
-                }
-                Console.WriteLine();
             }
         }
     }
 }
+
