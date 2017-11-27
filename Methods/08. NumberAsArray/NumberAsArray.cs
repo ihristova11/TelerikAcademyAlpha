@@ -1,7 +1,9 @@
 ﻿namespace _08.NumberAsArray
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
     class NumberAsArray
     {
@@ -12,42 +14,48 @@
             int[] firstNumber = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             int[] secondNumber = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-            SumNumbers(firstNumber, secondNumber);
+            Console.WriteLine(  SumNumbers(firstNumber, secondNumber)); 
         }
 
-        public static void SumNumbers(int[] firstNum, int[] secondNum)
+        public static string SumNumbers(int[] firstNum, int[] secondNum)
         {
-            int[] result = new int[Math.Max(firstNum.Length, secondNum.Length) + 1];
+            var result = new List<int>();
+            int carry = 0;
 
-            for (int i = 0; i < Math.Min(firstNum.Length, secondNum.Length); i++)
+            if (firstNum.Length < secondNum.Length)
             {
-                if (firstNum[i] + secondNum[i] < 10)
+                return SumNumbers(secondNum, firstNum);
+            }
+
+            for (int i = 0; i < secondNum.Length; i++)
+            {
+                if (firstNum[i] + secondNum[i] + carry < 10)
                 {
-                    result[i] += firstNum[i] + secondNum[i];
+                    result.Add(firstNum[i] + secondNum[i] + carry);
+                    carry = 0;
                 }
                 else
                 {
-                    result[i] += (firstNum[i] + secondNum[i]) % 10;
-                    result[i + 1] += 1;
+                    result.Add((firstNum[i] + secondNum[i] + carry) % 10);
+                    carry = 1;
                 }
             }
 
-            if(firstNum.Length > secondNum.Length)
+            for (int j = secondNum.Length; j < firstNum.Length; j++)
             {
-                for (int i = secondNum.Length; i < firstNum.Length; i++)
+                if (firstNum[j] + carry < 10)
                 {
-                    result[i] += firstNum[i];
+                    result.Add(firstNum[j] + carry);
+                    carry = 0;
                 }
-            }
-            else if(secondNum.Length < firstNum.Length)
-            {
-                for (int i = firstNum.Length; i < secondNum.Length; i++)
+                else
                 {
-                    result[i] += secondNum[i];
+                    result.Add((firstNum[j] + carry) % 10);
+                    carry = 1;
                 }
             }
 
-            Console.WriteLine(string.Join(" ", result));
+            return string.Join(" ", result);
         }
     }
 }
