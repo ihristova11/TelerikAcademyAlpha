@@ -48,9 +48,9 @@
                 else
                 {
                     row = 0;
-                    col = i - rows + 1;
+                    col = i - cols + 1;
                     num += 3;
-                    for (int j = 0; j < 2 * rows - i - 1; j++)
+                    for (int j = 0; j < 2 * cols - i - 1; j++)
                     {
                         matrix[row, col] = num;
 
