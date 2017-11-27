@@ -17,6 +17,7 @@
             Print();
         }
 
+        // method for filling the matrix
         public static void FillTheMatrix()
         {
             int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
@@ -24,9 +25,9 @@
             cols = input[1];
             matrix = new int[rows, cols];
             matrix[rows - 1, 0] = 0;
-            int num = 3;
+            int num = 1;
 
-            for (int i = 0; i < rows * 2 - 1; i++)
+            for (int i = 1; i < rows * 2 - 1; i++)
             {
                 int row;
                 int col;
@@ -34,11 +35,11 @@
                 {
                     row = rows - i - 1;
                     col = 0;
-
+                    num *= 3;
                     for (int j = 0; j <= i; j++)
                     {
-                        matrix[row, col] = counter;
-                        counter++;
+                        matrix[row, col] = num;
+
 
                         row++;
                         col++;
@@ -48,11 +49,10 @@
                 {
                     row = 0;
                     col = i - cols + 1;
-
+                    num *= 3;
                     for (int j = 0; j < 2 * cols - i - 1; j++)
                     {
-                        matrix[row, col] = counter;
-                        counter++;
+                        matrix[row, col] = num;
 
                         row++;
                         col++;
@@ -60,16 +60,16 @@
                 }
             }
 
-            public static void Print()
+        }
+        public static void Print()
+        {
+            for (int i = 0; i < rows; i++)
             {
-                for (int i = 0; i < rows; i++)
+                for (int j = 0; j < cols; j++)
                 {
-                    for (int j = 0; j < cols; j++)
-                    {
-                        Console.Write(matrix[i, j] + " ");
-                    }
-                    Console.WriteLine();
+                    Console.Write(matrix[i, j] + " ");
                 }
+                Console.WriteLine();
             }
         }
     }
