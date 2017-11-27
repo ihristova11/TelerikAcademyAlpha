@@ -61,6 +61,8 @@
             }
 
         }
+
+        // method for printing the matrix
         public static void Print()
         {
             for (int i = 0; i < rows; i++)
