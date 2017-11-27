@@ -1,7 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\bin\Debug\_05.ParseTags.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\bin\Debug\_05.ParseTags.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\bin\Debug\_05.ParseTags.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\obj\Debug\05. ParseTags.csproj.CoreCompileInputs.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\obj\Debug\_05.ParseTags.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\obj\Debug\_05.ParseTags.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\05. ParseTags\obj\Debug\05. ParseTags.csprojResolveAssemblyReference.cache

@@ -1,7 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\bin\Debug\_15.ReplaceTags.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\bin\Debug\_15.ReplaceTags.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\bin\Debug\_15.ReplaceTags.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\obj\Debug\15. ReplaceTags.csproj.CoreCompileInputs.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\obj\Debug\_15.ReplaceTags.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\obj\Debug\_15.ReplaceTags.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\15. ReplaceTags\obj\Debug\15. ReplaceTags.csprojResolveAssemblyReference.cache

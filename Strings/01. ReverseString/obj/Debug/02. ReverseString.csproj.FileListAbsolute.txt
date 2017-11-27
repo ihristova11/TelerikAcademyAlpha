@@ -1,7 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\bin\Debug\_01.ReverseString.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\bin\Debug\_01.ReverseString.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\bin\Debug\_01.ReverseString.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\obj\Debug\02. ReverseString.csprojResolveAssemblyReference.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\obj\Debug\02. ReverseString.csproj.CoreCompileInputs.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\obj\Debug\_01.ReverseString.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\01. ReverseString\obj\Debug\_01.ReverseString.pdb

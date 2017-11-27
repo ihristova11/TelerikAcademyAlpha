@@ -1,14 +1,16 @@
 ﻿namespace _02.GetLargestNumber
 {
     using System;
+    using System.Linq;
 
     class Program
     {
         static void Main()
         {
-            int firstNum = int.Parse(Console.ReadLine());
-            int secondNum = int.Parse(Console.ReadLine());
-            int thirdNum = int.Parse(Console.ReadLine());
+            int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            int firstNum = input[0];
+            int secondNum = input[1];
+            int thirdNum = input[2];
             int maxNumber = GetMax(GetMax(firstNum, secondNum), GetMax(secondNum, thirdNum));
             Console.WriteLine(maxNumber);
         }

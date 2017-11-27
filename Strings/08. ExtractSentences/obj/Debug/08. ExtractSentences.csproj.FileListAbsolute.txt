@@ -1,7 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\bin\Debug\_08.ExtractSentences.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\bin\Debug\_08.ExtractSentences.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\bin\Debug\_08.ExtractSentences.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\obj\Debug\08. ExtractSentences.csprojResolveAssemblyReference.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\obj\Debug\08. ExtractSentences.csproj.CoreCompileInputs.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\obj\Debug\_08.ExtractSentences.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\08. ExtractSentences\obj\Debug\_08.ExtractSentences.pdb

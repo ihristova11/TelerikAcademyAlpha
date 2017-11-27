@@ -1,6 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\bin\Debug\_12.ParseURL.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\bin\Debug\_12.ParseURL.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\bin\Debug\_12.ParseURL.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\obj\Debug\12. ParseURL.csproj.CoreCompileInputs.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\obj\Debug\_12.ParseURL.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\Strings\12. ParseURL\obj\Debug\_12.ParseURL.pdb
