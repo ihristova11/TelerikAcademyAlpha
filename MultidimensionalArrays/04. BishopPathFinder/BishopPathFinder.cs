@@ -25,7 +25,7 @@
             cols = input[1];
             matrix = new int[rows, cols];
             matrix[rows - 1, 0] = 0;
-            int num = 1;
+            int num = 0;
 
             for (int i = 1; i < rows * 2 - 1; i++)
             {
@@ -35,7 +35,7 @@
                 {
                     row = rows - i - 1;
                     col = 0;
-                    num *= 3;
+                    num += 3;
                     for (int j = 0; j <= i; j++)
                     {
                         matrix[row, col] = num;
@@ -48,9 +48,9 @@
                 else
                 {
                     row = 0;
-                    col = i - cols + 1;
-                    num *= 3;
-                    for (int j = 0; j < 2 * cols - i - 1; j++)
+                    col = i - rows + 1;
+                    num += 3;
+                    for (int j = 0; j < 2 * rows - i - 1; j++)
                     {
                         matrix[row, col] = num;
 
