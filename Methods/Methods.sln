@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. GetLargestNumber", "02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. EnglishDigit", "03. EnglishDigit\03. EnglishDigit.csproj", "{60A303D5-6253-4D59-BDF7-FF023F7ED122}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. AppearanceCount", "04. AppearanceCount\04. AppearanceCount.csproj", "{4F37F1CE-4C71-467F-8654-3B2285B63DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. LargerThanNeighbours", "05. LargerThanNeighbours\05. LargerThanNeighbours.csproj", "{E98D0620-1EBF-4CDF-BDC3-87AACD0FA4CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{60A303D5-6253-4D59-BDF7-FF023F7ED122}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60A303D5-6253-4D59-BDF7-FF023F7ED122}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60A303D5-6253-4D59-BDF7-FF023F7ED122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F37F1CE-4C71-467F-8654-3B2285B63DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F37F1CE-4C71-467F-8654-3B2285B63DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F37F1CE-4C71-467F-8654-3B2285B63DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F37F1CE-4C71-467F-8654-3B2285B63DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98D0620-1EBF-4CDF-BDC3-87AACD0FA4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98D0620-1EBF-4CDF-BDC3-87AACD0FA4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98D0620-1EBF-4CDF-BDC3-87AACD0FA4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98D0620-1EBF-4CDF-BDC3-87AACD0FA4CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
