@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2D5DC81-D6E4-47DB-BFA3-8DA3C69FD0E7}</ProjectGuid>
+    <ProjectGuid>{60A303D5-6253-4D59-BDF7-FF023F7ED122}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01.SayHello</RootNamespace>
-    <AssemblyName>_01.SayHello</AssemblyName>
+    <RootNamespace>_03.EnglishDigit</RootNamespace>
+    <AssemblyName>_03.EnglishDigit</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SayHello.cs" />
+    <Compile Include="EnglishDigit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

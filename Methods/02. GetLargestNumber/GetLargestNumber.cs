@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Program
+    class GetLargestNumber
     {
         static void Main()
         {
