@@ -7,6 +7,7 @@
     {
         static void Main()
         {
+            //reading the input
             int[] numbers = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
             Console.WriteLine(FindMinimum(numbers));
