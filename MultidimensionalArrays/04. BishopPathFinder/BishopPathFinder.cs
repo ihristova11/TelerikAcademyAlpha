@@ -9,55 +9,54 @@
         public static int[,] matrix;
         public static int row;
         public static int col;
-        public static int rows;
-        public static int cols;
+        public static int[] rows = { -1, -1, 1, 1 };
+        public static int[] cols = { -1, 1, 1, -1 };
         static void Main()
         {
             FillTheMatrix();
             Print();
         }
 
+        public static int GetMoveDirection(string dir)
+        {
+            switch(dir)
+            {
+                case "LU": return 0;
+                case "UL": return 0;
+                case "RU": return 1;
+                case "UR": return 1;
+                case "DR": return 2;
+                case "RD": return 2;
+                case "DL": return 3;
+                case "LD": return 3;
+
+            }
+        }
+
         // method for filling the matrix
         public static void FillTheMatrix()
         {
             int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-            rows = input[0];
-            cols = input[1];
-            matrix = new int[rows, cols];
-            matrix[rows - 1, 0] = 0;
+            row = input[0];
+            col = input[1];
+            matrix = new int[row, col];
+            matrix[row - 1, 0] = 0;
             int num = 0;
 
-            for (int i = 1; i < rows * 2 - 1; i++)
+            for (int i = row - 1; i >= 0; i--)
             {
-                int row;
-                int col;
-                if (i < rows)
+                for (int j = 0; j < col; j++)
                 {
-                    row = rows - i - 1;
-                    col = 0;
-                    num += 3;
-                    for (int j = 0; j <= i; j++)
-                    {
-                        matrix[row, col] = num;
-
-
-                        row++;
-                        col++;
-                    }
+                    matrix[i, j] = (row - 1 - i) * 3 + j * 3;
                 }
-                else
-                {
-                    row = 0;
-                    col = i - cols + 1;
-                    num += 3;
-                    for (int j = 0; j < 2 * cols - i - 1; j++)
-                    {
-                        matrix[row, col] = num;
-
-                        row++;
-                        col++;
-                    }
-                }
+            }
+            int movesCount = int.Parse(Console.ReadLine());
+            for (int i = 0; i < movesCount; i++)
+            {
+                var directions = Console.ReadLine().Split(' ');
+                var dir = directions[0];
+                var moves = directions[1];
+                Console.WriteLine(dir + " " + moves);
             }
 
         }
@@ -65,9 +64,9 @@
         // method for printing the matrix
         public static void Print()
         {
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < row; i++)
             {
-                for (int j = 0; j < cols; j++)
+                for (int j = 0; j < col; j++)
                 {
                     Console.Write(matrix[i, j] + " ");
                 }
