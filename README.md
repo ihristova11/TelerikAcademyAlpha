@@ -1,2 +1,3 @@
-TELERIK ACADEMY ALPHA
-Exams and preparation.
+#TELERIK ACADEMY ALPHA
+
+*Exams and preparation.
