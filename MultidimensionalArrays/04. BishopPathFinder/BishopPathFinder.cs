@@ -5,21 +5,12 @@
 
     class BishopPathFinder
     {
-        public static int eaten = 0;
-        public static int[,] matrix;
-        public static int row;
-        public static int col;
         public static int[] rows = { -1, -1, 1, 1 };
         public static int[] cols = { -1, 1, 1, -1 };
-        static void Main()
-        {
-            FillTheMatrix();
-            Print();
-        }
 
-        public static int GetMoveDirection(string dir)
+        static int GetMoveDirection(string dir)
         {
-            switch(dir)
+            switch (dir)
             {
                 case "LU": return 0;
                 case "UL": return 0;
@@ -30,49 +21,77 @@
                 case "DL": return 3;
                 case "LD": return 3;
 
+                default: throw new ArgumentException();
             }
         }
 
-        // method for filling the matrix
-        public static void FillTheMatrix()
+        static void Main(string[] args)
         {
-            int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-            row = input[0];
-            col = input[1];
-            matrix = new int[row, col];
-            matrix[row - 1, 0] = 0;
-            int num = 0;
+            int[] arrNum = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-            for (int i = row - 1; i >= 0; i--)
+            int rowsCount = arrNum[0];
+            int colsCount = arrNum[1];
+
+            var matrix = new int[rowsCount, colsCount];
+
+            for (int i = rowsCount - 1; i >= 0; i--)
             {
-                for (int j = 0; j < col; j++)
+                for (int j = 0; j < colsCount; j++)
                 {
-                    matrix[i, j] = (row - 1 - i) * 3 + j * 3;
+                    matrix[i, j] = (rowsCount - 1 - i) * 3 + j * 3;
                 }
             }
+
             int movesCount = int.Parse(Console.ReadLine());
+
+            int row = rowsCount - 1;
+            int col = 0;
+
+            int sum = 0;
+
             for (int i = 0; i < movesCount; i++)
             {
-                var directions = Console.ReadLine().Split(' ');
-                var dir = directions[0];
-                var moves = directions[1];
-                Console.WriteLine(dir + " " + moves);
-            }
+                var input = Console.ReadLine().Split(' ');
+                var dir = input[0];
+                var repeat = int.Parse(input[1]);
 
-        }
+                var moveDir = GetMoveDirection(dir);
 
-        // method for printing the matrix
-        public static void Print()
-        {
-            for (int i = 0; i < row; i++)
-            {
-                for (int j = 0; j < col; j++)
+                for (int j = 0; j < repeat - 1; j++)
                 {
-                    Console.Write(matrix[i, j] + " ");
+                    row += rows[moveDir];
+                    col += cols[moveDir];
+
+                    if (row > rowsCount - 1 || row < 0 || col > colsCount - 1 || col < 0)
+                    {
+                        row -= rows[moveDir];
+                        col -= cols[moveDir];
+                        break;
+                    }
+                    else
+                    {
+                        sum += matrix[row, col];
+                        matrix[row, col] = 0;
+                    }
                 }
-                Console.WriteLine();
             }
+
+            Console.WriteLine(sum);
+
+           // PrintMatrix(matrix);
         }
+
+        //static void PrintMatrix(int[,] matrix)
+        //{
+        //    for (int i = 0; i < matrix.GetLength(0); i++)
+        //    {
+        //        for (int j = 0; j < matrix.GetLength(1); j++)
+        //        {
+        //            Console.Write(matrix[i, j].ToString().PadLeft(3) + " ");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
     }
 }
 
