@@ -12,6 +12,7 @@
         public static int[,] valuesOfRC;
         public static int[] codes;
         static int coeff;
+        public static int sum = 0;
         static void Main()
         {
             //reading the input
@@ -52,6 +53,13 @@
             //    }
             //    Console.WriteLine();
             //}
+
+            int x = 0;
+            for (; x < 3; x++)
+            {
+                Console.WriteLine(x);
+            }
+            Console.WriteLine(x);
         }
 
         //method for filling the matrix
@@ -85,6 +93,35 @@
             {
                 valuesOfRC[0, i] = codes[i] % coeff; //wanted cols
                 valuesOfRC[1, i] = codes[i] / coeff; //wanted rows
+            }
+        }
+
+        public static void CalculateSum()
+        {
+            int row = r - 1, col = 0, x = 0;
+            while (x < valuesOfRC.Length)
+            {
+                if (row <= valuesOfRC[1, x])
+                {
+                    for (; row <= valuesOfRC[1, x]; row++)
+                    {
+                        if (col <= valuesOfRC[0, x])
+                        {
+                            for (; col <= valuesOfRC[0, x]; col++)
+                            {
+                                sum += matrix[row, col];
+                            }
+                        }
+                        else
+                        {
+                            for (; col >= 0; col--)
+                            {
+                                sum += matrix[row, col];
+                            }
+                        }
+                    }
+                }
+                x++;
             }
         }
     }
