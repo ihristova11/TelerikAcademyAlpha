@@ -44,14 +44,14 @@
 
             //Console.WriteLine(codes.Length);
 
-            for (int i = 0; i < numberOfMoves; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                    Console.Write(valuesOfRC[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
+            //for (int j = 0; j < 2; j++)
+            //{
+            //    for (int i = 0; i < numberOfMoves; i++)
+            //    {
+            //        Console.Write(valuesOfRC[j, i] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
         }
 
         //method for filling the matrix
