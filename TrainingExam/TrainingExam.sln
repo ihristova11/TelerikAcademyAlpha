@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BitShiftMatrix", "02. B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. AllocateArray", "03. AllocateArray\03. AllocateArray.csproj", "{3FCB8EA3-7C84-4BDD-BB2B-EF02E641A83D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. A+B", "04. A+B\04. A+B.csproj", "{644284FC-1111-495B-BE1F-379B3F476AFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3FCB8EA3-7C84-4BDD-BB2B-EF02E641A83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FCB8EA3-7C84-4BDD-BB2B-EF02E641A83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FCB8EA3-7C84-4BDD-BB2B-EF02E641A83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644284FC-1111-495B-BE1F-379B3F476AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644284FC-1111-495B-BE1F-379B3F476AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644284FC-1111-495B-BE1F-379B3F476AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644284FC-1111-495B-BE1F-379B3F476AFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
