@@ -2,150 +2,98 @@
 {
     using System;
     using System.Linq;
+    using System.Numerics;
 
     class BitShiftMatrix
     {
-        public static int r;
-        public static int c;
-        public static int[,] matrix;
-        public static int numberOfMoves;
-        public static int[,] valuesOfRC;
-        public static int[] codes;
-        static int coeff;
-        public static int sum = 0;
+        static int r;
+        static int c;
+
         static void Main()
         {
-            //reading the input
-            int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
+            BigInteger outputSum = 0;
+
+            r = int.Parse(Console.ReadLine());
+            c = int.Parse(Console.ReadLine());
+
+            var matrix = new BigInteger[r, c];
+
+            FillTheMatrix(matrix);
+
+            // coeff
+            var COEF = r >= c ?
+                       r : c;
+
+            //moves number
+            var moves = int.Parse(Console.ReadLine());
+
+            var codes = Console.ReadLine()
+                .Trim()
+                .Split()
                 .Select(int.Parse)
                 .ToArray();
 
-            //assign values to r an c
-            r = input[0];
-            c = input[1];
+            var curRow = r - 1;
+            var curCol = 0;
 
-            matrix = new int[r, c];
+            foreach (var code in codes)
+            {
+                var targetRow = code / COEF;
+                var targetCol = code % COEF;
 
-            numberOfMoves = int.Parse(Console.ReadLine());
+                // move cols first
+                for (int move = Math.Min(curCol, targetCol);
+                         move <= Math.Max(curCol, targetCol);
+                         move++)
+                {
+                    outputSum += matrix[curRow, move];
+                    matrix[curRow, move] = 0;
+                }
 
-            //array for the read codes
-            codes = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
-                .ToArray();
+                curCol = targetCol;
 
-            //find the coefficient
-            coeff = r < c ? c : r;
+                // move rows second
+                for (int move = Math.Min(curRow, targetRow);
+                         move <= Math.Max(curRow, targetRow);
+                         move++)
+                {
+                    outputSum += matrix[move, curCol];
+                    matrix[move, curCol] = 0;
+                }
 
-            //array for holding the coordinates of points
-            valuesOfRC = new int[2, numberOfMoves];
+                curRow = targetRow;
+            }
 
-            //FillTheMatrix();
-            //PrintTheMatrix();
-            CalculateValues();
-
-            //Console.WriteLine(codes.Length);
-
-            //for (int j = 0; j < 2; j++)
-            //{
-            //    for (int i = 0; i < numberOfMoves; i++)
-            //    {
-            //        Console.Write(valuesOfRC[j, i] + " ");
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            //int x = 0;
-            //for (; x < 3; x++)
-            //{
-            //    Console.WriteLine(x);
-            //}
-            //Console.WriteLine(x);
-            CalculateSum();
+            Console.WriteLine(outputSum);
         }
 
         //method for filling the matrix
-        public static void FillTheMatrix()
+        static void FillTheMatrix(BigInteger[,] matrix)
         {
-            for (int i = r - 1; i >= 0; i--)
+            var curFill = (BigInteger)1;
+            for (int curCol = 0;
+                     curCol < matrix.GetLength(1);
+                     curCol++)
             {
-                for (int j = 0; j < c; j++)
+                matrix[r - 1, curCol] = curFill;
+                curFill <<= 1;
+            }
+
+            for (int curCol = 0;
+                     curCol < c;
+                     curCol++)
+            {
+                curFill = matrix[r - 1, curCol];
+                curFill <<= 1;
+
+                for (int curRow = r - 2;
+                         curRow >= 0;
+                         curRow--)
                 {
-                    //formula for the value of every element in the matrix
-                    matrix[i, j] = (int)(Math.Pow(2, r - 1 - i + j));
+                    matrix[curRow, curCol] = curFill;
+                    curFill <<= 1;
                 }
             }
-        }
-
-        public static void PrintTheMatrix()
-        {
-            for (int i = 0; i < r; i++)
-            {
-                for (int j = 0; j < c; j++)
-                {
-                    Console.Write((matrix[i, j] + " ").PadLeft(4));
-                }
-                Console.WriteLine();
-            }
-        }
-
-        public static void CalculateValues()
-        {
-            for (int i = 0; i < numberOfMoves; i++)
-            {
-                valuesOfRC[0, i] = codes[i] % coeff; //wanted cols
-                valuesOfRC[1, i] = codes[i] / coeff; //wanted rows
-            }
-        }
-
-        public static void CalculateSum()
-        {
-            int row = r - 1, col = 0, x = 0;
-            while (x < valuesOfRC.Length)
-            {
-                //if (row <= valuesOfRC[1, x])
-                //{
-                //    for (; row <= valuesOfRC[1, x]; row++)
-                //    {
-                //        if (col <= valuesOfRC[0, x])
-                //        {
-                //            for (; col <= valuesOfRC[0, x]; col++)
-                //            {
-                //                sum += matrix[row, col];
-                //            }
-                //        }
-                //        else
-                //        {
-                //            for (; col >= valuesOfRC[0, x]; col--)
-                //            {
-                //                sum += matrix[row, col];
-                //            }
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    for (; row >= valuesOfRC[1, x]; row++)
-                //    {
-                //        if (col <= valuesOfRC[0, x])
-                //        {
-                //            for (; col <= valuesOfRC[0, x]; col++)
-                //            {
-                //                sum += matrix[row, col];
-                //            }
-                //        }
-                //        else
-                //        {
-                //            for (; col >= valuesOfRC[0, x]; col--)
-                //            {
-                //                sum += matrix[row, col];
-                //            }
-                //        }
-                //    }
-                //}
-
-                x++;
-            }
-            Console.WriteLine(sum);
         }
     }
 }

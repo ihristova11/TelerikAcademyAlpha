@@ -28,9 +28,11 @@
             for (int direction = 0; direction < directions.Length; direction++)
             {
                 int move = directions[direction];
+
                 if (move > 0) //right
                 {
                     position += move;
+
                     while (position > path.Length - 1)
                     {
                         position -= path.Length;
