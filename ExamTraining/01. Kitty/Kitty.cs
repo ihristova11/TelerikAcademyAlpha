@@ -6,23 +6,29 @@
 
     class Kitty
     {
+        public static int[] directions;
+        public static StringBuilder path;
+
         static void Main()
         {
             // reading the path for the kitty
-            StringBuilder path = new StringBuilder(Console.ReadLine());
-            int[] directions = Console.ReadLine()
+            path = new StringBuilder(Console.ReadLine());
+            directions = Console.ReadLine()
                 .Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
-                .ToArray();
-
+                .ToArray();          
+        }
+        //method for getting the direction
+        static void GetDirection()
+        {
             int position = 0; //holds the position in the path
-            int souls = 0;
-            int food = 0;
-            int deadlocks = 0;
+            int souls = 0; //holds the collected souls
+            int food = 0; //holds the collected food
+            int deadlocks = 0; //holds the number of deadlocks
             for (int direction = 0; direction < directions.Length; direction++)
             {
-                int move = directions[direction];
-                
+                int move = directions[direction]; //current direction
+
                 while (position > path.Length - 1)
                 {
                     position -= path.Length;
@@ -79,7 +85,6 @@
             Console.WriteLine("Coder souls collected: {0}", souls);
             Console.WriteLine("Food collected: {0}", food);
             Console.WriteLine("Deadlocks: {0}", deadlocks);
-
         }
     }
 }
