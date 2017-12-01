@@ -21,6 +21,11 @@
             int deadlocks = 0;
             for (int direction = 0; direction < directions.Length; direction++)
             {
+                if(position < 0 || position > path.Length - 1)
+                {
+
+                }
+
                 switch(path[direction])
                 {
                     case '@':
@@ -54,10 +59,16 @@
                                 Console.WriteLine("Jumps before deadlock: {0}", direction);
                             }
                         }
-                    case '*': break;
+                    case '*':
+                        food++;
+                        path[position] = 'v';
+                        break;
                 }
                 position = directions[direction];
             }
+            Console.WriteLine("Coder souls collected: {0}", souls);
+            Console.WriteLine("Food collected: {0}", food);
+            Console.WriteLine("Deadlocks: {0}", deadlocks);
 
         }
     }
