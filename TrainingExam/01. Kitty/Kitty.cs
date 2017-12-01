@@ -6,44 +6,56 @@
 
     class Kitty
     {
-        public static int[] directions;
-        public static StringBuilder path;
-
+        static int position = 0;
+        static int direction = 0;
+        static int souls = 0;
+        static int deadlocks = 0;
+        static int food = 0;
+        static int[] directions;
+        static StringBuilder path;
         static void Main()
         {
-            // reading the path for the kitty
             path = new StringBuilder(Console.ReadLine());
-            directions = Console.ReadLine()
+            directions = ("0 " + Console.ReadLine())
                 .Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
-                .ToArray();          
+                .ToArray();
+
+            CheckPosition();
         }
-        //method for getting the direction
-        static void GetDirection()
+
+        public static void CheckPosition()
         {
-            int position = 0; //holds the position in the path
-            int souls = 0; //holds the collected souls
-            int food = 0; //holds the collected food
-            int deadlocks = 0; //holds the number of deadlocks
             for (int direction = 0; direction < directions.Length; direction++)
             {
-                int move = directions[direction]; //current direction
-
-                while (position > path.Length - 1)
+                int move = directions[direction];
+                if (move > 0) //right
                 {
-                    position -= path.Length;
+                    position += move;
+                    while (position > path.Length - 1)
+                    {
+                        position -= path.Length;
+                    }
                 }
 
-                while (position < 0)
+                if (move < 0) //left
                 {
-                    position += path.Length;
+                    position += move;
+                    while (position < 0)
+                    {
+                        position += path.Length;
+                    }
                 }
 
-                switch (path[direction])
+                switch (path[position])
                 {
                     case '@':
                         souls++;
-                        path[direction] = 'v';
+                        path[position] = 'v';
+                        break;
+                    case '*':
+                        food++;
+                        path[position] = 'v';
                         break;
                     case 'x':
                         if (position % 2 == 0)
@@ -58,6 +70,7 @@
                             {
                                 Console.WriteLine("You are deadlocked, you greedy kitty!");
                                 Console.WriteLine("Jumps before deadlock: {0}", direction);
+                                return;
                             }
                         }
                         else
@@ -72,16 +85,14 @@
                             {
                                 Console.WriteLine("You are deadlocked, you greedy kitty!");
                                 Console.WriteLine("Jumps before deadlock: {0}", direction);
+                                return;
                             }
                         }
                         break;
-
-                    case '*':
-                        food++;
-                        path[position] = 'v';
-                        break;
+                    default: break;
                 }
             }
+
             Console.WriteLine("Coder souls collected: {0}", souls);
             Console.WriteLine("Food collected: {0}", food);
             Console.WriteLine("Deadlocks: {0}", deadlocks);
