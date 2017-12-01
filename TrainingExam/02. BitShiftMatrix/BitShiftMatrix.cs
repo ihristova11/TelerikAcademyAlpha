@@ -22,13 +22,15 @@
             PrintTheMatrix();
         }
 
+        //method for filling the matrix
         public static void FillTheMatrix()
         {
             for (int i = r - 1; i >= 0; i--)
             {
                 for (int j = 0; j < c; j++)
                 {
-                    matrix[i, j] = (int)(Math.Pow(2, r - 1 - i) * Math.Pow(2, j));
+                    //formula for the value of every element in the matrix
+                    matrix[i, j] = (int)(Math.Pow(2, r - 1 - i + j)); 
                 }
             }
         }
