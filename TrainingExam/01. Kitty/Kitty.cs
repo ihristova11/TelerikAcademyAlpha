@@ -7,7 +7,6 @@
     class Kitty
     {
         static int position = 0;
-        static int direction = 0;
         static int souls = 0;
         static int deadlocks = 0;
         static int food = 0;
