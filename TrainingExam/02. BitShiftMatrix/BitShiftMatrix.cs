@@ -54,12 +54,13 @@
             //    Console.WriteLine();
             //}
 
-            int x = 0;
-            for (; x < 3; x++)
-            {
-                Console.WriteLine(x);
-            }
-            Console.WriteLine(x);
+            //int x = 0;
+            //for (; x < 3; x++)
+            //{
+            //    Console.WriteLine(x);
+            //}
+            //Console.WriteLine(x);
+            CalculateSum();
         }
 
         //method for filling the matrix
@@ -101,28 +102,50 @@
             int row = r - 1, col = 0, x = 0;
             while (x < valuesOfRC.Length)
             {
-                if (row <= valuesOfRC[1, x])
-                {
-                    for (; row <= valuesOfRC[1, x]; row++)
-                    {
-                        if (col <= valuesOfRC[0, x])
-                        {
-                            for (; col <= valuesOfRC[0, x]; col++)
-                            {
-                                sum += matrix[row, col];
-                            }
-                        }
-                        else
-                        {
-                            for (; col >= 0; col--)
-                            {
-                                sum += matrix[row, col];
-                            }
-                        }
-                    }
-                }
+                //if (row <= valuesOfRC[1, x])
+                //{
+                //    for (; row <= valuesOfRC[1, x]; row++)
+                //    {
+                //        if (col <= valuesOfRC[0, x])
+                //        {
+                //            for (; col <= valuesOfRC[0, x]; col++)
+                //            {
+                //                sum += matrix[row, col];
+                //            }
+                //        }
+                //        else
+                //        {
+                //            for (; col >= valuesOfRC[0, x]; col--)
+                //            {
+                //                sum += matrix[row, col];
+                //            }
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    for (; row >= valuesOfRC[1, x]; row++)
+                //    {
+                //        if (col <= valuesOfRC[0, x])
+                //        {
+                //            for (; col <= valuesOfRC[0, x]; col++)
+                //            {
+                //                sum += matrix[row, col];
+                //            }
+                //        }
+                //        else
+                //        {
+                //            for (; col >= valuesOfRC[0, x]; col--)
+                //            {
+                //                sum += matrix[row, col];
+                //            }
+                //        }
+                //    }
+                //}
+
                 x++;
             }
+            Console.WriteLine(sum);
         }
     }
 }
