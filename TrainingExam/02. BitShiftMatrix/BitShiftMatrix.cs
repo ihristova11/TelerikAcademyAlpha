@@ -38,8 +38,20 @@
             //array for holding the coordinates of points
             valuesOfRC = new int[2, numberOfMoves];
 
-            FillTheMatrix();
-            PrintTheMatrix();
+            //FillTheMatrix();
+            //PrintTheMatrix();
+            CalculateValues();
+
+            //Console.WriteLine(codes.Length);
+
+            for (int i = 0; i < numberOfMoves; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.Write(valuesOfRC[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
 
         //method for filling the matrix
@@ -71,8 +83,8 @@
         {
             for (int i = 0; i < numberOfMoves; i++)
             {
-                valuesOfRC[0, numberOfMoves] = codes[numberOfMoves] % coeff; //wanted cols
-                valuesOfRC[1, numberOfMoves] = codes[numberOfMoves] / coeff; //wanted rows
+                valuesOfRC[0, i] = codes[i] % coeff; //wanted cols
+                valuesOfRC[1, i] = codes[i] / coeff; //wanted rows
             }
         }
     }
