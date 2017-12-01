@@ -8,6 +8,7 @@
         public static int r;
         public static int c;
         public static int[,] matrix;
+        public static int numberOfMoves;
         static void Main()
         {
             int[] input = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
@@ -17,7 +18,12 @@
             r = input[0];
             c = input[1];
             matrix = new int[r, c];
-            //int numberOfMoves = int.Parse(Console.ReadLine());
+            numberOfMoves = int.Parse(Console.ReadLine());
+            //array for the read codes
+            int[] codes = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+
             FillTheMatrix();
             PrintTheMatrix();
         }
