@@ -24,55 +24,50 @@
             long backward = 0;
 
 
-            while(notExit)
+            while (notExit)
             {
                 line = Console.ReadLine();
-                if (line != "exit")
+                if (line == "exit")
+                {
+                    notExit = false;
+                }
+                else
                 {
                     arr = line.Split(' ');
                     steps = int.Parse(arr[0]);
                     direction = arr[1];
                     size = int.Parse(arr[2]);
+                    
+                        if (direction == "forward")
+                        {
+                        for (int i = 0; i < steps; i++)
+                        {
+                            position = (position + size) % numbers.Length;
 
-                    int index = position;
-
-                    for (int i = 0; i < steps; i++)
-                    {
-                        if (direction == "backwards")
+                            forward += numbers[position];
+                        }
+                    }
+                    else
+                        {
+                        for (int i = 0; i < steps; i++)
                         {
                             position -= size;
 
-                            if (position > numbers.Length - 1)
-                            {
-                                position = (position - numbers.Length) % numbers.Length;
-                            }
                             if (position < 0)
                             {
-                                position = (numbers.Length - position) % numbers.Length;
+
+                                position = numbers.Length + position % (numbers.Length);
                             }
 
-                            backward += numbers[index];
-                        }
-                        else
-                        {
-                            position += size;
-
-                            if (position > numbers.Length - 1)
+                            if (position >= numbers.Length)
                             {
-                                position = (position - numbers.Length) % numbers.Length;
-                            }
-                            if (position < 0)
-                            {
-                                position = (numbers.Length - position) % numbers.Length;
+                                position = position - numbers.Length;
                             }
 
-                            forward += numbers[index];
+                            backward += numbers[position];
                         }
                     }
-                }
-                else
-                {
-                    notExit = false;
+
                 }
 
             }
