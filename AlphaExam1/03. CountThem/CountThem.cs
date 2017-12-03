@@ -27,9 +27,9 @@ namespace _03.CountThem
                 }
                 else
                 {
-                    var matches = singleLineMatcher.Matches(input);
+                    var singleMatches = singleLineMatcher.Matches(input);
                     {
-                        foreach (Match match in matches)
+                        foreach (Match match in singleMatches)
                         {
                             input = input.Replace(match.ToString(), string.Empty);
                         }
@@ -39,25 +39,25 @@ namespace _03.CountThem
                 }
             }
 
-            var kekeroni = strBr.ToString();
+            var correctedInput = strBr.ToString();
 
-            var machoos = multiLineMatcher.Matches(kekeroni);
-            foreach (Match match in machoos)
+            var multiMatches = multiLineMatcher.Matches(correctedInput);
+            foreach (Match match in multiMatches)
             {
-                kekeroni = kekeroni.Replace(match.ToString(), string.Empty);
+                correctedInput = correctedInput.Replace(match.ToString(), string.Empty);
             }
 
-            var sumMoreMuchas = new Regex(@"\\\\");
+            var otherSymbols = new Regex(@"\\\\");
 
-            var michka = sumMoreMuchas.Matches(kekeroni);
+            var otherSymbolsCollection = otherSymbols.Matches(correctedInput);
 
-            foreach (Match match in michka)
+            foreach (Match match in otherSymbolsCollection)
             {
-                kekeroni = kekeroni.Replace(match.ToString(), string.Empty);
+                correctedInput = correctedInput.Replace(match.ToString(), string.Empty);
             }
 
             var variableMatcher = new Regex(@"(\\@|@)(_|[a-zA-Z])[a-zA-Z|0-9|_]+");
-            var michas = variableMatcher.Matches(kekeroni);
+            var michas = variableMatcher.Matches(correctedInput);
 
             List<string> xd = new List<string>();
             foreach (Match match in michas)
