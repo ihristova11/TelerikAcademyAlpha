@@ -18,14 +18,23 @@
             int steps;
             bool notExit = true;
             string[] arr;
+            string line = string.Empty;
 
 
             while(notExit)
             {
-                arr = Console.ReadLine().Split(' ');
-                steps = int.Parse(arr[0]);
-                direction = arr[1];
-                size = int.Parse(arr[2]);
+                line = Console.ReadLine();
+                if (line != "exit")
+                {
+                    arr = line.Split(' ');
+                    steps = int.Parse(arr[0]);
+                    direction = arr[1];
+                    size = int.Parse(arr[2]);
+                }
+                else
+                {
+                    notExit = false;
+                }
 
             }
         }
