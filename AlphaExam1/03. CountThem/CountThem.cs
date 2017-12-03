@@ -57,22 +57,22 @@ namespace _03.CountThem
             }
 
             var variableMatcher = new Regex(@"(\\@|@)(_|[a-zA-Z])[a-zA-Z|0-9|_]+");
-            var michas = variableMatcher.Matches(correctedInput);
+            var variableMatchesCollection = variableMatcher.Matches(correctedInput);
 
-            List<string> xd = new List<string>();
-            foreach (Match match in michas)
+            List<string> variables = new List<string>();
+            foreach (Match match in variableMatchesCollection)
             {
                 if (!match.ToString().StartsWith(@"\"))
                 {
-                    xd.Add(match.ToString().TrimStart('@'));
+                    variables.Add(match.ToString().TrimStart('@'));
                 }
             }
-            xd = xd.Distinct().ToList();
-            xd.Sort();
+            variables = variables.Distinct().ToList();
+            variables.Sort();
 
-            Console.WriteLine(xd.Count);
+            Console.WriteLine(variables.Count);
 
-            foreach (var str in xd)
+            foreach (var str in variables)
             {
                 Console.WriteLine(str);
             }
