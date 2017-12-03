@@ -20,7 +20,8 @@
             bool notExit = true;
             string[] arr;
             string line = string.Empty;
-            long sum = 0;
+            long forward = 0;
+            long backward = 0;
 
 
             while(notExit)
@@ -33,17 +34,40 @@
                     direction = arr[1];
                     size = int.Parse(arr[2]);
 
-                    if(direction == "backwards")
-                    {
-                        size *= -1;
-                    }
-
                     int index = position;
 
-                    while(index != position + steps * size)
+                    for (int i = 0; i < steps; i++)
                     {
-                        sum += numbers[index];
-                        index += size;
+                        if (direction == "backwards")
+                        {
+                            position -= size;
+
+                            if (position > numbers.Length - 1)
+                            {
+                                position = (position - numbers.Length) % numbers.Length;
+                            }
+                            if (position < 0)
+                            {
+                                position = (numbers.Length - position) % numbers.Length;
+                            }
+
+                            backward += numbers[index];
+                        }
+                        else
+                        {
+                            position += size;
+
+                            if (position > numbers.Length - 1)
+                            {
+                                position = (position - numbers.Length) % numbers.Length;
+                            }
+                            if (position < 0)
+                            {
+                                position = (numbers.Length - position) % numbers.Length;
+                            }
+
+                            forward += numbers[index];
+                        }
                     }
                 }
                 else
@@ -52,6 +76,9 @@
                 }
 
             }
+
+            Console.WriteLine(forward);
+            Console.WriteLine(backward);
         }
     }
 }
