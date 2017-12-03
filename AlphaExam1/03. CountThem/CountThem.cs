@@ -1,19 +1,81 @@
 ﻿using System;
-using System.Globalization;
-using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
-class BiggestOf5Numbers
+namespace _03.CountThem
 {
-    static void Main()
+    class CountThem
     {
+        static void Main(string[] args)
         {
-            double[] arr = new double[3];
-            for (int i = 0; i < 3; i++)
+            string singleLine = @"\/\/.*|\#.*";
+            string multiLine = @"\/\*.*\*\/";
+            var singleLineMatcher = new Regex(singleLine);
+            var multiLineMatcher = new Regex(multiLine);
+            var strBr = new StringBuilder();
+
+            while (true)
             {
-                arr[i] = double.Parse(Console.ReadLine());
+                var input = Console.ReadLine();
+
+                if (input == @"{!}")
+                {
+                    break;
+                }
+                else
+                {
+                    var matches = singleLineMatcher.Matches(input);
+                    {
+                        foreach (Match match in matches)
+                        {
+                            input = input.Replace(match.ToString(), string.Empty);
+                        }
+                    }
+
+                    strBr.Append(input);
+                }
             }
 
-            Console.WriteLine(Math.Max(Math.Max(arr[0], arr[1]), Math.Max(arr[1],arr[2])));
+            var kekeroni = strBr.ToString();
+
+            var machoos = multiLineMatcher.Matches(kekeroni);
+            foreach (Match match in machoos)
+            {
+                kekeroni = kekeroni.Replace(match.ToString(), string.Empty);
+            }
+
+            var sumMoreMuchas = new Regex(@"\\\\");
+
+            var michka = sumMoreMuchas.Matches(kekeroni);
+
+            foreach (Match match in michka)
+            {
+                kekeroni = kekeroni.Replace(match.ToString(), string.Empty);
+            }
+
+            var variableMatcher = new Regex(@"(\\@|@)(_|[a-zA-Z])[a-zA-Z|0-9|_]+");
+            var michas = variableMatcher.Matches(kekeroni);
+
+            List<string> xd = new List<string>();
+            foreach (Match match in michas)
+            {
+                if (!match.ToString().StartsWith(@"\"))
+                {
+                    xd.Add(match.ToString().TrimStart('@'));
+                }
+            }
+            xd = xd.Distinct().ToList();
+            xd.Sort();
+
+            Console.WriteLine(xd.Count);
+
+            foreach (var str in xd)
+            {
+                Console.WriteLine(str);
+            }
         }
     }
 }
