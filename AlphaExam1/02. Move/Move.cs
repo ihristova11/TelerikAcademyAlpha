@@ -17,12 +17,15 @@
             int size;
             int steps;
             bool notExit = true;
-            string line = string.Empty;
+            string[] arr;
 
 
             while(notExit)
             {
-                line = Console.ReadLine();
+                arr = Console.ReadLine().Split(' ');
+                steps = int.Parse(arr[0]);
+                direction = arr[1];
+                size = int.Parse(arr[2]);
 
             }
         }
