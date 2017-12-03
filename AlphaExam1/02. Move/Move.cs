@@ -12,6 +12,12 @@
                 .Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
+            bool notExit = true;
+
+            while(notExit)
+            {
+
+            }
         }
     }
 }
