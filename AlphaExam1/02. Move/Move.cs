@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Program
+    class Move
     {
         static void Main()
         {
