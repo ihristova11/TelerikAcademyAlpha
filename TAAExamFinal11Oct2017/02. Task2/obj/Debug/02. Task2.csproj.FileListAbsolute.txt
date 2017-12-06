@@ -1,5 +1,0 @@
-D:\IRINA\Programming\TAAExamFinal11Oct2017\02. Task2\bin\Debug\_02.Task2.exe.config
-D:\IRINA\Programming\TAAExamFinal11Oct2017\02. Task2\bin\Debug\_02.Task2.exe
-D:\IRINA\Programming\TAAExamFinal11Oct2017\02. Task2\bin\Debug\_02.Task2.pdb
-D:\IRINA\Programming\TAAExamFinal11Oct2017\02. Task2\obj\Debug\_02.Task2.exe
-D:\IRINA\Programming\TAAExamFinal11Oct2017\02. Task2\obj\Debug\_02.Task2.pdb

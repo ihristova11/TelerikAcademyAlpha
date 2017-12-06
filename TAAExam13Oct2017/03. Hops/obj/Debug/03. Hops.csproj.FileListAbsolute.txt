@@ -1,6 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\bin\Debug\_03.Hops.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\bin\Debug\_03.Hops.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\bin\Debug\_03.Hops.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\obj\Debug\03. Hops.csprojResolveAssemblyReference.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\obj\Debug\_03.Hops.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\03. Hops\obj\Debug\_03.Hops.pdb

@@ -1,6 +1,0 @@
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\obj\Debug\02. PrimeTriangle.csprojResolveAssemblyReference.cache
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\bin\Debug\_02.PrimeTriangle.exe.config
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\bin\Debug\_02.PrimeTriangle.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\bin\Debug\_02.PrimeTriangle.pdb
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\obj\Debug\_02.PrimeTriangle.exe
-C:\Users\hrist\OneDrive\Документи\GitHub\TelerikAcademyAlpha\TAAExam13Oct2017\02. PrimeTriangle\obj\Debug\_02.PrimeTriangle.pdb

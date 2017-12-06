@@ -1,6 +1,0 @@
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\bin\Debug\_01.Task1.exe.config
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\bin\Debug\_01.Task1.exe
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\bin\Debug\_01.Task1.pdb
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\obj\Debug\01. Task1.csprojResolveAssemblyReference.cache
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\obj\Debug\_01.Task1.exe
-D:\IRINA\Programming\TAAExamFinal11Oct2017\01. Task1\obj\Debug\_01.Task1.pdb
