@@ -3,10 +3,13 @@ using System.Collections.Generic;
 
 namespace MobilePhoneComponents
 {
-    class MobilePhone
+    public class MobilePhone
     {
+        private static readonly MobilePhone meizuMX4Pro = new MobilePhone(MobileManufacturer.MEIZU, "MX4PRO",
+            new Display(Display.MobileDisplayType, 5.5), new Battery(Battery.MobileBatteryType.LiIon));
+
         private string model;
-        private Manufacturer manufacturer;
+        private MobileManufacturer manufacturer;
         private double price;
         //private Owner owner;
         private Display display;
@@ -18,28 +21,28 @@ namespace MobilePhoneComponents
         private List<Call> calls = new List<Call>();
 
 
-        public MobilePhone(Manufacturer manufacturer, string model) : base()
+        public MobilePhone(MobileManufacturer manufacturer, string model) : base()
         {
             this.Manufacturer = manufacturer;
 
         }
 
-        public MobilePhone(Manufacturer manufaturer, string model, Display display) : this(manufacturer, model)
+        public MobilePhone(MobileManufacturer manufaturer, string model, Display display) : this(manufacturer, model)
         {
            
         }
 
-        public MobilePhone(Manufacturer manufacturer, string model, Display display, Battery battery)
+        public MobilePhone(MobileManufacturer manufacturer, string model, Display display, Battery battery)
         {
 
         }
 
-        public MobilePhone(Manufacturer manufacturer, string model, Battery battery, Display display, OS os) : this(manufacturer, model)
+        public MobilePhone(MobileManufacturer manufacturer, string model, Battery battery, Display display, OS os) : this(manufacturer, model)
         {
 
         }
 
-        public Manufacturer Manufacturer
+        public MobileManufacturer Manufacturer
         {
             get
             {
@@ -136,7 +139,15 @@ namespace MobilePhoneComponents
             }
         }
 
-        public enum Manufacturer
+        public static MobilePhone MeizuMx4Pro
+        {
+            get
+            {
+                return;
+            }
+        }
+
+        public enum MobileManufacturer
         {
             HTC,
             SAMSUNG,
@@ -155,6 +166,7 @@ namespace MobilePhoneComponents
             MICROSOFT,
             HUAWEI,
             XIAOMI,
+            MEIZU,
             Other
         }
 
