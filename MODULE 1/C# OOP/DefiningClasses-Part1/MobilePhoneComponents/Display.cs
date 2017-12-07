@@ -2,15 +2,30 @@
 {
     class Display
     {
-        private Display display;
+        private DisplayType displayType;
         private double size;
-        private ColorsType numberOfColors;
 
-
-        public enum ColorsType
+        public Display()
         {
 
+        }
+
+
+        public enum DisplayType
+        {
+            CSTN,
+            TFT,
+            TFD,
+            OLED,
+            AMOLED,
+            LCD
         };
+
+        public enum TouchScreenType
+        {
+            CAPACITIVE,
+            RESISTIVE
+        }
     }
 }
 
