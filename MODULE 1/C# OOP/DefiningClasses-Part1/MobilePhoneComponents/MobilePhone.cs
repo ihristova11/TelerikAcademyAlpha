@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MobilePhoneComponents
+﻿namespace MobilePhoneComponents
 {
+    using System;
+    using System.Collections.Generic;
+
     public class MobilePhone
     {
         private static readonly MobilePhone meizuMX4Pro = new MobilePhone(MobileManufacturer.MEIZU, "MX4PRO",
-            new Display(Display.MobileDisplayType, 5.5), new Battery(Battery.MobileBatteryType.LiIon));
+            new Display(Display.MobileDisplayType.LCD, 5.5), new Battery(Battery.MobileBatteryType.LiIon, 5000));
 
         private string model;
         private MobileManufacturer manufacturer;
@@ -16,7 +16,7 @@ namespace MobilePhoneComponents
         private bool displaySet = false;
         private Battery battery;
         private bool batterySet = false;
-        private OS oS;
+        private MobileOS oS;
         private bool OSSet = false;
         private List<Call> calls = new List<Call>();
 
@@ -24,22 +24,26 @@ namespace MobilePhoneComponents
         public MobilePhone(MobileManufacturer manufacturer, string model) : base()
         {
             this.Manufacturer = manufacturer;
+            this.Model = model;
 
         }
 
-        public MobilePhone(MobileManufacturer manufaturer, string model, Display display) : this(manufacturer, model)
+        public MobilePhone(MobileManufacturer manufaturer, string model, Display display) : this(manufaturer, model)
         {
-           
+            this.Display = display;
+            this.displaySet = true;
         }
 
-        public MobilePhone(MobileManufacturer manufacturer, string model, Display display, Battery battery)
+        public MobilePhone(MobileManufacturer manufacturer, string model, Display display, Battery battery) : this(manufacturer, model, display)
         {
-
+            this.Battery = battery;
+            this.batterySet = true;
         }
 
-        public MobilePhone(MobileManufacturer manufacturer, string model, Battery battery, Display display, OS os) : this(manufacturer, model)
+        public MobilePhone(MobileManufacturer manufacturer, string model, Battery battery, Display display, MobileOS os) : this(manufacturer, model, display, battery)
         {
-
+            this.OS = os;
+            this.OSSet = true;
         }
 
         public MobileManufacturer Manufacturer
@@ -120,7 +124,7 @@ namespace MobilePhoneComponents
             }
         }
 
-        public OS OS
+        public MobileOS OS
         {
             get
             {
@@ -143,7 +147,7 @@ namespace MobilePhoneComponents
         {
             get
             {
-                return;
+                return meizuMX4Pro;
             }
         }
 
@@ -170,7 +174,7 @@ namespace MobilePhoneComponents
             Other
         }
 
-        public enum OS
+        public enum MobileOS
         {
             IOS,
             WINDOWS,

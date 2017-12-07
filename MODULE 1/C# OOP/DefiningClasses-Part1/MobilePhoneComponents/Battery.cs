@@ -1,6 +1,7 @@
 ﻿namespace MobilePhoneComponents
 {
     using System;
+
     public class Battery
     {
         private MobileBatteryType batteryType;

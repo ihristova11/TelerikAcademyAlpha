@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace MobilePhoneComponents
+﻿namespace MobilePhoneComponents
 {
+    using System;
+
     public class Display
     {
         private MobileDisplayType displayType;
