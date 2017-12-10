@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point3D", "Point3D\Point3D.csproj", "{1D46CB7E-F751-416C-B3A8-5527EB5A8007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D46CB7E-F751-416C-B3A8-5527EB5A8007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D46CB7E-F751-416C-B3A8-5527EB5A8007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D46CB7E-F751-416C-B3A8-5527EB5A8007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D46CB7E-F751-416C-B3A8-5527EB5A8007}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D868F58-BE46-4999-A17B-361BC4295260}
+	EndGlobalSection
+EndGlobal
