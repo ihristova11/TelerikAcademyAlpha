@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Battery.cs" />
+    <Compile Include="Call.cs" />
+    <Compile Include="ContactInformation.cs" />
+    <Compile Include="Display.cs" />
+    <Compile Include="MobilePhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
