@@ -24,7 +24,7 @@ namespace Cosmetics.Core.Engine
 
         public Toothpaste CreateToothpaste(string name, string brand, decimal price, GenderType gender, IList<string> ingredients)
         {
-            Toothpaste toothpaste = new Toothpaste(name, brand, price, gender, string.Join(",",ingredients));
+            Toothpaste toothpaste = new Toothpaste(name, brand, price, gender, string.Join(", ",ingredients));
             return toothpaste;
         }
 

@@ -2,6 +2,7 @@
 using Cosmetics.Common;
 using Cosmetics.Contracts;
 using System;
+using System.Text;
 
 namespace Cosmetics.Products
 {
@@ -16,23 +17,38 @@ namespace Cosmetics.Products
             Guard.WhenArgument(name.Length, "invalid length").IsLessThan(3).Throw();
             Guard.WhenArgument(name.Length, "invalid length").IsGreaterThan(10).Throw();
             Guard.WhenArgument(brand.Length, "ivalid length").IsLessThan(2).IsGreaterThan(10).Throw();
+            this.Name = name;
+            this.Brand = brand;
+            this.Price = price;
+            this.Gender = gender;
+            this.Milliliters = milliliters;
+            this.Usage = usageType;
+            
         }
 
-        public string Name => throw new NotImplementedException();
+        public string Name { get; private set; }
 
-        public string Brand => throw new NotImplementedException();
+        public string Brand { get; private set; }
 
-        public decimal Price => throw new NotImplementedException();
+        public decimal Price { get; private set; }
 
-        public GenderType Gender => throw new NotImplementedException();
+        public GenderType Gender { get; private set; }
 
-        public uint Milliliters => throw new NotImplementedException();
+        public uint Milliliters { get; private set; }
 
-        public UsageType Usage => throw new NotImplementedException();
+        public UsageType Usage { get; private set; }
 
         public string Print()
         {
-            throw new NotImplementedException();
+            var sb = new StringBuilder();
+            sb.AppendLine($"#{this.Name}");
+            sb.AppendLine($" #Price: {this.Price}");
+            sb.AppendLine($" #Gender: {this.Gender}");
+            sb.AppendLine($" #Milliliters: {this.Milliliters}");
+            sb.AppendLine($" #Usage: {this.Usage}");
+            sb.AppendLine("===");
+
+            return sb.ToString();
         }
     }
 }
