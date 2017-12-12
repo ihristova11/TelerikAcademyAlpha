@@ -59,7 +59,7 @@ namespace Cosmetics
 
             foreach (var product in this.products)
             {
-                strBuilder.AppendLine(product.Print());
+                strBuilder.Append(product.Print());
             }
 
             return strBuilder.ToString();

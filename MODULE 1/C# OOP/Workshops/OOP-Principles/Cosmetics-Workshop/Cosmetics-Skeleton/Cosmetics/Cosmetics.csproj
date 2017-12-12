@@ -48,13 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="Common\ScentType.cs" />
     <Compile Include="Common\UsageType.cs" />
     <Compile Include="Common\GenderType.cs" />
     <Compile Include="Contracts\ICategory.cs" />
+    <Compile Include="Contracts\ICreame.cs" />
     <Compile Include="Contracts\IProduct.cs" />
     <Compile Include="Contracts\IShampoo.cs" />
     <Compile Include="Contracts\IShoppingCart.cs" />
     <Compile Include="Contracts\IToothpaste.cs" />
+    <Compile Include="Products\Cream.cs" />
+    <Compile Include="Products\Product.cs" />
     <Compile Include="Products\Shampoo.cs" />
     <Compile Include="Products\Toothpaste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

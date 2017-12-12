@@ -2,7 +2,7 @@
 {
     using System;
 
-    public enum ScentTypecs
+    public enum ScentType
     {
         Vanilla,
         Lavender,
