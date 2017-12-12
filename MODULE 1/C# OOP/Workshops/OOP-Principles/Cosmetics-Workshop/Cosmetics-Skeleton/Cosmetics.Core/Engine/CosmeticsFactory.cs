@@ -34,5 +34,10 @@ namespace Cosmetics.Core.Engine
             return shoppingCart;
         }
 
+        public Cream CreateCream(string name, string brand, decimal price, GenderType gender, ScentType scent)
+        {
+            Cream cream = new Cream(name, brand, price, gender, scent);
+            return cream;
+        }
     }
 }

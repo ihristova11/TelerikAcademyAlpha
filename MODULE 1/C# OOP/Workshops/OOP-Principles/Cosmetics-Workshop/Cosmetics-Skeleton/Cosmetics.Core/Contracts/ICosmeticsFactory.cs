@@ -14,6 +14,8 @@
 
         Toothpaste CreateToothpaste(string name, string brand, decimal price, GenderType gender, IList<string> ingredients);
 
+        Cream CreateCream(string name, string brand, decimal price, GenderType gender, ScentType scent);
+
         ShoppingCart CreateShoppingCart();
     }
 }
