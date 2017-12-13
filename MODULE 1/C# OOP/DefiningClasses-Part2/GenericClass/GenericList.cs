@@ -1,6 +1,7 @@
 ﻿namespace GenericClass
 {
     using System;
+    using System.Linq;
     using System.Text;
 
     public class GenericList<T>
@@ -34,7 +35,7 @@
                 max = this.list[0];
                 foreach (var element in this.list)
                 {
-                    if(max.CompareTo(element) < 0)
+                    if (max.CompareTo(element) < 0)
                     {
                         max = element;
                     }
@@ -46,14 +47,14 @@
         public T Min()
         {
             T min = default(T);
-            
-            if(this.list.Length > 0)
+
+            if (this.list.Length > 0)
             {
                 min = this.list[0];
 
                 foreach (var element in this.list)
                 {
-                    if(min.CompareTo(element) > 0)
+                    if (min.CompareTo(element) > 0)
                     {
                         min = element;
                     }
@@ -74,6 +75,60 @@
                 CheckRange(index);
                 this.list[index] = value;
             }
+        }
+
+        public void InsertAt(int index, T element)
+        {
+            CheckRange(index);
+
+            if (this.lastIndex + 1 == index)
+            {
+                DoubleSize();
+            }
+
+            for (int ind = this.lastIndex + 1; ind > index; ind--)
+            {
+                this.list[ind] = this.list[ind - 1];
+            }
+            this.list[index] = element;
+            ++lastIndex;
+        }
+
+        public int IndexOf(T element)
+        {
+            int index = -1;
+
+            for (int i = 0; i < this.lastIndex; i++)
+            {
+                if(element.Equals(this.list[i]))
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        }
+
+        public void Clear()
+        {
+            for (int ind = 0; ind < this.lastIndex; ind++)
+            {
+                this.list[ind] = default(T);
+            }
+            this.lastIndex = -1;
+        }
+
+        public void RemoveAt(int index)
+        {
+            CheckRange(index);
+
+            for (int ind = index + 1; ind <= this.lastIndex; ind++)
+            {
+                this.list[ind - 1] = this.list[ind];
+            }
+
+            this.list[this.lastIndex--] = default(T);
         }
 
         private void DoubleSize()
