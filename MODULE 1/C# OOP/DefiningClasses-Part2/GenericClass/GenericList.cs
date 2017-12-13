@@ -1,6 +1,10 @@
 ﻿namespace GenericClass
 {
+    using System;
+    using System.Text;
+
     public class GenericList<T>
+        where T : IComparable
     {
         private T[] list;
         private int lastIndex;
@@ -13,12 +17,63 @@
 
         public void Add(T element)
         {
-            if(lastIndex + 1 == this.list.Length)
+            if (lastIndex + 1 == this.list.Length)
             {
                 DoubleSize();
             }
 
             this.list[++lastIndex] = element;
+        }
+
+        public T Max()
+        {
+            T max = default(T);
+
+            if (list.Length > 0)
+            {
+                max = this.list[0];
+                foreach (var element in this.list)
+                {
+                    if(max.CompareTo(element) < 0)
+                    {
+                        max = element;
+                    }
+                }
+            }
+            return max;
+        }
+
+        public T Min()
+        {
+            T min = default(T);
+            
+            if(this.list.Length > 0)
+            {
+                min = this.list[0];
+
+                foreach (var element in this.list)
+                {
+                    if(min.CompareTo(element) > 0)
+                    {
+                        min = element;
+                    }
+                }
+            }
+            return min;
+        }
+
+        public T this[int index]
+        {
+            get
+            {
+                CheckRange(index);
+                return this.list[index];
+            }
+            set
+            {
+                CheckRange(index);
+                this.list[index] = value;
+            }
         }
 
         private void DoubleSize()
@@ -32,6 +87,26 @@
             }
 
             this.list = newList;
+        }
+
+        private void CheckRange(int index)
+        {
+            if (index < 0 || index > this.lastIndex)
+            {
+                throw new IndexOutOfRangeException();
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+
+            for (int ind = 0; ind <= this.lastIndex; ind++)
+            {
+                result.AppendLine(String.Format("{0,-5}{1}", String.Format("[{0}]", ind), this.list[ind]));
+            }
+
+            return result.ToString().Trim();
         }
     }
 }
