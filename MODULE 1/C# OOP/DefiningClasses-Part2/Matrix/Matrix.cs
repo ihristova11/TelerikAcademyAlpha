@@ -1,7 +1,8 @@
-﻿using System;
-
-namespace Matrix
+﻿namespace Matrix
 {
+    using System;
+    using System.Text;
+
     public class Matrix<T>
         where T : IComparable
     {
@@ -110,6 +111,73 @@ namespace Matrix
             }
 
             return result;
+        }
+
+        public static Matrix<T> operator *(Matrix<T> firstMatrix, Matrix<T> secondMatrix)
+        {
+            if(firstMatrix.Rows != secondMatrix.Cols)
+            {
+                throw new Exception("The matrices cannot be multiplied.");
+            }
+
+            Matrix<T> result = new Matrix<T>(firstMatrix.Rows, firstMatrix.Cols);
+            T temp;
+
+            for (int matrixRow = 0; matrixRow < result.Rows; matrixRow++)
+            {
+                for (int matrixCol = 0; matrixCol < result.Cols; matrixCol++)
+                {
+                    temp = (dynamic)0;
+
+                    for (int index = 0; index < result.Cols; index++)
+                    {
+                        temp += (dynamic)firstMatrix[matrixRow, matrixCol] * secondMatrix[matrixRow, matrixCol];
+                    }
+                    result[matrixRow, matrixCol] = (dynamic)temp;
+                }
+            }
+            return result;
+        }
+
+        public static bool OverrideBool(Matrix<T> matrix)
+        {
+            for (int row = 0; row < matrix.Rows; row++)
+            {
+                for (int col = 0; col < matrix.Cols; col++)
+                {
+                    if(matrix[row, col] != (dynamic)0)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static bool operator true(Matrix<T> matrix)
+        {
+            return OverrideBool(matrix);
+        }
+
+        public static bool operator false(Matrix<T> matrix)
+        {
+            return OverrideBool(matrix);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+
+            for (int row = 0; row < this.Rows; row++)
+            {
+                for (int col = 0; col < this.Cols; col++)
+                {
+                    result.Append(this.matrix[row, col] + "\t");
+                }
+                result.AppendLine();
+            }
+
+            return result.ToString();
         }
     }
 }
