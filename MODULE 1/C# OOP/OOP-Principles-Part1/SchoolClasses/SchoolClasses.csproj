@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Schoolcs.cs" />
     <Compile Include="StudentsClass.cs" />
     <Compile Include="Discipline.cs" />
     <Compile Include="IPerson.cs" />
