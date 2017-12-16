@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using Academy.Models.Contracts;
+using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
@@ -21,10 +22,7 @@ namespace Academy.Models
             get { return this.name; }
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < 5 || value.Length > 30)
-                {
-                    throw new ArgumentException("Lecture's name should be between 5 and 30 symbols long!");
-                }
+               Validator.CorrectName(value, Constants.MinCourseNameLength, Constants.MaxCourseNameLength, Constants.InvalidLectureName);
 
                 this.name = value;
             }

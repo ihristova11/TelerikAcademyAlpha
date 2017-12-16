@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
@@ -39,10 +40,7 @@ namespace Academy.Models
 
             set
             {
-                if (value < 1 || value > 7)
-                {
-                    throw new ArgumentException("The number of lectures per week must be between 1 and 7!");
-                }
+                Validator.CorrectLecturePerWeek(value.ToString());
 
                 this.lecturesPerWeek = value;
             }

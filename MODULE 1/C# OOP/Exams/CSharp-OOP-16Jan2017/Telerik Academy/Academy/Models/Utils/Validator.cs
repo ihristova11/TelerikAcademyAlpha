@@ -21,12 +21,12 @@ namespace Academy.Models.Utilities
             }
             catch (Exception e)
             {
-                throw new ArgumentException(Constants.CoursecorrectLecturePerWeek);
+                throw new ArgumentException(Constants.InvalidLecturesPerWeek);
             };
 
-            if (res < 1 || res > 7)
+            if (res < Constants.MinLecturesPerWeek || res > Constants.MaxLecturesPerWeek)
             {
-                throw new ArgumentException(Constants.CoursecorrectLecturePerWeek);
+                throw new ArgumentException(Constants.InvalidLecturesPerWeek);
             }
 
             return res;
