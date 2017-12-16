@@ -8,6 +8,8 @@ namespace Academy.Models
     public class CourseResult : ICourseResult
     {
         private float examPoints;
+        private float coursePoints;
+
         public ICourse Course { get; }
 
         public float ExamPoints
@@ -24,7 +26,21 @@ namespace Academy.Models
             }
 
         }
-        public float CoursePoints { get; }
+
+        public float CoursePoints
+        {
+            get { return this.coursePoints; }
+            private set
+            {
+                if (value < 0 || value > 125)
+                {
+                    throw new ArgumentException("Course result's course points should be between 0 and 125!");
+                }
+
+                this.coursePoints = value;
+            }
+            
+        }
         public Grade Grade { get; }
     }
 }
