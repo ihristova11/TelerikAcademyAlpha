@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Academy.Models.Contracts;
 using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
-    public class VideoResource : ILectureResource
+    public abstract class Resource : ILectureResource
     {
         private string name;
         private string url;
 
-        public string Name {
+        public string Name
+        {
             get { return this.name; }
             set
             {
@@ -18,7 +23,8 @@ namespace Academy.Models
                 this.name = value;
             }
         }
-        public string Url {
+        public string Url
+        {
             get { return this.url; }
             set
             {

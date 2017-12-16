@@ -68,7 +68,6 @@
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\ConsoleReader.cs" />
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
-    <Compile Include="Models\Contracts\IResource.cs" />
     <Compile Include="Models\Contracts\IUser.cs" />
     <Compile Include="Models\Contracts\ICourse.cs" />
     <Compile Include="Models\Contracts\ILecture.cs" />
@@ -84,6 +83,7 @@
     <Compile Include="Models\HomeworkResource.cs" />
     <Compile Include="Models\Lecture.cs" />
     <Compile Include="Models\PresentationResource.cs" />
+    <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />

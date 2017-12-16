@@ -23,6 +23,10 @@
         public const int MaxExamPoints = 1000;
         public const int MinCoursePoints = 0;
         public const int MaxCoursePoints = 125;
+        public const int MinResourceName = 3;
+        public const int MaxResourceName = 15;
+        public const int MinUrl = 5;
+        public const int MaxUrl = 150;
 
         public const int MinExamPassedPoints = 30;
         public const int MinCoursePassedPoints = 45;
