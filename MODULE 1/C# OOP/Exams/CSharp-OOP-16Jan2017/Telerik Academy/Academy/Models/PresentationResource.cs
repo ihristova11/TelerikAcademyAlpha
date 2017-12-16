@@ -5,9 +5,9 @@ namespace Academy.Models
 {
     public class PresentationResource : Resource, ILectureResource
     {
-        public PresentationResource(string type, string name, string url) : base(type, name, url)
+        public PresentationResource(string name, string url) : base(name, url)
         {
-            this.Type = type;
+            base.Type = "Presentation";
         }
     }
 }

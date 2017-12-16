@@ -64,13 +64,13 @@ namespace Academy.Core.Factories
             switch (type)
             {
                 case "video":
-                    return new VideoResource(type, name, url);
+                    return new VideoResource(name, url,currentDate);
                 case "presentation":
-                    return new PresentationResource(type, name, url);
+                    return new PresentationResource(name, url);
                 case "demo":
-                    return new DemoResource(type, name, url);
+                    return new DemoResource( name, url);
                 case "homework":
-                    return new HomeworkResource(type, name, url);
+                    return new HomeworkResource(name, url, currentDate);
                 default: throw new ArgumentException("Invalid lecture resource type");
             }
 

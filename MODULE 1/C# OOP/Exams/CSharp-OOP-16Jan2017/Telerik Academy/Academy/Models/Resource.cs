@@ -10,14 +10,14 @@ namespace Academy.Models
 {
     public abstract class Resource : ILectureResource
     {
-        private const string PatternToPrint = "\n* Resource: \n - Name: {0}\n - Url: {1}\n - Type: {2}";
+        private const string PatternToPrint = "    * Resource:\n     - Name: {0}\n     - Url: {1}\n     - Type: {2}";
 
         private string name;
         private string url;
 
-        public Resource(string type, string name, string url)
+        public Resource(string name, string url)
         {
-            this.Type = type;
+            //this.Type = type;
             this.Name = name;
             this.Url = url;
         }

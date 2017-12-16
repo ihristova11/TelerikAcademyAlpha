@@ -7,17 +7,19 @@ namespace Academy.Models
 {
     public class VideoResource : Resource, ILectureResource
     {
-        private const string PatternToPrint = "\n* Resource: \n - Name: {0}\n - Url: {1}\n - Type: {2} - Update date: {3}";
+        private const string PatternToPrint = "\n{0}\n     - Uploaded on: {1}";
 
-        public VideoResource(string type, string name, string url) : base(type, name, url)
+        public VideoResource(string name, string url, DateTime uplodedOn) : base(name, url)
         {
+            base.Type = "Video";
+            UploadedOn = uplodedOn;
         }
 
-        public DateTime UpdatedOn { get; set; }
+        public DateTime UploadedOn { get; private set; }
 
         public override string ToString()
         {
-            return string.Format(PatternToPrint, this.Name, this.Url, this.Type, this.UpdatedOn);
+            return string.Format(PatternToPrint, base.ToString(), UploadedOn);
         }
     }
 }

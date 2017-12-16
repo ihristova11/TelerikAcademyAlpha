@@ -66,8 +66,8 @@ namespace Academy.Models
                 ? NoLecture
                 : string.Join("\n", Lectures);
 
-            return string.Format(PatternToPrint, this.Name, this.LecturesPerWeek, this.StartingDate, this.EndingDate,
-                this.OnsiteStudents.Count, this.OnlineStudents.Count, lecture);
+            return string.Format(PatternToPrint, this.Name, this.LecturesPerWeek, this.StartingDate, this.EndingDate, lecture,
+                this.OnsiteStudents.Count, this.OnlineStudents.Count);
         }
     }
 }
