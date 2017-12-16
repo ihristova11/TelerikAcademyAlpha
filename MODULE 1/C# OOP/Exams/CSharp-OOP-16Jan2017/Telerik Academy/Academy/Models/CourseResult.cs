@@ -42,5 +42,10 @@ namespace Academy.Models
             
         }
         public Grade Grade { get; }
+
+        public override string ToString()
+        {
+            return $"* {this.Course.Name}: Points: - {this.CoursePoints}, Grade: - {this.Grade}";
+        }
     }
 }
