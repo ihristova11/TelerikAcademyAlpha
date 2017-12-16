@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using Academy.Models.Contracts;
 
 namespace Academy.Models
@@ -12,7 +13,7 @@ namespace Academy.Models
         public Trainer(string username, string technologies)
         {
             this.Username = username;
-            this.Technologies = technologies.Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries).ToList();
+            this.Technologies = technologies.Split(',').Select(x => x.Trim()).ToList();
         }
 
         public string Username
@@ -20,10 +21,10 @@ namespace Academy.Models
             get { return this.username; }
             set
             {
-                if (value.Length < 3 || value.Length > 16 || value == null || value == string.Empty)
-                {
-                    throw new ArgumentException("User's username should be between 3 and 16 symbols long!");
-                }
+                //if (value.Length < 3 || value.Length > 16)
+                //{
+                //    throw new ArgumentException("User's username should be between 3 and 16 symbols long!");
+                //}
 
                 this.username = value;
             }

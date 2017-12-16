@@ -53,8 +53,7 @@ namespace Academy.Core.Factories
 
         public ILecture CreateLecture(string name, string date, ITrainer trainer)
         {
-            // TODO: Implement this
-            throw new NotImplementedException("Lecture class not attached to factory.");
+            return new Lecture(name, date, trainer);
         }
 
         public ILectureResource CreateLectureResource(string type, string name, string url)

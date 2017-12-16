@@ -65,7 +65,7 @@ namespace Academy.Models
         public override string ToString()
         {
             string msg = "  * There are no lectures in this course!";
-            return $"* Course\n - Name: {this.Name}\n - Lectures per week: {this.LecturesPerWeek}\n - Starting date: {this.StartingDate}\n - Ending date: {this.EndingDate}\n - Lectures: " + msg;
+            return $"* Course\n - Name: {this.Name}\n - Lectures per week: {this.LecturesPerWeek}\n - Starting date: {this.StartingDate}\n - Ending date: {this.EndingDate}\n - Lectures: \n" + msg;
         }
     }
 }

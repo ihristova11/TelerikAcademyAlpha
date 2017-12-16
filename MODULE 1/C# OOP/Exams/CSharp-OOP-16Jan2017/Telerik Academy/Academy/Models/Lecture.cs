@@ -7,7 +7,15 @@ namespace Academy.Models
 {
     public class Lecture : ILecture
     {
-        private string name; 
+        private string name;
+
+        public Lecture(string name, string date, ITrainer trainer)
+        {
+            this.Name = name;
+            this.Date = DateTime.Parse(date);
+            this.Trainer = trainer;
+            this.Resources = new List<ILectureResource>();
+        }
 
         public string Name {
             get { return this.name; }
