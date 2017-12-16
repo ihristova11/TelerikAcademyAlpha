@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Threading;
 using Academy.Models.Contracts;
 using Academy.Models.Utilities;
+using Microsoft.SqlServer.Server;
 
 namespace Academy.Models
 {
     public class Lecture : ILecture
     {
+        private const string PatternToPrint = "  * Lecture:\n   - Name: {0}\n   - Date: {1}\n   - Trainer username: {2}\n   - Resources:{3}";
+        private const string NoResource = "\n    * There are no resources in this lecture.";
+
         private string name;
 
         public Lecture(string name, string date, ITrainer trainer)
@@ -18,11 +22,12 @@ namespace Academy.Models
             this.Resources = new List<ILectureResource>();
         }
 
-        public string Name {
+        public string Name
+        {
             get { return this.name; }
             set
             {
-               Validator.CorrectName(value, Constants.MinCourseNameLength, Constants.MaxCourseNameLength, Constants.InvalidLectureName);
+                Validator.CorrectName(value, Constants.MinCourseNameLength, Constants.MaxCourseNameLength, Constants.InvalidLectureName);
 
                 this.name = value;
             }
@@ -33,7 +38,7 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            return $"* Lecture:\n - Name: {this.Name}\n - Date: {this.Date}\n - Trainer username: {this.Trainer.Username}\n - Resourses: ";
+            return string.Format(PatternToPrint, this.Name, this.Date, this.Trainer.Username, this.Resources);
         }
     }
 }

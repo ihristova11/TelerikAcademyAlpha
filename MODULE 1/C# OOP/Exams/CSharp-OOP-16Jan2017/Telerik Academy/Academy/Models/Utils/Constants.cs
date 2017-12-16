@@ -10,6 +10,8 @@
         public const string InvalidLectureName = "Lecture's name should be between 5 and 30 symbols long!";
         public const string InvalidResourceName = "Resource name should be between 3 and 15 symbols long!";
         public const string InvalidResourceURL = "Resource url should be between 5 and 150 symbols long!";
+        public const string InvalidExamPoints = "Course result's exam points should be between 0 and 1000!";
+        public const string InvalidCoursePoints = "Course result's course points should be between 0 and 125!";
 
         public const int MinUserNameLength = 3;
         public const int MaxUserNameLength = 16;
@@ -17,6 +19,10 @@
         public const int MaxCourseNameLength = 45;
         public const int MinLecturesPerWeek = 1;
         public const int MaxLecturesPerWeek = 7;
+        public const int MinExamPoints = 0;
+        public const int MaxExamPoints = 1000;
+        public const int MinCoursePoints = 0;
+        public const int MaxCoursePoints = 125;
 
     }
 }

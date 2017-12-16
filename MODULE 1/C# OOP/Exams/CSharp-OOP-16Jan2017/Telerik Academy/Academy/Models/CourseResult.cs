@@ -1,12 +1,15 @@
 ﻿using System;
 using Academy.Models.Contracts;
 using Academy.Models.Enums;
+using Academy.Models.Utilities;
 using Academy.Models.Utils.Contracts;
 
 namespace Academy.Models
 {
     public class CourseResult : ICourseResult
     {
+        private const string PatternToPrint = "* {0}: Points - {1}, Grade - {2}";
+
         private float examPoints;
         private float coursePoints;
 
@@ -17,11 +20,8 @@ namespace Academy.Models
             get { return this.examPoints; }
             private set
             {
-                if (value < 0 || value > 1000)
-                {
-                    throw new ArgumentException("Course result's exam points should be between 0 and 1000!");
-                }
-
+                Validator.ValidatePoints(value,Constants.MinExamPoints, Constants.MaxExamPoints, Constants.InvalidExamPoints);
+                
                 this.examPoints = value;
             }
 
@@ -32,10 +32,7 @@ namespace Academy.Models
             get { return this.coursePoints; }
             private set
             {
-                if (value < 0 || value > 125)
-                {
-                    throw new ArgumentException("Course result's course points should be between 0 and 125!");
-                }
+                Validator.ValidatePoints(value, Constants.MinCoursePoints, Constants.MaxCoursePoints, Constants.InvalidCoursePoints);
 
                 this.coursePoints = value;
             }
@@ -45,7 +42,7 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            return $"* {this.Course.Name}: Points: - {this.CoursePoints}, Grade: - {this.Grade}";
+            return string.Format(PatternToPrint, this.CoursePoints, this.Grade);
         }
     }
 }

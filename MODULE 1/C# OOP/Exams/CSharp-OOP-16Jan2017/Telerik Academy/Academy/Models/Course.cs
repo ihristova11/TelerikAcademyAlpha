@@ -8,6 +8,9 @@ namespace Academy.Models
 
     public class Course : ICourse
     {
+        private const string PatternToPrint = "* Course:\n - Name: {0}\n - Lectures per week: {1}\n - Starting date: {2}\n - Ending date: {3}\n - Onsite students: {5}\n - Online students: {6}\n - Lectures:\n{4}";
+        private const string NoLecture = "  * There are no lectures in this course!";
+
         private string name;
         private int lecturesPerWeek;
         private DateTime endingDate;
@@ -27,10 +30,7 @@ namespace Academy.Models
             get { return this.name; }
             set
             {
-                if (value.Length < 3 || value.Length > 45)
-                {
-                    throw new ArgumentException("The name of the course must be between 3 and 45 symbols!");
-                }
+                Validator.CorrectName(value, Constants.MinCourseNameLength, Constants.MaxCourseNameLength, Constants.InvalidCourseName);
 
                 this.name = value;
             }
@@ -62,8 +62,8 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            string msg = "  * There are no lectures in this course!";
-            return $"* Course\n - Name: {this.Name}\n - Lectures per week: {this.LecturesPerWeek}\n - Starting date: {this.StartingDate}\n - Ending date: {this.EndingDate}\n - Lectures: \n" + msg;
+            return string.Format(PatternToPrint, this.Name, this.LecturesPerWeek, this.StartingDate, this.EndingDate,
+                this.OnsiteStudents, this.OnlineStudents, this.Lectures);
         }
     }
 }

@@ -47,5 +47,13 @@ namespace Academy.Models.Utilities
 
             return result;
         }
+
+        public static void ValidatePoints(float points, int min, int max, string message)
+        {
+            if (points < min || points > max)
+            {
+                throw new ArgumentException(message);
+            }
+        }
     }
 }

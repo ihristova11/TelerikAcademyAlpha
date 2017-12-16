@@ -26,7 +26,7 @@ namespace Academy.Models
             get { return this.username; }
             set
             {
-                Validator.CorrectName(value, Constants.MinUserNameLength, Constants.MaxUserNameLength, Constants.UserCorrectName);
+                Validator.CorrectName(value, Constants.MinUserNameLength, Constants.MaxUserNameLength, Constants.InvalidUserName);
 
                 this.username = value;
             }
@@ -37,7 +37,7 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            return $"* Student:\n - Username: {this.Username}\n - Track: {this.Track}\n - Course results: {this.CourseResults}";
+            return string.Format(PatternToPrint, this.Username, this.CourseResults);
         }
     }
 }

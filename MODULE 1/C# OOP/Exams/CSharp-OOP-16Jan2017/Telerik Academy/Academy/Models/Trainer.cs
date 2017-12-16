@@ -24,7 +24,7 @@ namespace Academy.Models
             get { return this.username; }
             set
             {
-                Validator.CorrectName(value, Constants.MinUserNameLength , Constants.MaxUserNameLength, Constants.UserCorrectName);
+                Validator.CorrectName(value, Constants.MinUserNameLength , Constants.MaxUserNameLength, Constants.InvalidUserName);
                 this.username = value;
             }
         }
@@ -33,9 +33,9 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            var techno = string.Join("; ", this.Technologies);
+            var technologies = string.Join("; ", this.Technologies);
 
-            return string.Format(PatternToPrint, Username, techno);
+            return string.Format(PatternToPrint, Username, technologies);
         }
     }
 }
