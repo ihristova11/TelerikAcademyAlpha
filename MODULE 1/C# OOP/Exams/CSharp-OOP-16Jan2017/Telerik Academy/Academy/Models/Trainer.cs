@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Academy.Models.Contracts;
 
 namespace Academy.Models
@@ -10,7 +11,8 @@ namespace Academy.Models
 
         public Trainer(string username, string technologies)
         {
-            
+            this.Username = username;
+            this.Technologies = technologies.Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries).ToList();
         }
 
         public string Username

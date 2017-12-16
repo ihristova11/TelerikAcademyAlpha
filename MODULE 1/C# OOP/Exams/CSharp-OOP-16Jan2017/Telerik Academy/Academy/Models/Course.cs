@@ -11,6 +11,16 @@ namespace Academy.Models
         private int lecturesPerWeek;
         private DateTime endingDate;
 
+        public Course(string name, string lecturesPerWeek, string startingDate)
+        {
+            this.Name = name;
+            this.LecturesPerWeek = int.Parse(lecturesPerWeek);
+            this.StartingDate = DateTime.Parse(startingDate);
+            this.OnsiteStudents = new List<IStudent>();
+            this.OnlineStudents = new List<IStudent>();
+            this.Lectures = new List<ILecture>();
+        }
+
         public string Name
         {
             get { return this.name; }

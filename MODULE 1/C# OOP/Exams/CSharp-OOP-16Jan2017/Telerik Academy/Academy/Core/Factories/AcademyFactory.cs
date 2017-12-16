@@ -43,14 +43,12 @@ namespace Academy.Core.Factories
 
         public ITrainer CreateTrainer(string username, string technologies)
         {
-            // TODO: Implement this
-            throw new NotImplementedException("Trainer class not attached to factory.");
+            return new Trainer(username, technologies);
         }
 
         public ICourse CreateCourse(string name, string lecturesPerWeek, string startingDate)
         {
-            // TODO: Implement this
-            throw new NotImplementedException("Course class not attached to factory.");
+            return new Course(name, lecturesPerWeek, startingDate);
         }
 
         public ILecture CreateLecture(string name, string date, ITrainer trainer)
