@@ -3,20 +3,10 @@ using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
-    public class HomeworkResource : ILectureResource
+    public class HomeworkResource : Resource, ILectureResource
     {
-        private string name;
-
-        public string Name
+        public HomeworkResource(string type, string name, string url) : base(type, name, url)
         {
-            get { return this.name; }
-            set
-            {
-                Validator.CorrectName(value, Constants.MinResourceName, Constants.MaxResourceName, Constants.InvalidResourceName);
-
-                this.name = value;
-            }
         }
-        public string Url { get; set; }
     }
 }

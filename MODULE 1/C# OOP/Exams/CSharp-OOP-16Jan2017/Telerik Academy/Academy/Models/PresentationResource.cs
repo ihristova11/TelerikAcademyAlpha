@@ -3,20 +3,11 @@ using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
-    public class PresentationResource : ILectureResource
+    public class PresentationResource : Resource, ILectureResource
     {
-        private string name;
-
-        public string Name
+        public PresentationResource(string type, string name, string url) : base(type, name, url)
         {
-            get { return this.name; }
-            set
-            {
-                Validator.CorrectName(value, Constants.MinResourceName, Constants.MaxResourceName, Constants.InvalidResourceName);
-
-                this.name = value;
-            }
+            this.Type = type;
         }
-        public string Url { get; set; }
     }
 }

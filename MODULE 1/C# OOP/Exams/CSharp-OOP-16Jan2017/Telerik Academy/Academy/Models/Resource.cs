@@ -10,8 +10,17 @@ namespace Academy.Models
 {
     public abstract class Resource : ILectureResource
     {
+        private const string PatternToPrint = "\n* Resource: \n - Name: {0}\n - Url: {1}\n - Type: {2}";
+
         private string name;
         private string url;
+
+        public Resource(string type, string name, string url)
+        {
+            this.Type = type;
+            this.Name = name;
+            this.Url = url;
+        }
 
         public string Name
         {
@@ -32,6 +41,13 @@ namespace Academy.Models
 
                 this.url = value;
             }
+        }
+
+        public string Type { get; protected set; }
+
+        public override string ToString()
+        {
+            return string.Format(PatternToPrint, this.Name, this.Url, this.Type);
         }
     }
 }

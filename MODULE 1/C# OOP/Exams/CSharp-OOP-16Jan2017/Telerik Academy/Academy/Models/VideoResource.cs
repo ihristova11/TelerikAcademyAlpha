@@ -1,31 +1,23 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Academy.Models.Contracts;
 using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
-    public class VideoResource : ILectureResource
+    public class VideoResource : Resource, ILectureResource
     {
-        private string name;
-        private string url;
+        private const string PatternToPrint = "\n* Resource: \n - Name: {0}\n - Url: {1}\n - Type: {2} - Update date: {3}";
 
-        public string Name {
-            get { return this.name; }
-            set
-            {
-                Validator.CorrectName(value, Constants.MinResourceName, Constants.MaxResourceName, Constants.InvalidResourceName);
-
-                this.name = value;
-            }
+        public VideoResource(string type, string name, string url) : base(type, name, url)
+        {
         }
-        public string Url {
-            get { return this.url; }
-            set
-            {
-                Validator.CorrectName(value, Constants.MinUrl, Constants.MaxUrl, Constants.InvalidResourceURL);
 
-                this.url = value;
-            }
+        public DateTime UpdatedOn { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format(PatternToPrint, this.Name, this.Url, this.Type, this.UpdatedOn);
         }
     }
 }
