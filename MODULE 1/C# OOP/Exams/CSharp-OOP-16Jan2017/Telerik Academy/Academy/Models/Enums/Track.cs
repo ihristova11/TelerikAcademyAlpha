@@ -2,5 +2,8 @@
 {
     public enum Track
     {
+        Frontend,
+        Dev,
+        None
     }
 }

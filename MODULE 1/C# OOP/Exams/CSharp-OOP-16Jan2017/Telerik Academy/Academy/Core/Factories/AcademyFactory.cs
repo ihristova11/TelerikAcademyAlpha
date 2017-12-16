@@ -38,8 +38,7 @@ namespace Academy.Core.Factories
 
         public IStudent CreateStudent(string username, string track)
         {
-            // TODO: Implement this
-            throw new NotImplementedException("Student class not attached to factory.");
+            return new Student(username, track);
         }
 
         public ITrainer CreateTrainer(string username, string technologies)

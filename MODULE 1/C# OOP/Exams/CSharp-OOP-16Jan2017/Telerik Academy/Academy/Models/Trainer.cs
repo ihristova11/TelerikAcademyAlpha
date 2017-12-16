@@ -8,7 +8,13 @@ namespace Academy.Models
     {
         private string username;
 
-        public string Username {
+        public Trainer(string username, string technologies)
+        {
+            
+        }
+
+        public string Username
+        {
             get { return this.username; }
             set
             {

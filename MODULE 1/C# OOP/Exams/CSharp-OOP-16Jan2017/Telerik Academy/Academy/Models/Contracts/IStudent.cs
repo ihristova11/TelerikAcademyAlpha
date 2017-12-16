@@ -1,5 +1,6 @@
 ﻿using Academy.Models.Utils.Contracts;
 using System.Collections.Generic;
+using Academy.Models.Enums;
 
 namespace Academy.Models.Contracts
 {

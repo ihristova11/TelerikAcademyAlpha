@@ -77,7 +77,9 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enums\Grade.cs" />
     <Compile Include="Models\Enums\Initiative.cs" />
+    <Compile Include="Models\Enums\Track.cs" />
     <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\Utils\Contracts\ICourseResult.cs" />
     <Compile Include="Models\Utils\Contracts\ILectureResource.cs" />
