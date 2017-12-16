@@ -20,7 +20,7 @@ namespace Academy.Models
             this.CoursePoints = float.Parse(coursePoints);
         }
 
-        public ICourse Course { get; }
+        public ICourse Course { get; set; }
 
         public float ExamPoints
         {
@@ -28,7 +28,7 @@ namespace Academy.Models
             private set
             {
                 Validator.ValidatePoints(value,Constants.MinExamPoints, Constants.MaxExamPoints, Constants.InvalidExamPoints);
-                
+                SetGrade(value);
                 this.examPoints = value;
             }
         }
@@ -39,7 +39,7 @@ namespace Academy.Models
             private set
             {
                 Validator.ValidatePoints(value, Constants.MinCoursePoints, Constants.MaxCoursePoints, Constants.InvalidCoursePoints);
-
+                SetGrade(value);
                 this.coursePoints = value;
             }
             
@@ -49,8 +49,9 @@ namespace Academy.Models
         private void SetGrade(float point)
         {
             this.Grade = Grade.Failed;
-            if (point >= Constants.MinExamExcellentPoints || CoursePoints >= Constants.MinCourseExcellentPoints) { this.Grade = Grade.Excellent; };
-            if (point >= Constants.MinExamPassedPoints || CoursePoints >= Constants.MinCoursePassedPoints) { this.Grade = Grade.Passed; };
+            if (point >= 30 || CoursePoints >= 45) { this.Grade = Grade.Passed; };
+            if (point >= 65 || CoursePoints >= 75) { this.Grade = Grade.Excellent; };
+
         }
 
         public override string ToString()

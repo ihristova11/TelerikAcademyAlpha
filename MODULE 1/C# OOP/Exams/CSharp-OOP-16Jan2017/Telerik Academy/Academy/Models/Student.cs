@@ -37,7 +37,10 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            return string.Format(PatternToPrint, this.Username, this.CourseResults, this.CourseResults);
+            var courseResult = CourseResults.Count == 0
+                ? NoCourseResult
+                : string.Join("\n", CourseResults);
+            return string.Format(PatternToPrint, this.Username, this.Track, courseResult);
         }
     }
 }
