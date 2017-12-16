@@ -1,6 +1,10 @@
-﻿namespace Academy.Models
+﻿using Academy.Models.Contracts;
+
+namespace Academy.Models
 {
-    public class VideoResource
+    public class VideoResource : IResource
     {
+        public string Name { get; set; }
+        public string Url { get; set; }
     }
 }
