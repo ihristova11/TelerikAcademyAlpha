@@ -12,7 +12,7 @@ namespace Academy.Models
             get { return this.username; }
             set
             {
-                if (value.Length < 3 || value.Length > 16 || value == null)
+                if (value.Length < 3 || value.Length > 16 || value == null || value == string.Empty)
                 {
                     throw new ArgumentException("User's username should be between 3 and 16 symbols long!");
                 }
