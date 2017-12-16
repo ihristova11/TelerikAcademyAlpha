@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security;
 using Academy.Models.Contracts;
+using Academy.Models.Utilities;
 
 namespace Academy.Models
 {
     public class Trainer : ITrainer
     {
         private string username;
+
+        private const string PatternToPrint = "* Trainer:\n - Username: {0}\n - Technologies: {1}";
 
         public Trainer(string username, string technologies)
         {
@@ -21,11 +24,7 @@ namespace Academy.Models
             get { return this.username; }
             set
             {
-                //if (value.Length < 3 || value.Length > 16)
-                //{
-                //    throw new ArgumentException("User's username should be between 3 and 16 symbols long!");
-                //}
-
+                Validator.CorrectName(value, Constants.MinUserNameLength , Constants.MaxUserNameLength, Constants.UserCorrectName);
                 this.username = value;
             }
         }
@@ -34,8 +33,9 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            string technologies = string.Join("; ", this.Technologies);
-            return $"* Trainer:\n - Username: {this.Username}\n - Technologies: " + technologies;
+            var techno = string.Join("; ", this.Technologies);
+
+            return string.Format(PatternToPrint, Username, techno);
         }
     }
 }

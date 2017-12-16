@@ -83,8 +83,10 @@
     <Compile Include="Models\Season.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />
+    <Compile Include="Models\Utils\Constants.cs" />
     <Compile Include="Models\Utils\Contracts\ICourseResult.cs" />
     <Compile Include="Models\Utils\Contracts\ILectureResource.cs" />
+    <Compile Include="Models\Utils\Validator.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

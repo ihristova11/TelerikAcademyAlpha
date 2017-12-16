@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Academy.Models.Contracts;
 using Academy.Models.Enums;
+using Academy.Models.Utilities;
 using Academy.Models.Utils.Contracts;
 
 namespace Academy.Models
@@ -10,6 +11,9 @@ namespace Academy.Models
     {
         private string username;
 
+        private const string PatternToPrint = "* Student:\n - Username: {0}\n - Track: {1}\n - Course results:\n  {2}";
+        private const string NoCourseResult = "* User has no course results!";
+
         public Student(string username, string track)
         {
             this.Username = username;
@@ -17,15 +21,15 @@ namespace Academy.Models
             this.CourseResults = new List<ICourseResult>();
         }
 
-        public string Username {
+        public string Username
+        {
             get { return this.username; }
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < 3 || value.Length > 16)
-                {
-                    throw new ArgumentException("User's username should be between 3 and 16 symbols long!");
-                }
-        }
+                Validator.CorrectName(value, Constants.MinUserNameLength, Constants.MaxUserNameLength, Constants.UserCorrectName);
+
+                this.username = value;
+            }
         }
         public Track Track { get; set; }
 
