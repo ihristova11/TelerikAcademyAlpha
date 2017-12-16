@@ -62,8 +62,12 @@ namespace Academy.Models
 
         public override string ToString()
         {
+            var lecture = this.Lectures.Count == 0
+                ? NoLecture
+                : string.Join("\n", Lectures);
+
             return string.Format(PatternToPrint, this.Name, this.LecturesPerWeek, this.StartingDate, this.EndingDate,
-                this.OnsiteStudents, this.OnlineStudents, this.Lectures);
+                this.OnsiteStudents.Count, this.OnlineStudents.Count, lecture);
         }
     }
 }

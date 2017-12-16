@@ -24,5 +24,9 @@
         public const int MinCoursePoints = 0;
         public const int MaxCoursePoints = 125;
 
+        public const int MinExamPassedPoints = 30;
+        public const int MinCoursePassedPoints = 45;
+        public const int MinExamExcellentPoints = 65;
+        public const int MinCourseExcellentPoints = 75;
     }
 }

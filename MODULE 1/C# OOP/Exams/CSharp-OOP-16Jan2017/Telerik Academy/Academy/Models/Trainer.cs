@@ -35,7 +35,7 @@ namespace Academy.Models
         {
             var technologies = string.Join("; ", this.Technologies);
 
-            return string.Format(PatternToPrint, Username, technologies);
+            return string.Format(PatternToPrint, this.Username, technologies);
         }
     }
 }

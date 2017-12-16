@@ -38,7 +38,11 @@ namespace Academy.Models
 
         public override string ToString()
         {
-            return string.Format(PatternToPrint, this.Name, this.Date, this.Trainer.Username, this.Resources);
+            var resource = Resources.Count == 0
+                ? NoResource
+                : string.Join("\n", Resources);
+
+            return string.Format(PatternToPrint, this.Name, this.Date, this.Trainer.Username, resource);
         }
     }
 }

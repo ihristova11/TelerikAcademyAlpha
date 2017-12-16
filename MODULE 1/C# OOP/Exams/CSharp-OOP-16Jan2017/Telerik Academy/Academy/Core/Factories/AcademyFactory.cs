@@ -76,8 +76,7 @@ namespace Academy.Core.Factories
 
         public ICourseResult CreateCourseResult(ICourse course, string examPoints, string coursePoints)
         {
-            // TODO: Implement this
-            throw new NotImplementedException("CourseResult class not attached to factory.");
+            return new CourseResult(course, examPoints, coursePoints);
         }
     }
 }

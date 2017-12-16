@@ -13,6 +13,13 @@ namespace Academy.Models
         private float examPoints;
         private float coursePoints;
 
+        public CourseResult(ICourse course, string examPoints, string coursePoints)
+        {
+            this.Course = course;
+            this.ExamPoints = float.Parse(examPoints);
+            this.CoursePoints = float.Parse(coursePoints);
+        }
+
         public ICourse Course { get; }
 
         public float ExamPoints
@@ -24,7 +31,6 @@ namespace Academy.Models
                 
                 this.examPoints = value;
             }
-
         }
 
         public float CoursePoints
@@ -38,11 +44,18 @@ namespace Academy.Models
             }
             
         }
-        public Grade Grade { get; }
+        public Grade Grade { get; set; }
+
+        private void SetGrade(float point)
+        {
+            this.Grade = Grade.Failed;
+            if (point >= Constants.MinExamExcellentPoints || CoursePoints >= Constants.MinCourseExcellentPoints) { this.Grade = Grade.Excellent; };
+            if (point >= Constants.MinExamPassedPoints || CoursePoints >= Constants.MinCoursePassedPoints) { this.Grade = Grade.Passed; };
+        }
 
         public override string ToString()
         {
-            return string.Format(PatternToPrint, this.CoursePoints, this.Grade);
+            return string.Format(PatternToPrint,this.Course.Name, this.CoursePoints, this.Grade);
         }
     }
 }
