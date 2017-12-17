@@ -15,7 +15,15 @@ namespace AcademyRPG
         public int DefensePoints { get; }
         public int GetTargetIndex(List<WorldObject> availableTargets)
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < availableTargets.Count; i++)
+            {
+                if (availableTargets[i].Owner != this.Owner && availableTargets[i].Owner != 0)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
     }
 }
