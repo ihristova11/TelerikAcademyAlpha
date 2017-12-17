@@ -1,24 +1,35 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace AcademyRPG
 {
     public class Giant : Character, IFighter, IGatherer
     {
-        public Giant(string name, Point position, int owner) : base(name, position, 0)
+        private int currentAttackPoints = 150;
+
+        public Giant(string name, Point position)
+            : base(name, position, 0)
         {
-            this.AttackPoints = 150;
-            this.DefensePoints = 80;
-            base.HitPoints = 200;
+            this.HitPoints = 200;
         }
 
-        public int AttackPoints { get; }
-        public int DefensePoints { get; }
+        public int AttackPoints
+        {
+            get { return this.currentAttackPoints; }
+        }
+
+        public int DefensePoints
+        {
+            get { return 80; }
+        }
 
         public int GetTargetIndex(List<WorldObject> availableTargets)
         {
-            for (int i = 0; i < availableTargets.Count;i++)
+            for (int i = 0; i < availableTargets.Count; i++)
             {
-                if (availableTargets[i].Owner != this.Owner && availableTargets[i].Owner != 0)
+                if (availableTargets[i].Owner != 0)
                 {
                     return i;
                 }
@@ -29,12 +40,9 @@ namespace AcademyRPG
 
         public bool TryGather(IResource resource)
         {
-            bool isGathered = false;
-
-            if (resource.Type == ResourceType.Stone && !isGathered)
+            if (resource.Type == ResourceType.Stone)
             {
-                this.HitPoints += 100;
-                isGathered = true;
+                this.currentAttackPoints = this.currentAttackPoints + 100;
                 return true;
             }
 

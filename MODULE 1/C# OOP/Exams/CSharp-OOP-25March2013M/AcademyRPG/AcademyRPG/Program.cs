@@ -9,7 +9,7 @@ namespace AcademyRPG
     {
         static Engine GetEngineInstance()
         {
-            return new Engine();
+            return new ExtendedEngine();
         }
 
         static void Main(string[] args)

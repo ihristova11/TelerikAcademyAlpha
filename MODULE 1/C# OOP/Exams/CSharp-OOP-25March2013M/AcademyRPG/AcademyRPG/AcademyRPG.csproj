@@ -48,11 +48,12 @@
     <Compile Include="House.cs" />
     <Compile Include="ICollectable.cs" />
     <Compile Include="ICollector.cs" />
-    <Compile Include="IWorldObject.cs" />
+    <Compile Include="IDestroyable.cs" />
     <Compile Include="IGatherer.cs" />
     <Compile Include="IResource.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="MovingObject.cs" />
+    <Compile Include="Ninja.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="IControllable.cs" />
