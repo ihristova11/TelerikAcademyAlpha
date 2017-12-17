@@ -8,7 +8,7 @@ namespace AcademyRPG
         {
             this.AttackPoints = 150;
             this.DefensePoints = 80;
-            this.HitPoints = 200;
+            base.HitPoints = 200;
         }
 
         public int AttackPoints { get; }

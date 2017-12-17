@@ -4,7 +4,7 @@
     {
         public Rock(int hitPoints, Point position, int owner = 0) : base(position, 0)
         {
-            this.HitPoints = hitPoints;
+            base.HitPoints = hitPoints;
             this.Type = ResourceType.Stone;
             this.Quantity = this.HitPoints / 2;
         }
