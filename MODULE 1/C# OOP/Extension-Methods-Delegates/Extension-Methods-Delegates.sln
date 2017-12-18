@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstBeforeLast", "FirstBef
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRange", "AgeRange\AgeRange.csproj", "{6FB1C317-7262-4E8D-AAFA-4D97D7A312D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderStudents", "OrderStudents\OrderStudents.csproj", "{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6FB1C317-7262-4E8D-AAFA-4D97D7A312D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB1C317-7262-4E8D-AAFA-4D97D7A312D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB1C317-7262-4E8D-AAFA-4D97D7A312D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
