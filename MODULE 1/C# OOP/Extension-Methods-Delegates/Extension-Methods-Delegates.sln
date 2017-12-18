@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeRange", "AgeRange\AgeRan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderStudents", "OrderStudents\OrderStudents.csproj", "{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleBy7And3", "DivisibleBy7And3\DivisibleBy7And3.csproj", "{51719AB0-6E77-4CB8-9C22-95C466C73F16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D90D5AD7-1070-4EF7-82B9-DC33C609FB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51719AB0-6E77-4CB8-9C22-95C466C73F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51719AB0-6E77-4CB8-9C22-95C466C73F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51719AB0-6E77-4CB8-9C22-95C466C73F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51719AB0-6E77-4CB8-9C22-95C466C73F16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
