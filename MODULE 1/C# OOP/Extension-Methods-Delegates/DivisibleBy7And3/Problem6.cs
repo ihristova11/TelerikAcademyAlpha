@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace DivisibleBy7And3
+﻿namespace DivisibleBy7And3
 {
+    using System;
+    using System.Linq;
+
     class Problem6
     {
         static void Main()
