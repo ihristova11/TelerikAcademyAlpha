@@ -4,7 +4,7 @@ using FastAndFurious.ConsoleApplication.Models.Tunnings.Tires.Abstract;
 
 namespace FastAndFurious.ConsoleApplication.Models.Tunnings.Tires
 {
-    public class FalkenAzenisTiresSet : TiresSet, ITunningPart, ITireSet, IAccelerateable, ITopSpeed, IWeightable, IValuable 
+    public class FalkenAzenisTiresSet : TiresSet
     {
         private const int FalkenAzenisTireWeightInGrams = 7800;
         private const int FalkenAzenisTireAccelerationBonus = 3;
