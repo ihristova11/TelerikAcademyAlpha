@@ -11,8 +11,12 @@ namespace FastAndFurious.ConsoleApplication.Models.MotorVehicles.Abstract
     public abstract class MotorVehicle : IMotorVehicle, IWeightable, IValuable
     {
 
-        public MotorVehicle()
+        public MotorVehicle(decimal price, int weight, int topSpeed, int acceleration)
         {
+            this.Price = price;
+            this.Weight = weight;
+            this.TopSpeed = topSpeed;
+            this.Acceleration = acceleration;
         }
 
         public decimal Price
@@ -21,42 +25,19 @@ namespace FastAndFurious.ConsoleApplication.Models.MotorVehicles.Abstract
             {
                 return this.Price + this.TunningParts.Sum(x => x.Price);
             }
-        }
-        public int Weight
-        {
-            get
+            protected set
             {
-                throw new NotImplementedException();
+                
             }
         }
-        public int Acceleration
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public int TopSpeed
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public IEnumerable<ITunningPart> TunningParts
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public int Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Weight { get; protected set; }
+
+        public int Acceleration { get; protected set; }
+
+        public int TopSpeed { get; protected set; }
+
+        public IEnumerable<ITunningPart> TunningParts { get; protected set; }
+        public int Id { get; }
 
         public void AddTunning(ITunningPart part)
         {
