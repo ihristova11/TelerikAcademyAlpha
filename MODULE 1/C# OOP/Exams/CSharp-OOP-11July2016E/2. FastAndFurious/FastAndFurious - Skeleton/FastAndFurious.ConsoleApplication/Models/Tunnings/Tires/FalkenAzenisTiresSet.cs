@@ -20,7 +20,7 @@ namespace FastAndFurious.ConsoleApplication.Models.Tunnings.Tires
                   FalkenAzenisTireAccelerationBonus,
                   FalkenAzenisTireTopSpeedBonus, 
                   TunningGradeType.LowGrade,
-                  Common.Enums.TireType.OffRoadTire)
+                  TireType.OffRoadTire)
         {
         }
     }

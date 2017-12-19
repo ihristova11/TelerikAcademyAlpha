@@ -53,6 +53,7 @@
     <Compile Include="Common\Enums\TireType.cs" />
     <Compile Include="Common\Enums\TransmissionType.cs" />
     <Compile Include="Common\Enums\TunningPartGradeType.cs" />
+    <Compile Include="Common\Enums\TurbochargerType.cs" />
     <Compile Include="Common\Exceptions\TunningDuplicationException.cs" />
     <Compile Include="Common\Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Common\Utils\DataGenerator.cs" />
@@ -75,6 +76,12 @@
     <Compile Include="Contracts\IWeightable.cs" />
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="Models\Drivers\Abstract\Driver.cs" />
+    <Compile Include="Models\Drivers\DominicRendeto.cs" />
+    <Compile Include="Models\Drivers\Jessi.cs" />
+    <Compile Include="Models\Drivers\LetiSpaghetti.cs" />
+    <Compile Include="Models\Drivers\Mia.cs" />
+    <Compile Include="Models\Drivers\VinBenzin.cs" />
+    <Compile Include="Models\Drivers\Vince.cs" />
     <Compile Include="Models\Motors\Abstract\Motor.cs" />
     <Compile Include="Models\Motors\CentaurPulseMotor.cs" />
     <Compile Include="Models\Motors\HellcatMotor.cs" />
@@ -92,12 +99,17 @@
     <Compile Include="Models\Tunnings\EngineControlUnits\DinanEngineControlUnit.cs" />
     <Compile Include="Models\Tunnings\EngineControlUnits\SCTPerformanceEngineControlUnit.cs" />
     <Compile Include="Models\Tunnings\ExhaustSystems\Abstract\Exhaust.cs" />
+    <Compile Include="Models\Tunnings\ExhaustSystems\BorlaExhaust.cs" />
+    <Compile Include="Models\Tunnings\ExhaustSystems\MagnaflowExhaust.cs" />
+    <Compile Include="Models\Tunnings\ExhaustSystems\RemusExhaust.cs" />
     <Compile Include="Models\Tunnings\Tires\Abstract\TireSet.cs" />
     <Compile Include="Models\Tunnings\Turbochargers\Abstract\Turbocharger.cs" />
     <Compile Include="Models\MotorVehicles\Abstract\MotorVehicle.cs" />
     <Compile Include="Models\Tunnings\Tires\FalkenAzenisTiresSet.cs" />
     <Compile Include="Models\Tunnings\Tires\MichelinPilotTiresSet.cs" />
     <Compile Include="Models\Tunnings\Tires\YokohamaAdvanTiresSet.cs" />
+    <Compile Include="Models\Tunnings\Turbochargers\VortexR35SequentialTurbocharger.cs" />
+    <Compile Include="Models\Tunnings\Turbochargers\ZX8ParallelTwinTurbocharger.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

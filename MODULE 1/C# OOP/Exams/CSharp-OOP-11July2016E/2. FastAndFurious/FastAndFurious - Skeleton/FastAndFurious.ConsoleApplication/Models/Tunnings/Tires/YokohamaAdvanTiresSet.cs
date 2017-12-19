@@ -11,7 +11,15 @@ namespace FastAndFurious.ConsoleApplication.Models.Tunnings.Tires
         private const int YokohamaAdvanTireTopSpeedBonus = 1;
         private const decimal YokohamaAdvanTirePriceInUSADollars = 589;
 
-        public YokohamaAdvanTiresSet()
+        public YokohamaAdvanTiresSet(decimal price, int weight,
+            int acceleration, int topSpeed, TunningGradeType tunningGrade,
+            TransmissionType transmissionType)
+            : base(YokohamaAdvanTirePriceInUSADollars,
+                  YokohamaAdvanTireWeightInGrams, 
+                  YokohamaAdvanTireAccelerationBonus,
+                  YokohamaAdvanTireTopSpeedBonus, 
+                  TunningGradeType.MidGrade,
+                  TireType.AllTerrainTire)
         {
         }
     }
