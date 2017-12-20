@@ -6,6 +6,10 @@ namespace Dealership.Models
 {
     public class User : IUser
     {
+        public User(string username, string firstName, string lastName, string password, string role)
+        {
+            
+        }
         public string Username { get; }
 
         public string FirstName { get; }

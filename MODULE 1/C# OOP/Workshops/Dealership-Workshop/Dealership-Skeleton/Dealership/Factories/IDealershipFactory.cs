@@ -9,10 +9,10 @@ namespace Dealership.Factories
 
         IComment CreateComment(string content);
 
-        Car CreateCar(string make, string model, decimal price, int seats);
+        IVehicle CreateCar(string make, string model, decimal price, int seats);
 
-        Motorcycle CreateMotorcycle(string make, string model, decimal price, string category);
+        IVehicle CreateMotorcycle(string make, string model, decimal price, string category);
 
-        Truck CreateTruck(string make, string model, decimal price, int weightCapacity);
+        IVehicle CreateTruck(string make, string model, decimal price, int weightCapacity);
     }
 }
