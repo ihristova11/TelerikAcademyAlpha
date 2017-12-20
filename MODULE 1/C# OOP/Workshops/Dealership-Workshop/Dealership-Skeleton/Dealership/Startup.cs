@@ -1,7 +1,7 @@
-﻿using Dealership.Engine;
-
-namespace Dealership
+﻿namespace Dealership
 {
+    using Dealership.Engine;
+
     public class Startup
     {
         public static void Main()

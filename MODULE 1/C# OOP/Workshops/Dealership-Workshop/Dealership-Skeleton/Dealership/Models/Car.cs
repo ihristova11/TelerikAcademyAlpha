@@ -1,24 +1,32 @@
-﻿using Dealership.Contracts;
+﻿using Dealership.Common.Enums;
 
 namespace Dealership.Models
 {
-    public class Car : Vehicle, ICar
-    {
-        private readonly int seats;
+    using Dealership.Contracts;
+    using System;
 
-        public Car(string make, string model, decimal price, int seats)
-            : base(make, model, price)
+    public class Car : Vehicle, ICar, IVehicle
+    {
+        private int wheels;
+        private int seats;
+        private string make;
+
+        public Car(string make, string model, decimal price, int seats) : base(make, model, price, VehicleType.Car, (int)VehicleType.Car)
         {
-            this.seats = seats;
+           this.Seats = seats;
         }
 
-        public int Seats { get { return this.seats; } }
-
-        public override int Wheels { get { return Constants.CarWheels; } }
-
-        public override string ToString()
+        public int Seats
         {
-            return base.ToString() + $"Seats: {this.Seats}";
+            get { return this.seats; }
+            private set
+            {
+                if (value < 1 || value > 10)
+                {
+                    throw new ArgumentException("Seats must be between 1 and 10!");
+                }
+                this.seats = value;
+            }
         }
     }
 }

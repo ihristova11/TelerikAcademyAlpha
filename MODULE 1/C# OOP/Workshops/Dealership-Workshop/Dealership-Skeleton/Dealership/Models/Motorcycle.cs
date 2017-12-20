@@ -1,25 +1,37 @@
-﻿using Dealership.Contracts;
+﻿
+using Dealership.Common.Enums;
 
 namespace Dealership.Models
 {
-    public class Motorcycle : Vehicle, IMotorcycle
-    {
-        private readonly string category;
+    using Dealership.Contracts;
+    using System;
 
-        public Motorcycle(string make, string model, decimal price, string category)
-            : base(make, model, price)
+    public class Motorcycle : Vehicle, IMotorcycle, IVehicle
+    {
+        private int wheels;
+        private string category;
+
+        public Motorcycle(string make, string model, decimal price, string category) : base(make, model, price, VehicleType.Motorcycle, (int)VehicleType.Motorcycle)
         {
-            //validation
-            this.category = category;
+            this.Category = category;
         }
 
-        public string Category { get { return this.category; } }
-
-        public override int Wheels { get { return Constants.MotorcycleWheels; } }
-
-        public override string ToString()
+        public string Category
         {
-            return base.ToString() + $"Category: {this.Category}";
+            get { return this.category; }
+            private set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Category must be between 3 and 10 characters long!");
+                }
+                if (value.Length < 3 || value.Length > 10)
+                {
+                    throw new ArgumentException("Category must be between 3 and 10 characters long!");
+                }
+
+                this.category = value;
+            }
         }
     }
 }

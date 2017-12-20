@@ -1,24 +1,31 @@
-﻿using Dealership.Contracts;
+﻿using Dealership.Common.Enums;
 
 namespace Dealership.Models
 {
-    public class Truck : Vehicle, ITruck
+    using Dealership.Contracts;
+    using System;
+
+    public class Truck : Vehicle, ITruck, IVehicle
     {
-        public Truck(string make, string model, decimal price, int weightCapacity)
-            : base(make, model, price)
+        private int wheels;
+        private int weightCapacity;
+
+        public Truck(string make, string model, decimal price, int weightCapacity) : base(make, model, price, VehicleType.Truck, (int)VehicleType.Truck)
         {
+            this.WeightCapacity = weightCapacity;
         }
 
-        public int WeightCapacity { get; }
-
-        public override int Wheels
+        public int WeightCapacity
         {
-            get { return Constants.TruckWheels; }
-        }
-
-        public override string ToString()
-        {
-            return base.ToString() + $"Weight capacity: {this.WeightCapacity}";
+            get { return this.weightCapacity; }
+            set
+            {
+                if (value < 0 || value > 100)
+                {
+                    throw new ArgumentException("Weight capacity must be between 1 and 100!");
+                }
+                this.weightCapacity = value;
+            }
         }
     }
 }

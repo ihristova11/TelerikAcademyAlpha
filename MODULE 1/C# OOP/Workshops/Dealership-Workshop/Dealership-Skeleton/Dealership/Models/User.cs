@@ -1,47 +1,117 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dealership.Common.Enums;
-using Dealership.Contracts;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Dealership.Models
 {
+    using Dealership.Common.Enums;
+    using Dealership.Contracts;
+    using System;
+    using System.Collections.Generic;
+
     public class User : IUser
     {
-        private readonly string username;
-        private readonly string firstName;
-        private readonly string lastName;
-        private readonly string password;
-        private readonly Role role;
-        private IList<IVehicle> vehicles;
+        private string username;
+        private string firstName;
+        private string lastName;
+        private string password;
+        private string usernamePattern = "^[A-Za-z0-9]+$";
 
-        public User(string username, string firstName, string lastName, string password, string role)
+        public User(string username, string firstName, string lastName, string password)
         {
-            Validator.ValidateUser(username, Constants.UsernamePattern, Constants.InvalidUsername);
-            Validator.ValidateUser(password, Constants.PsswordPattern, Constants.InvalidPassword);
-
-            this.username = username;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.password = password;
-            this.role = (Role) Enum.Parse(typeof(Enum), role);
-            this.vehicles = new List<IVehicle>().AsReadOnly();
+            this.Username = username;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Password = password;
+            this.Vehicles = new List<IVehicle>();
         }
 
-        public string Username { get { return this.username; } }
+        public User(string username, string firstName, string lastName, string password, string role) : this(username, firstName, lastName, password)
+        {
+            this.Role = (Role) Enum.Parse(typeof(Role), role);
+        }
 
-        public string FirstName { get { return this.firstName; } }
+        public string Username
+        {
+            get { return this.username; }
 
-        public string LastName { get { return this.lastName; } }
+            private set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException();
+                }
 
-        public string Password { get { return this.password; } }
+                Regex regex = new Regex(usernamePattern);
+                if (!regex.IsMatch(value))
+                {
+                    throw new Exception("Username contains invalid symbols!");
+                }
+                if (value.Length < 3 || value.Length > 20)
+                {
+                    throw new ArgumentException("Username must be between 2 and 20 characters long!");
+                }
 
-        public Role Role { get { return this.role; } }
+                this.username = value;
+                //todo: add validation for regex pattern
+            }
+        }
 
-        public IList<IVehicle> Vehicles { get { return new List<IVehicle>(this.vehicles); } }
+        public string FirstName
+        {
+            get { return this.firstName; }
+            private set
+            {
+                if (value.Length < 3 || value.Length > 20)
+                {
+                    throw new Exception("Firstname must be between 2 and 20 characters long!");
+                }
+
+                this.firstName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get { return this.lastName; }
+            private set
+            {
+                if (value.Length < 3 || value.Length > 20)
+                {
+                    throw new Exception("Lastname must be between 2 and 20 characters long!");
+                }
+
+                this.lastName = value;
+            }
+        }
+
+        public string Password
+        {
+            get { return this.password; }
+            private set
+            {
+                if (value.Length < 5 || value.Length > 30)
+                {
+                    throw new Exception("Password must be between 5 and 30 characters long!");
+                }
+                this.password = value;
+            }
+        }
+        public Role Role { get; }
+
+        public IList<IVehicle> Vehicles { get; }
 
         public void AddVehicle(IVehicle vehicle)
         {
+            if (this.Vehicles.Count > 4 && this.Role != Role.VIP)
+            {
+                throw new ArgumentException("You are not VIP and cannot add more than 5 vehicles!");
+            }
+
+            if (this.Role == Role.Admin)
+            {
+                throw new Exception("Admin cannot add vehicle");
+            }
+            
             this.Vehicles.Add(vehicle);
         }
 
@@ -52,26 +122,31 @@ namespace Dealership.Models
 
         public void AddComment(IComment commentToAdd, IVehicle vehicleToAddComment)
         {
-            //validations
+            commentToAdd.Author = this.Username;
             vehicleToAddComment.Comments.Add(commentToAdd);
         }
 
         public void RemoveComment(IComment commentToRemove, IVehicle vehicleToRemoveComment)
         {
-            //validations
+            commentToRemove.Author = this.Username;
             vehicleToRemoveComment.Comments.Remove(commentToRemove);
+        }
+
+        public override string ToString()
+        {
+            return $"Username: {this.Username}, Fullname: {this.FirstName} {this.LastName}, Role: {this.Role}";
         }
 
         public string PrintVehicles()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Username: {this.Username}, FullName: {this.FirstName} {this.LastName}, Role: {this.Role}");
-            for (int i = 0; i < this.Vehicles.Count; i++)
+            int count = 1;
+            foreach (var vehicle in Vehicles)
             {
-                sb.Append(i + 1);
-                sb.AppendLine(this.Vehicles[i].ToString());
+                sb.Append($"{count}. " + vehicle.ToString());
+                count++;
             }
-            return sb.ToString();
+            return $"--USER {this.Username}--\n" + sb;
         }
     }
 }
