@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dealership.Contracts;
 
 namespace Dealership.Models
 {
-    public class Comment
+    public class Comment : IComment
     {
         public Comment(string content)
         {
         }
+
+        public string Content { get; }
+
+        public string Author { get; set; }
     }
 }

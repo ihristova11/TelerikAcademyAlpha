@@ -61,7 +61,10 @@
     <Compile Include="Factories\IDealershipFactory.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Motorcycle.cs" />
+    <Compile Include="Models\Truck.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VeryImportant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
