@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using Dealership.Common.Enums;
 using Dealership.Contracts;
 
@@ -63,7 +64,14 @@ namespace Dealership.Models
 
         public string PrintVehicles()
         {
-            return $"Username: {this.Username}, FullName: {this.FirstName} {this.LastName}, Role: {this.Role}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Username: {this.Username}, FullName: {this.FirstName} {this.LastName}, Role: {this.Role}");
+            for (int i = 0; i < this.Vehicles.Count; i++)
+            {
+                sb.Append(i + 1);
+                sb.AppendLine(this.Vehicles[i].ToString());
+            }
+            return sb.ToString();
         }
     }
 }

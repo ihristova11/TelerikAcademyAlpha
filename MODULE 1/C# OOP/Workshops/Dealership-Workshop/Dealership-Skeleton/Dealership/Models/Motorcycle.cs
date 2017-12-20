@@ -14,5 +14,12 @@ namespace Dealership.Models
         }
 
         public string Category { get { return this.category; } }
+
+        public override int Wheels { get { return Constants.MotorcycleWheels; } }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Category: {this.Category}";
+        }
     }
 }

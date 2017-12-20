@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using Dealership.Common.Enums;
 using Dealership.Contracts;
 
@@ -26,12 +27,35 @@ namespace Dealership.Models
 
         public decimal Price {get { return this.price; }}
 
-        public int Wheels { get; }
+        public virtual int Wheels { get; }
 
         public VehicleType Type { get; }
 
         public string Make {get { return this.make; }}
 
         public string Model {get { return this.model; }}
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}\nMake: {this.Make}\nModel: {this.Model}\nWheels: {this.Wheels}\nPrice: {this.Price}";
+        }
+
+        public virtual string PrintComments()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (this.Comments.Count > 0)
+            {
+                foreach (var comment in this.Comments)
+                {
+                    sb.AppendLine(comment.ToString());
+                }
+
+                return sb.ToString();
+            }
+            else
+            {
+                return "    --NO COMMENTS--";
+            }
+        }
     }
 }

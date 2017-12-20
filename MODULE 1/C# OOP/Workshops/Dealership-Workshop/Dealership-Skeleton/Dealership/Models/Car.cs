@@ -13,5 +13,12 @@ namespace Dealership.Models
         }
 
         public int Seats { get { return this.seats; } }
+
+        public override int Wheels { get { return Constants.CarWheels; } }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Seats: {this.Seats}";
+        }
     }
 }
