@@ -1,7 +1,5 @@
 ﻿using Dealership.Contracts;
-using System;
 using Dealership.Models;
-using Dealership.Common.Enums;
 
 namespace Dealership.Factories
 {

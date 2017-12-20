@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Dealership.Common.Enums;
 using Dealership.Contracts;
 
@@ -6,45 +7,63 @@ namespace Dealership.Models
 {
     public class User : IUser
     {
+        private readonly string username;
+        private readonly string firstName;
+        private readonly string lastName;
+        private readonly string password;
+        private readonly Role role;
+        private IList<IVehicle> vehicles;
+
         public User(string username, string firstName, string lastName, string password, string role)
         {
-            
+            Validator.ValidateUser(username, Constants.UsernamePattern, Constants.InvalidUsername);
+            Validator.ValidateUser(password, Constants.PsswordPattern, Constants.InvalidPassword);
+
+            this.username = username;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.password = password;
+            this.role = (Role) Enum.Parse(typeof(Enum), role);
+            this.vehicles = new List<IVehicle>().AsReadOnly();
         }
-        public string Username { get; }
 
-        public string FirstName { get; }
+        public string Username { get { return this.username; } }
 
-        public string LastName { get; }
+        public string FirstName { get { return this.firstName; } }
 
-        public string Password { get; }
+        public string LastName { get { return this.lastName; } }
 
-        public Role Role { get; }
+        public string Password { get { return this.password; } }
 
-        public IList<IVehicle> Vehicles { get; }
+        public Role Role { get { return this.role; } }
+
+        public IList<IVehicle> Vehicles { get { return new List<IVehicle>(this.vehicles); } }
 
         public void AddVehicle(IVehicle vehicle)
         {
-            throw new System.NotImplementedException();
+            this.Vehicles.Add(vehicle);
         }
 
         public void RemoveVehicle(IVehicle vehicle)
         {
-            throw new System.NotImplementedException();
+            this.Vehicles.Remove(vehicle);
         }
 
         public void AddComment(IComment commentToAdd, IVehicle vehicleToAddComment)
         {
-            throw new System.NotImplementedException();
+            //validations
+            vehicleToAddComment.Comments.Add(commentToAdd);
         }
 
         public void RemoveComment(IComment commentToRemove, IVehicle vehicleToRemoveComment)
         {
-            throw new System.NotImplementedException();
+            //validations
+            vehicleToRemoveComment.Comments.Remove(commentToRemove);
         }
 
         public string PrintVehicles()
         {
-            throw new System.NotImplementedException();
+            return $"Username: {this.Username}, FullName: {this.FirstName} {this.LastName}, Role: {this.Role}";
         }
     }
 }
