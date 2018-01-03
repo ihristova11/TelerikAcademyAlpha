@@ -22,5 +22,10 @@ namespace StudentGroups
         public string Email { get; set; }
         public IList<int> Marks { get; set; }
         public uint GroupNumber { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.FirstName} {this.LastName}";
+        }
     }
 }
