@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleBy7And3", "Divisib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{09BA4A06-CA95-4445-9886-3B3A1F3B0CCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{52EA9BD5-B56B-47C4-8B67-1209031B8575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{09BA4A06-CA95-4445-9886-3B3A1F3B0CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09BA4A06-CA95-4445-9886-3B3A1F3B0CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09BA4A06-CA95-4445-9886-3B3A1F3B0CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EA9BD5-B56B-47C4-8B67-1209031B8575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EA9BD5-B56B-47C4-8B67-1209031B8575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EA9BD5-B56B-47C4-8B67-1209031B8575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EA9BD5-B56B-47C4-8B67-1209031B8575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
