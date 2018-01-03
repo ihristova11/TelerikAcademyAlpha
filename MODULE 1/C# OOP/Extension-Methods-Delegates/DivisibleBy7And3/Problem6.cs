@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Problem6
+    public class Problem6
     {
         static void Main()
         {

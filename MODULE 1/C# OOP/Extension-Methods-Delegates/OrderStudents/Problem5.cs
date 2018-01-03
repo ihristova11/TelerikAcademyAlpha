@@ -10,10 +10,12 @@ namespace OrderStudents
     {
         static void Main()
         {
-            var students = new List<Student>();
-            students.Add(new Student("Irina", "Hristova"));
-            students.Add(new Student("Ivan", "Ivanov"));
-            students.Add(new Student("Pesho", "Peshov"));
+            var students = new List<Student>
+            {
+                new Student("Irina", "Hristova"),
+                new Student("Ivan", "Ivanov"),
+                new Student("Pesho", "Peshov")
+            };
             FindStudents(students);
         }
 

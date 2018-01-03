@@ -7,12 +7,14 @@ namespace AgeRange
 {
     public class Problem4
     {
-        static void Main()
+        public static void Main()
         {
-            List<Student> students = new List<Student>();
-            students.Add(new Student("Irina", "Hristova", 18));
-            students.Add(new Student("Ivan", "Hristov", 25));
-            students.Add(new Student("Ivan", "Ivanov", 19));
+            List<Student> students = new List<Student>
+            {
+                new Student("Irina", "Hristova", 18),
+                new Student("Ivan", "Hristov", 25),
+                new Student("Ivan", "Ivanov", 19)
+            };
             FindStudents(students);
         }
 
