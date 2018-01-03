@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGroups", "StudentGroups\StudentGroups.csproj", "{D2C02DEA-7C3A-48D2-A234-59F9C194B9C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGroupsExtensions", "StudentGroupsExtensions\StudentGroupsExtensions.csproj", "{83AD758D-738B-4559-B054-0B29468DF367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D2C02DEA-7C3A-48D2-A234-59F9C194B9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2C02DEA-7C3A-48D2-A234-59F9C194B9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2C02DEA-7C3A-48D2-A234-59F9C194B9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83AD758D-738B-4559-B054-0B29468DF367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AD758D-738B-4559-B054-0B29468DF367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AD758D-738B-4559-B054-0B29468DF367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AD758D-738B-4559-B054-0B29468DF367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
