@@ -23,6 +23,7 @@ namespace StudentGroupsExtensions
             PrintStudents(list.FindStudentsWithTwoMarks());
             PrintStudentWithMarks(list.FindStudentsEnrolledIn2006("06"));
             PrintStudents(list.FindStudentsInMathDepartment("Mathematics"));
+            PrintStudents(list.GroupStudents());
         }
 
         public static void PrintStudents(IEnumerable<Student> students)
@@ -93,6 +94,13 @@ namespace StudentGroupsExtensions
         {
             var studentsEnrolledIn2006 = studentslistList.Where(s => s.Group.DepartmentName == department);
             return studentsEnrolledIn2006;
+        }
+
+        // --- PROBLEM 18 ---
+        public static IEnumerable<Student> GroupStudents(this IList<Student> studentslistList)
+        {
+            var studentsGrouped = studentslistList.OrderBy(s => s.Group.GroupNumber);
+            return studentsGrouped;
         }
     }
 }
