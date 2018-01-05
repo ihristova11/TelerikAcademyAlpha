@@ -13,7 +13,7 @@ namespace StudentGroupsExtensions
             var list = new List<Student>()
             {
                 new Student("Irina", "Hristova", 123456, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6}, 2),
-                new Student("Ivan", "Hristov", 123456, "02813456", "someemail@email.com", new List<int>() {6, 6, 6}, 3),
+                new Student("Ivan", "Hristov", 123456, "02813456", "someemail@email.com", new List<int>() {6, 6}, 3),
                 new Student("Pesho", "Is Back", 123456, "123456", "someemail@email.com", new List<int>() {2, 3, 4}, 2)
             };
 
@@ -21,7 +21,7 @@ namespace StudentGroupsExtensions
             PrintStudents(list.FindStudentsWithEmail("abv.bg"));
             PrintStudents(list.FindStudentsWithSofiaTel());
             PrintStudents(list.FindStrudentsWithExcellentMark());
-
+            PrintStudents(list.FindStudentsWithTwoMarks());
         }
 
         public static void PrintStudents(IEnumerable<Student> students)
@@ -62,6 +62,13 @@ namespace StudentGroupsExtensions
         {
             var studentsWithExcellentMarks = studentsList.Where(s => s.Marks.Any(m => m == 6));
             return studentsWithExcellentMarks; ;
+        }
+
+        // --- PROBLEM 14 ---
+        public static IEnumerable<Student> FindStudentsWithTwoMarks(this IList<Student> studentslList)
+        {
+            var studentsWithTwoMarks = studentslList.Where(s => s.Marks.Count == 2);
+            return studentsWithTwoMarks;
         }
     }
 }
