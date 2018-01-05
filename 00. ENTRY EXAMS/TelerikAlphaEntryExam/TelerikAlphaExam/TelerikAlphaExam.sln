@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. PaperCutter", "02. PaperCutter\02. PaperCutter.csproj", "{9EAFEB25-936E-4524-9E89-CFC144925975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. SpellCaster", "03. SpellCaster\03. SpellCaster.csproj", "{75BD3E03-C051-4643-9D2F-377403D0EDD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EAFEB25-936E-4524-9E89-CFC144925975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAFEB25-936E-4524-9E89-CFC144925975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAFEB25-936E-4524-9E89-CFC144925975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAFEB25-936E-4524-9E89-CFC144925975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BD3E03-C051-4643-9D2F-377403D0EDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BD3E03-C051-4643-9D2F-377403D0EDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BD3E03-C051-4643-9D2F-377403D0EDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BD3E03-C051-4643-9D2F-377403D0EDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
