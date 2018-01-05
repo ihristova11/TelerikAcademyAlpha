@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Numbers", "01. Numbers\01. Numbers.csproj", "{9A97954A-9A53-4D23-AE72-2D6DE3DFDAF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MergingAndSquashing", "02. MergingAndSquashing\02. MergingAndSquashing.csproj", "{04DDC760-5C58-403A-9DB3-C5B32BDD898D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Speeds", "03. Speeds\03. Speeds.csproj", "{DECF8B23-A575-4D3C-A57A-01B44957D895}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A97954A-9A53-4D23-AE72-2D6DE3DFDAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A97954A-9A53-4D23-AE72-2D6DE3DFDAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A97954A-9A53-4D23-AE72-2D6DE3DFDAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A97954A-9A53-4D23-AE72-2D6DE3DFDAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04DDC760-5C58-403A-9DB3-C5B32BDD898D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DDC760-5C58-403A-9DB3-C5B32BDD898D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DDC760-5C58-403A-9DB3-C5B32BDD898D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DDC760-5C58-403A-9DB3-C5B32BDD898D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECF8B23-A575-4D3C-A57A-01B44957D895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECF8B23-A575-4D3C-A57A-01B44957D895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECF8B23-A575-4D3C-A57A-01B44957D895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECF8B23-A575-4D3C-A57A-01B44957D895}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
