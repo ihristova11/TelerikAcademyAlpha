@@ -11,9 +11,9 @@ namespace StudentGroupsExtensions
         {
             var list = new List<Student>()
             {
-                new Student("Irina", "Hristova", 123406, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6}, 2),
-                new Student("Ivan", "Hristov", 123406, "02813456", "someemail@email.com", new List<int>() {6, 6}, 3),
-                new Student("Pesho", "Is Back", 123456, "123406", "someemail@email.com", new List<int>() {2, 3, 4}, 2)
+                new Student("Irina", "Hristova", 123406, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6},2, "Mathematics"),
+                new Student("Ivan", "Hristov", 123406, "02813456", "someemail@email.com", new List<int>() {6, 6}, 3, "Physics"),
+                new Student("Pesho", "Is Back", 123456, "123406", "someemail@email.com", new List<int>() {2, 3, 4}, 2, "Astronomy")
             };
 
             PrintStudents(list.FindStudentsWithGroupNumber());
@@ -22,6 +22,7 @@ namespace StudentGroupsExtensions
             PrintStudents(list.FindStrudentsWithExcellentMark());
             PrintStudents(list.FindStudentsWithTwoMarks());
             PrintStudentWithMarks(list.FindStudentsEnrolledIn2006("06"));
+            PrintStudents(list.FindStudentsInMathDepartment("Mathematics"));
         }
 
         public static void PrintStudents(IEnumerable<Student> students)
@@ -48,7 +49,7 @@ namespace StudentGroupsExtensions
         // --- PROBLEM 10 ---
         public static IEnumerable<Student> FindStudentsWithGroupNumber(this IList<Student> studentsList)
         {
-            var studentsWithGroupNumber2 = studentsList.Where(s => s.GroupNumber == 2);
+            var studentsWithGroupNumber2 = studentsList.Where(s => s.Group.GroupNumber == 2);
             return studentsWithGroupNumber2;
         }
 
@@ -79,10 +80,18 @@ namespace StudentGroupsExtensions
             var studentsWithTwoMarks = studentslList.Where(s => s.Marks.Count == 2);
             return studentsWithTwoMarks;
         }
+
         // --- PROBLEM 15 ---
         public static IEnumerable<Student> FindStudentsEnrolledIn2006(this IList<Student> studentslistList, string year)
         {
             var studentsEnrolledIn2006 = studentslistList.Where(s => s.FN.ToString().EndsWith(year));
+            return studentsEnrolledIn2006;
+        }
+
+        // --- PROBLEM 16* ---
+        public static IEnumerable<Student> FindStudentsInMathDepartment(this IList<Student> studentslistList, string department)
+        {
+            var studentsEnrolledIn2006 = studentslistList.Where(s => s.Group.DepartmentName == department);
             return studentsEnrolledIn2006;
         }
     }
