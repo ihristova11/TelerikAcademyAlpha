@@ -14,9 +14,9 @@ namespace StudentGroupsExtensions
             {
                 new Student("Irina", "Hristova", 123456, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6}, 2),
                 new Student("Ivan", "Hristov", 123456, "02813456", "someemail@email.com", new List<int>() {6, 6, 6}, 3),
-                new Student("Pesho", "Is Back", 123456, "123456", "someemail@email.com", new List<int>() {6, 6, 6}, 2)
+                new Student("Pesho", "Is Back", 123456, "123456", "someemail@email.com", new List<int>() {2, 3, 4}, 2)
             };
-            
+
             PrintStudents(list.FindStudentsWithGroupNumber());
             PrintStudents(list.FindStudentsWithEmail("abv.bg"));
             PrintStudents(list.FindStudentsWithSofiaTel());
@@ -30,7 +30,9 @@ namespace StudentGroupsExtensions
             {
                 Console.WriteLine($"{student.ToString()}");
             }
+            Console.WriteLine();
         }
+
 
         //extensions methods
 
