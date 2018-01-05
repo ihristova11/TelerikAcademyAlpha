@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using StudentGroups;
@@ -12,9 +11,9 @@ namespace StudentGroupsExtensions
         {
             var list = new List<Student>()
             {
-                new Student("Irina", "Hristova", 123456, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6}, 2),
-                new Student("Ivan", "Hristov", 123456, "02813456", "someemail@email.com", new List<int>() {6, 6}, 3),
-                new Student("Pesho", "Is Back", 123456, "123456", "someemail@email.com", new List<int>() {2, 3, 4}, 2)
+                new Student("Irina", "Hristova", 123406, "123456", "irina99@abv.bg", new List<int>() {6, 6, 6}, 2),
+                new Student("Ivan", "Hristov", 123406, "02813456", "someemail@email.com", new List<int>() {6, 6}, 3),
+                new Student("Pesho", "Is Back", 123456, "123406", "someemail@email.com", new List<int>() {2, 3, 4}, 2)
             };
 
             PrintStudents(list.FindStudentsWithGroupNumber());
@@ -22,6 +21,7 @@ namespace StudentGroupsExtensions
             PrintStudents(list.FindStudentsWithSofiaTel());
             PrintStudents(list.FindStrudentsWithExcellentMark());
             PrintStudents(list.FindStudentsWithTwoMarks());
+            PrintStudents(list.FindStudentsEnrolledIn2006("06"));
         }
 
         public static void PrintStudents(IEnumerable<Student> students)
@@ -69,6 +69,12 @@ namespace StudentGroupsExtensions
         {
             var studentsWithTwoMarks = studentslList.Where(s => s.Marks.Count == 2);
             return studentsWithTwoMarks;
+        }
+        // --- PROBLEM 15 ---
+        public static IEnumerable<Student> FindStudentsEnrolledIn2006(this IList<Student> studentslistList, string year)
+        {
+            var studentsEnrolledIn2006 = studentslistList.Where(s => s.FN.ToString().EndsWith(year));
+            return studentsEnrolledIn2006;
         }
     }
 }
