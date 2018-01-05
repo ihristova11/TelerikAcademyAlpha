@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGroupsExtensions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestString", "LongestString\LongestString.csproj", "{BC4B402A-3B7A-4549-B40C-80F74DA6E8CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteConvergentSeries", "InfiniteConvergentSeries\InfiniteConvergentSeries.csproj", "{AE7B212C-B749-43C7-955E-75B106A0974F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{BC4B402A-3B7A-4549-B40C-80F74DA6E8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC4B402A-3B7A-4549-B40C-80F74DA6E8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC4B402A-3B7A-4549-B40C-80F74DA6E8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7B212C-B749-43C7-955E-75B106A0974F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7B212C-B749-43C7-955E-75B106A0974F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7B212C-B749-43C7-955E-75B106A0974F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7B212C-B749-43C7-955E-75B106A0974F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
