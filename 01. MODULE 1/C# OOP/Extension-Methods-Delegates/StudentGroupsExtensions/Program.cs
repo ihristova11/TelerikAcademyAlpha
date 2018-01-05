@@ -21,7 +21,7 @@ namespace StudentGroupsExtensions
             PrintStudents(list.FindStudentsWithSofiaTel());
             PrintStudents(list.FindStrudentsWithExcellentMark());
             PrintStudents(list.FindStudentsWithTwoMarks());
-            PrintStudents(list.FindStudentsEnrolledIn2006("06"));
+            PrintStudentWithMarks(list.FindStudentsEnrolledIn2006("06"));
         }
 
         public static void PrintStudents(IEnumerable<Student> students)
@@ -29,6 +29,15 @@ namespace StudentGroupsExtensions
             foreach (var student in students)
             {
                 Console.WriteLine($"{student.ToString()}");
+            }
+            Console.WriteLine();
+        }
+
+        public static void PrintStudentWithMarks(IEnumerable<Student> students)
+        {
+            foreach (var student in students)
+            {
+                Console.WriteLine($"{student.ToString()} - {string.Join(", ", student.Marks)}");
             }
             Console.WriteLine();
         }
