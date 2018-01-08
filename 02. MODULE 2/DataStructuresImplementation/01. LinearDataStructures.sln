@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swappings", "Swappings\Swappings.csproj", "{7352945F-0103-4BC4-8790-1E90351C7A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{B5417A91-34D2-41BA-BC33-9FA0AFE0F114}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketsExpression", "BracketsExpression\BracketsExpression.csproj", "{20E9E07C-AAA5-4B65-8F79-27FBE372066F}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{7352945F-0103-4BC4-8790-1E90351C7A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7352945F-0103-4BC4-8790-1E90351C7A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7352945F-0103-4BC4-8790-1E90351C7A7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5417A91-34D2-41BA-BC33-9FA0AFE0F114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5417A91-34D2-41BA-BC33-9FA0AFE0F114}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5417A91-34D2-41BA-BC33-9FA0AFE0F114}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5417A91-34D2-41BA-BC33-9FA0AFE0F114}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Release|Any CPU.ActiveCfg = Release|Any CPU
