@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Swappings
 {
-    public class Swappings
+    public static class Swappings
     {
         static void Main()
         {
@@ -12,23 +12,47 @@ namespace Swappings
             int[] swappings = Console.ReadLine().Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse).ToArray();
 
+            
             LinkedList<int> numbers = new LinkedList<int>();
             numbers.AddFirst(1);
 
-            for (int i = 1; i < numbersCount; i++)
-            {
-                numbers.AddAfter(new LinkedListNode<int>(i - 1), new LinkedListNode<int>(i));
-            }
             var currValue = numbers.First;
-            int desiredValue = swappings[0];
+
+            for (int i = 2; i <= numbersCount; i++)
+            {
+                numbers.AddAfter(currValue, new LinkedListNode<int>(i));
+                currValue = currValue.Next;
+            }
+
+            int desiredValue;
+            currValue = numbers.First;
 
             for (int i = 0; i < swappings.Length; i++)
             {
+                desiredValue = swappings[i];
+
                 while (currValue != null && currValue.Value != desiredValue)
                 {
                     currValue = currValue.Next;
                 }
+                
+                currValue.Next.SwapWith(numbers.First);
             }
+
+            Console.WriteLine(string.Join(", ", numbers));
+        }
+
+        public static void SwapWith<T>(this LinkedListNode<T> first, LinkedListNode<T> second)
+        {
+            if (first == null)
+                throw new ArgumentNullException("first");
+
+            if (second == null)
+                throw new ArgumentNullException("second");
+
+            var tmp = first.Value;
+            first.Value = second.Value;
+            second.Value = tmp;
         }
     }
 }
