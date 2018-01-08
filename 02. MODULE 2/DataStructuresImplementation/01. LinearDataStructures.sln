@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swappings", "Swappings\Swap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BracketsExpression", "BracketsExpression\BracketsExpression.csproj", "{20E9E07C-AAA5-4B65-8F79-27FBE372066F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Problems", "Problems", "{2B16982F-2AC5-4EF6-9515-3B312CD6469A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework", "Homework", "{797549AA-D270-44BF-A34D-8FB5CA66FBD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathToOne", "PathToOne\PathToOne.csproj", "{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +27,18 @@ Global
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E9E07C-AAA5-4B65-8F79-27FBE372066F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7352945F-0103-4BC4-8790-1E90351C7A7B} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
+		{20E9E07C-AAA5-4B65-8F79-27FBE372066F} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
+		{1EFC5031-0E60-42A2-BECC-D0C0D0758EFB} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FAF8C82-D1B9-4B1D-8486-00BFE2D462C3}
