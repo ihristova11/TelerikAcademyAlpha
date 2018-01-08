@@ -2,57 +2,104 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Swappings
+namespace _5.Swappings
 {
-    public static class Swappings
+    public class ListNode
+    {
+        public ListNode(int value, ListNode prev)
+        {
+            this.Value = value;
+            this.Previous = prev;
+            if (prev != null)
+            {
+                this.Previous.Next = this;
+            }
+        }
+
+        public int Value { get; set; }
+
+        public ListNode Next { get; set; }
+
+        public ListNode Previous { get; set; }
+    }
+
+    public class Swappings
     {
         static void Main()
         {
-            int numbersCount = int.Parse(Console.ReadLine());
-            int[] swappings = Console.ReadLine().Split(new string[] {" "}, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse).ToArray();
+            int n = int.Parse(Console.ReadLine());
 
-            
-            LinkedList<int> numbers = new LinkedList<int>();
-            numbers.AddFirst(1);
+            int[] arr = Console.ReadLine().Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-            var currValue = numbers.First;
+            var dict = new Dictionary<int, ListNode>();
 
-            for (int i = 2; i <= numbersCount; i++)
+            ListNode head = null;
+            ListNode tail = null;
+            ListNode prev = null;
+
+            for (int i = 1; i <= n; i++)
             {
-                numbers.AddAfter(currValue, new LinkedListNode<int>(i));
-                currValue = currValue.Next;
-            }
 
-            int desiredValue;
-            currValue = numbers.First;
-
-            for (int i = 0; i < swappings.Length; i++)
-            {
-                desiredValue = swappings[i];
-
-                while (currValue != null && currValue.Value != desiredValue)
+                var node = new ListNode(i, prev);
+                prev = node;
+                if (head == null)
                 {
-                    currValue = currValue.Next;
+                    head = node;
                 }
-                
-                currValue.Next.SwapWith(numbers.First);
+
+                tail = node;
+                dict.Add(i, node);
             }
 
-            Console.WriteLine(string.Join(", ", numbers));
+            foreach (int node in arr)
+            {
+                Swap(dict[node], ref head, ref tail);
+            }
+
+            var current = head;
+
+            var result = new List<int>(n);
+
+            while (current != null)
+            {
+                result.Add(current.Value);
+                current = current.Next;
+            }
+
+            Console.WriteLine(string.Join(" ", dict.Select(x => x.Value.Value)));
         }
 
-        public static void SwapWith<T>(this LinkedListNode<T> first, LinkedListNode<T> second)
+        public static void Swap(ListNode node, ref ListNode head, ref ListNode tail)
         {
-            if (first == null)
-                throw new ArgumentNullException("first");
+            var newHead = node.Next ?? node;
+            var newTail = node.Previous ?? node;
 
-            if (second == null)
-                throw new ArgumentNullException("second");
+            if (newTail == node) // if node is the last element => tail element
+            {
+                node.Next = null;
+            }
+            else
+            {
+                node.Next = head;
+                head.Previous = node;
+            }
 
-            var tmp = first.Value;
-            first.Value = second.Value;
-            second.Value = tmp;
+            if (newHead == node) // if node is the first element => head element
+            {
+                node.Previous = null;
+            }
+            else
+            {
+                node.Previous = tail;
+                tail.Next = node;
+            }
+
+            newHead.Previous = null;
+
+            newTail.Next = null;
+
+            head = newHead;
+            tail = newTail;
         }
     }
 }
