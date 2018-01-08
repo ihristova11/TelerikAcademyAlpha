@@ -60,13 +60,13 @@ namespace _5.Swappings
 
             var result = new List<int>(n);
 
-            while (current != null)
+            while (current != null) // adding node values in list
             {
                 result.Add(current.Value);
-                current = current.Next;
+                current = current.Next; // iterating 
             }
 
-            Console.WriteLine(string.Join(" ", dict.Select(x => x.Value.Value)));
+            Console.WriteLine(string.Join(" ", result));
         }
 
         public static void Swap(ListNode node, ref ListNode head, ref ListNode tail)
