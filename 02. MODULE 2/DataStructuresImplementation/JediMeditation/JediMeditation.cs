@@ -18,7 +18,7 @@ namespace JediMeditation
             LinkedListNode<string> knight = null;
             LinkedListNode<string> padawan = null;
 
-            foreach (var jedi in jedis)
+            foreach (var jedi in jedis) // can be simplified
             {
                 switch (jedi[0])
                 {
