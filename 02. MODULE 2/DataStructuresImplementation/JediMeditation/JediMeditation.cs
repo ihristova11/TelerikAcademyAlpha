@@ -89,6 +89,8 @@ namespace JediMeditation
                         break;
                 }
             }
+
+            Console.WriteLine(string.Join(" ", result));
         }
     }
 }
