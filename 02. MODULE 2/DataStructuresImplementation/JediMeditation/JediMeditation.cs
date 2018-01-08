@@ -27,7 +27,6 @@ namespace JediMeditation
                         if (master == null)
                         {
                             result.AddFirst(newMaster);
-
                         }
                         else
                         {
@@ -50,7 +49,7 @@ namespace JediMeditation
                         }
                         else
                         {
-                            result.AddAfter(master, newKnight);
+                            result.AddAfter(knight, newKnight);
                         }
                         knight = newKnight;
                         break;
