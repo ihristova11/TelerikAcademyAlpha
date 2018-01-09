@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JediMeditation", "JediMedit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SumAndAverageOfElements", "01. SumAndAverageOfElements\01. SumAndAverageOfElements.csproj", "{84EF2E18-6E69-4538-9DF7-7FE2102C0D9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. ReverseIntegersWithStack", "02. ReverseIntegersWithStack\02. ReverseIntegersWithStack.csproj", "{C4125343-F36A-4506-BE6C-68D348C4C1C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{84EF2E18-6E69-4538-9DF7-7FE2102C0D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84EF2E18-6E69-4538-9DF7-7FE2102C0D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84EF2E18-6E69-4538-9DF7-7FE2102C0D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4125343-F36A-4506-BE6C-68D348C4C1C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4125343-F36A-4506-BE6C-68D348C4C1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4125343-F36A-4506-BE6C-68D348C4C1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4125343-F36A-4506-BE6C-68D348C4C1C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{4CF7A2F8-0A75-4C6C-9F85-5C0B854B97EB} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
 		{E983DEE0-F225-4AE0-A31D-4D505133BBB7} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
 		{84EF2E18-6E69-4538-9DF7-7FE2102C0D9A} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
+		{C4125343-F36A-4506-BE6C-68D348C4C1C0} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FAF8C82-D1B9-4B1D-8486-00BFE2D462C3}
