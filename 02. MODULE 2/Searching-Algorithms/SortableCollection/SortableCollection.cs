@@ -12,7 +12,9 @@ namespace SortableCollection
             Console.WriteLine(LinearSearch(numbers, 7));
             Console.WriteLine(BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 6));
         }
+        
 
+        // Implementation of Linear search algorithm (task 1)
         public static int LinearSearch(int[] numbers, int desired)
         {
             for (int i = 0; i < numbers.Length; i++)
@@ -26,6 +28,7 @@ namespace SortableCollection
             return -1;
         }
 
+        // Implementation of Binary search algorithm (task 2)
         public static int BinarySearch(int[] numbers, int min, int max, int desired)
         {
             int mid = (min + max) / 2;
