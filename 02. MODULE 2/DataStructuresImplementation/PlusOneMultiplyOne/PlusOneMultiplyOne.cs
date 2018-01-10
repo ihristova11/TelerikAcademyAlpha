@@ -15,37 +15,59 @@ namespace PlusOneMultiplyOne
             uint m = input[1];
 
             FindMember(n, m);
-           //Console.WriteLine(FindMember(n, m));
         }
-        // todo: invalid return => must be fixed
+        //// todo: invalid return => must be fixed
+        //private static void FindMember(uint n, uint m, uint member = 0)
+        //{
+        //    uint result;
+        //    if (m == 1)
+        //    {
+        //        result =  n;
+        //    }
+        //    else
+        //    {
+        //        var elements = new LinkedList<uint>();
+
+        //        while (member < m)
+        //        {
+        //            elements.AddLast(n + 1);
+        //            elements.AddLast(2 * n + 1);
+        //            elements.AddLast(n + 2);
+
+        //            member += 3;
+        //            n = elements.First.Value;
+        //            elements.RemoveFirst();
+        //        }
+        //        while (m <= member)
+        //        {
+        //            elements.RemoveLast();
+        //            member--;
+        //        }
+
+        //        result = elements.Last.Value;
+        //    }
+
+        //    Console.WriteLine(result);
+        //}
+
+            // todo : 
         private static void FindMember(uint n, uint m, uint member = 0)
         {
-            uint result;
-            if (m == 1)
+            Stack<uint> sequence = new Stack<uint>();
+            uint result = n;
+            sequence.Push(n);
+            member++;
+            for (uint i = n; i <n + m / 3; i++)
             {
-                result =  n;
+                sequence.Push(i + 1);
+                sequence.Push(2 * i + 1);
+                sequence.Push(i + 2);
+                member += 3;
             }
-            else
+
+            for (uint i = member; i>= m; i--)
             {
-                var elements = new LinkedList<uint>();
-
-                while (member < m)
-                {
-                    elements.AddLast(n + 1);
-                    elements.AddLast(2 * n + 1);
-                    elements.AddLast(n + 2);
-
-                    member += 3;
-                    n = elements.First.Value;
-                    elements.RemoveFirst();
-                }
-                while (m <= member)
-                {
-                    elements.RemoveLast();
-                    member--;
-                }
-
-                result = elements.Last.Value;
+                result = sequence.Pop();
             }
 
             Console.WriteLine(result);
