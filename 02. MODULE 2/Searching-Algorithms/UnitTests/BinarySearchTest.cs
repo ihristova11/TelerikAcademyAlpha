@@ -11,7 +11,7 @@ namespace UnitTests
         {
             SortableCollection.SortableCollection collection = new SortableCollection.SortableCollection(new int[] { 1, 2, 4, 6, 8, 11, 17 });
 
-            Assert.IsTrue(collection.BinarySearch(collection.Numbers, 0, collection.Numbers.Length - 1, 4));
+            Assert.IsTrue(collection.BinarySearch(4));
         }
 
         [TestMethod]
@@ -19,7 +19,7 @@ namespace UnitTests
         {
             SortableCollection.SortableCollection collection = new SortableCollection.SortableCollection(new int[] { 1, 2, 4, 6, 8, 11, 17 });
 
-            Assert.IsFalse(collection.BinarySearch(collection.Numbers, 0, collection.Numbers.Length - 1, 3));
+            Assert.IsFalse(collection.BinarySearch(3));
         }
     }
 }

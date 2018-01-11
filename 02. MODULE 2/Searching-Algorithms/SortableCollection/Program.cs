@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SortableCollection
 {
@@ -12,13 +8,40 @@ namespace SortableCollection
         {
             int[] numbers = { 1, 5, 4, 2, 7, -1, 0 };
             int[] sortedNumbers = { 1, 2, 4, 6, 8, 11, 17 };
-            //Console.WriteLine(LinearSearch(numbers, 7));
-            //Console.WriteLine(BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 6));
-            //Console.WriteLine(Shuffle(numbers));
 
-            //var linearSearch = LinearSearch(numbers, 7);
-            //var binarySearch = BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 11);
-            //var shuffle = Shuffle(numbers);
+            var notSorted = new SortableCollection(numbers);
+            var sorted = new SortableCollection(sortedNumbers);
+
+            Console.WriteLine("============================");
+            Console.WriteLine("Sorted array:");
+            Console.WriteLine(string.Join(" ", sortedNumbers));
+            Console.WriteLine("============================");
+            Console.WriteLine("Not sorted array:");
+            Console.WriteLine(string.Join(" ", numbers));
+            Console.WriteLine("============================");
+            Console.WriteLine();
+
+            Console.WriteLine("Linear search 4:");
+            Console.WriteLine(notSorted.LinearSearch(4));
+            Console.WriteLine();
+
+            Console.WriteLine("Binary search 3:");
+            Console.WriteLine(sorted.BinarySearch(3));
+            Console.WriteLine();
+
+            Console.WriteLine("Shuffle:");
+            notSorted.Shuffle();
+            sorted.Shuffle();
+            notSorted.Print();
+            sorted.Print();
+            Console.WriteLine();
+
+
+            Console.WriteLine("Shuffle again:");
+            notSorted.Shuffle();
+            sorted.Shuffle();
+            notSorted.Print();
+            sorted.Print();
         }
     }
 }
