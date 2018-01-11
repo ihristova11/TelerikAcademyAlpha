@@ -12,9 +12,19 @@ namespace SortableCollection
             var notSorted = new SortableCollection(numbers);
             var sorted = new SortableCollection(sortedNumbers);
             var selectionSorter = new SelectionSorter();
+            var quickSorter = new QuickSorter();
+            var mergeSorter = new MergeSorter();
 
             Console.WriteLine("Selection sort:");
             selectionSorter.Sort(numbers);;
+            Console.WriteLine();
+
+            Console.WriteLine("Quick sort:");
+            quickSorter.Sort(numbers); 
+            Console.WriteLine();
+
+            Console.WriteLine("Merge sort:");
+            mergeSorter.Sort(numbers); 
             Console.WriteLine();
 
             Console.WriteLine("============================");
