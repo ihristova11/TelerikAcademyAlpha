@@ -1,6 +1,10 @@
 ﻿namespace SortableCollection
 {
-    public class SelectionSorter
+    public class SelectionSorter : ISorter
     {
+        public void Sort()
+        {
+            
+        }
     }
 }

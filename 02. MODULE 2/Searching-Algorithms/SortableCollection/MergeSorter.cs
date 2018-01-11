@@ -1,6 +1,10 @@
 ﻿namespace SortableCollection
 {
-    public class MergeSorter
+    public class MergeSorter : ISorter
     {
+        public void Sort()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

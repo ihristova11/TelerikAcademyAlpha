@@ -1,6 +1,10 @@
 ﻿namespace SortableCollection
 {
-    public class QuickSorter
+    public class QuickSorter : ISorter
     {
+        public void Sort()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
