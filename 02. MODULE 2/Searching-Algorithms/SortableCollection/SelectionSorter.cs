@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SortableCollection
+﻿namespace SortableCollection
 {
-    class SelectionSorter
+    public class SelectionSorter
     {
     }
 }

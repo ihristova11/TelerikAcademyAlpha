@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MergeSorter.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="QuickSorter.cs" />
+    <Compile Include="SelectionSorter.cs" />
     <Compile Include="SortableCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
