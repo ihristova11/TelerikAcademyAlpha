@@ -3,34 +3,31 @@ using System.IO;
 
 namespace SortableCollection
 {
-    class SortableCollection
+    public class SortableCollection
     {
-        static void Main()
+        public SortableCollection(int[] numbers)
         {
-            int[] numbers = { 1, 5, 4, 2, 7, -1, 0 };
-            int[] sortedNumbers = { 1, 2, 4, 6, 8, 11, 17 };
-            //Console.WriteLine(LinearSearch(numbers, 7));
-            //Console.WriteLine(BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 6));
-            Console.WriteLine(Shuffle(numbers));
+            this.Numbers = numbers;
         }
-        
+
+       public int[] Numbers { get; set; }
 
         // Implementation of Linear search algorithm (task 1)
-        public static int LinearSearch(int[] numbers, int desired)
+        public bool LinearSearch(int[] numbers, int desired)
         {
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] == desired)
                 {
-                    return i;
+                    return true;
                 }
             }
 
-            return -1;
+            return false;
         }
 
         // Implementation of Binary search algorithm (task 2)
-        public static int BinarySearch(int[] numbers, int min, int max, int desired)
+        public int BinarySearch(int[] numbers, int min, int max, int desired)
         {
             int mid = (min + max) / 2;
             int midValue = numbers[mid];
@@ -59,7 +56,7 @@ namespace SortableCollection
         }
 
         //Implementation of Shuffle algorithm
-        public static int[] Shuffle(int[] numbers)
+        public int[] Shuffle(int[] numbers)
         {
             //get random number
             var random = new Random();
