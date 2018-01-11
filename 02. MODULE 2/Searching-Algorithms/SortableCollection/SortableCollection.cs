@@ -9,8 +9,9 @@ namespace SortableCollection
         {
             int[] numbers = { 1, 5, 4, 2, 7, -1, 0 };
             int[] sortedNumbers = { 1, 2, 4, 6, 8, 11, 17 };
-            Console.WriteLine(LinearSearch(numbers, 7));
-            Console.WriteLine(BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 6));
+            //Console.WriteLine(LinearSearch(numbers, 7));
+            //Console.WriteLine(BinarySearch(sortedNumbers, 0, sortedNumbers.Length - 1, 6));
+            Console.WriteLine(Shuffle(numbers));
         }
         
 
@@ -55,6 +56,26 @@ namespace SortableCollection
 
                 return BinarySearch(numbers, min, max, desired);
             }
+        }
+
+        //Implementation of Shuffle algorithm
+        public static int[] Shuffle(int[] numbers)
+        {
+            //get random number
+            var random = new Random();
+
+            for (int i = numbers.Length - 1; i > 0; i--)
+            {
+                //find random index using the random number
+                int j = random.Next() % (i + 1);
+
+                //Swap elements
+                var temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+
+            return numbers;
         }
     }
 }
