@@ -2,14 +2,14 @@
 {
     public class QuickSorter : ISorter
     {
-        public void Sort()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void QuickSort()
         {
             
+        }
+
+        public void Sort(int[] collection)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

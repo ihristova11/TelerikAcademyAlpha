@@ -11,6 +11,11 @@ namespace SortableCollection
 
             var notSorted = new SortableCollection(numbers);
             var sorted = new SortableCollection(sortedNumbers);
+            var selectionSorter = new SelectionSorter();
+
+            Console.WriteLine("Selection sort:");
+            selectionSorter.Sort(numbers);;
+            Console.WriteLine();
 
             Console.WriteLine("============================");
             Console.WriteLine("Sorted array:");

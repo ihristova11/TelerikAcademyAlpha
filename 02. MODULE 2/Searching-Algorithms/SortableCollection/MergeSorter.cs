@@ -2,14 +2,15 @@
 {
     public class MergeSorter : ISorter
     {
-        public void Sort()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public void MergeSort()
         {
             
+        }
+
+        public void Sort(int[] collection)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

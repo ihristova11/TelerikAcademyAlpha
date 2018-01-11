@@ -4,31 +4,34 @@ namespace SortableCollection
 {
     public class SelectionSorter : ISorter
     {
-        public void Sort()
+        public void Sort(int[] collection)
         {
-            SelectionSort(new SortableCollection(new int[] { 1, 5, 4, 2, 7, -1, 0 }));
+            SelectionSort(collection);
         }
 
-        public void SelectionSort(SortableCollection collection)
+        public void SelectionSort(int[] collection)
         {
             int min;
             int temp;
-            for (int i = 0; i < collection.Numbers.Length; i++)
+            for (int i = 0; i < collection.Length - 1; i++)
             {
-                min = collection.Numbers[i];
+                min = collection[i];
 
-                for (int j = i + 1; j < collection.Numbers.Length - 1; j++)
+                for (int j = i + 1; j < collection.Length; j++)
                 {
-                    if (min > collection.Numbers[j])
+                    if (min > collection[j])
                     {
-                        min = collection.Numbers[j];
+                        min = collection[j];
+
+                        //swapping elements
+                        temp = collection[i];
+                        collection[i] = collection[j];
+                        collection[j] = temp;
                     }
 
-                    //swappint elements
-                    collection.Numbers[i] = collection.Numbers[j];
-                    collection.Numbers[j] = min;
                 }
             }
+            Console.WriteLine(string.Join(" ", collection));
         }
     }
 }

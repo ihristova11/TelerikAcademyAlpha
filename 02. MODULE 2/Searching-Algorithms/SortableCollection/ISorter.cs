@@ -2,6 +2,6 @@
 {
     public interface ISorter
     {
-        void Sort();
+        void Sort(int[] collection);
     }
 }
