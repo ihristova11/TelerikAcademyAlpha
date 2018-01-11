@@ -27,20 +27,20 @@ namespace SortableCollection
         }
 
         // Implementation of Binary search algorithm (task 2)
-        public int BinarySearch(int[] numbers, int min, int max, int desired)
+        public bool BinarySearch(int[] numbers, int min, int max, int desired)
         {
             int mid = (min + max) / 2;
             int midValue = numbers[mid];
 
             if (min > max)
             {
-                return -1;
+                return false;
             }
             else
             {
                 if (desired == midValue)
                 {
-                    return mid;
+                    return true;
                 }
                 else if (desired > midValue)
                 {
