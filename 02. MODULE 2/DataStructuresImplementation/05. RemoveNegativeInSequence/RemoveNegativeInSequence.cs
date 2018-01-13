@@ -1,28 +1,17 @@
-﻿namespace _05.RemoveNegativeInSequence
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _05.RemoveNegativeInSequence
 {
-    public class ListNode
-    {
-        public ListNode(int value, ListNode prev)
-        {
-            this.Value = value;
-            this.Previous = prev;
-            if (prev != null)
-            {
-                this.Previous.Next = this;
-            }
-        }
-
-        public int Value { get; set; }
-
-        public ListNode Next { get; set; }
-
-        public ListNode Previous { get; set; }
-    }
-
     public class RemoveNegativeInSequence
     {
         static void Main()
         {
+            List<int> list = new List<int>() { 1, -5, 2, 5, -6, -7, -19, 21 };
+
+            Console.WriteLine($"Positive: {string.Join(" ", list.Where(x => x >= 0))}");
+            Console.WriteLine($"Negative: {string.Join(" ", list.Where(x => x < 0))}");
         }
     }
 }
