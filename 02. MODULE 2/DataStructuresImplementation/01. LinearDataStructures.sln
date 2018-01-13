@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokiSkoki", "CokiSkoki\Coki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. OccurrancesOfNumbers", "07. OccurrancesOfNumbers\07. OccurrancesOfNumbers.csproj", "{786E0889-43AE-4967-8028-84910BF76D3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Majorant", "08. Majorant\08. Majorant.csproj", "{A3749E98-FE05-4AEE-96F8-3FE495826CD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{786E0889-43AE-4967-8028-84910BF76D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{786E0889-43AE-4967-8028-84910BF76D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{786E0889-43AE-4967-8028-84910BF76D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3749E98-FE05-4AEE-96F8-3FE495826CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3749E98-FE05-4AEE-96F8-3FE495826CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3749E98-FE05-4AEE-96F8-3FE495826CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3749E98-FE05-4AEE-96F8-3FE495826CD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{91AAAF3C-F35F-4F16-98EE-149654CF4A0B} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
 		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
 		{786E0889-43AE-4967-8028-84910BF76D3F} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
+		{A3749E98-FE05-4AEE-96F8-3FE495826CD3} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FAF8C82-D1B9-4B1D-8486-00BFE2D462C3}
