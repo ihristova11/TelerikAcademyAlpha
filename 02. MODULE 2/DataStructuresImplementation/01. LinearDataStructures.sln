@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. RemoveNegativeInSequenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. RemoveOddOccurrences", "06. RemoveOddOccurrences\06. RemoveOddOccurrences.csproj", "{91AAAF3C-F35F-4F16-98EE-149654CF4A0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CokiSkoki", "CokiSkoki\CokiSkoki.csproj", "{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{91AAAF3C-F35F-4F16-98EE-149654CF4A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91AAAF3C-F35F-4F16-98EE-149654CF4A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91AAAF3C-F35F-4F16-98EE-149654CF4A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{5375FAA6-4ABE-4B47-9FA7-D4D52504A295} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
 		{59A34F52-1593-4536-A68E-ED0C6A901442} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
 		{91AAAF3C-F35F-4F16-98EE-149654CF4A0B} = {797549AA-D270-44BF-A34D-8FB5CA66FBD7}
+		{B033F3BF-1DAD-4DEB-9AD3-39F88426ECD9} = {2B16982F-2AC5-4EF6-9515-3B312CD6469A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FAF8C82-D1B9-4B1D-8486-00BFE2D462C3}
