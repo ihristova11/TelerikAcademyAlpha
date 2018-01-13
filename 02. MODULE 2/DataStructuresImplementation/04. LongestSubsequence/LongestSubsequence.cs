@@ -8,29 +8,31 @@ namespace _04.LongestSubsequence
     {
         static void Main()
         {
-            List<int> seq = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
-            Console.WriteLine(FindLongest(seq));
+            List<int> numbers = new List<int>() { 1, 3, 2, 3, 4, 5, 6, 4, 5, 6, 6, 7, 8 };
+
+            
         }
 
-        private static int FindLongest(List<int> seq)
+        public static void CountOccurrances(IList<int> numbers)
         {
-            int best = 1;
-            int counter = 1;
-            for (int i = 1; i < seq.Count; i++)
+            if (numbers == null || numbers.Count == 0)
             {
-                if (seq[i - 1] == seq[i])
-                {
-                    counter++;
+                throw new ArgumentException("cannot be empty");
+            }
 
-                    best = best < counter ? counter : best;
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (dictionary.ContainsKey(numbers[i]))
+                {
+                    dictionary[numbers[i]]++;
                 }
                 else
                 {
-                    counter = 1;
+                    dictionary.Add(numbers[i], 1);
                 }
             }
-
-            return best;
         }
     }
 }
