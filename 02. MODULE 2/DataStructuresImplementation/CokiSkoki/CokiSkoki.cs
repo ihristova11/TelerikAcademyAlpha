@@ -21,7 +21,7 @@ namespace CokiSkoki
 
             for (int index = buildingsHeight.Length - 1; index >= 0; index--)
             {
-                while (peekIndices.Count != 0 && buildingsHeight[peekIndices.Peek()] < buildingsHeight[index] )
+                while (peekIndices.Count != 0 && buildingsHeight[peekIndices.Peek()] <= buildingsHeight[index] )
                 {
                     int peekIndex = peekIndices.Pop();
                     pathLengths[peekIndex] = peekIndices.Count();
