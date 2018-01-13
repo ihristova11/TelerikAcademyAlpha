@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace _06.RemoveOddOccurrences
 {
-    class RemoveOddOccurrences
+    public class RemoveOddOccurrences
     {
         static void Main()
         {

@@ -1,6 +1,6 @@
 ﻿namespace _03.SortIntegersInIncreasingOrder
 {
-    class SortIntegersInIncreasingOrder
+    public class SortIntegersInIncreasingOrder
     {
         static void Main()
         {

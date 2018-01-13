@@ -19,7 +19,7 @@
         public ListNode Previous { get; set; }
     }
 
-    class RemoveNegativeInSequence
+    public class RemoveNegativeInSequence
     {
         static void Main()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace _04.LongestSubsequence
 {
-    class LongestSubsequence
+    public class LongestSubsequence
     {
         static void Main()
         {
