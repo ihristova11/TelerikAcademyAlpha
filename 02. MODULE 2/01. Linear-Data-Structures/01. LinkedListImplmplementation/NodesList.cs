@@ -5,6 +5,7 @@ namespace _01.LinkedListImplmplementation
     public class NodesList<T>
     {
         // not fully implemented
+
         public ListNode<T> Head { get; set; }
 
         public ListNode<T> Tail { get; set; }

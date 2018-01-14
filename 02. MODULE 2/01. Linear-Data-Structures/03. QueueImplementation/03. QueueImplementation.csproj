@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{72B0AA4D-001C-42BA-9F7E-882706B7B0A2}</ProjectGuid>
+    <ProjectGuid>{3421C263-C594-4D1D-8C26-3618C8EF1457}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01.LinkedListImplmplementation</RootNamespace>
-    <AssemblyName>_01.LinkedListImplmplementation</AssemblyName>
+    <RootNamespace>_03.QueueImplementation</RootNamespace>
+    <AssemblyName>_03.QueueImplementation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListNode.cs" />
-    <Compile Include="NodesList.cs" />
+    <Compile Include="LinkListQueue.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Queue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
