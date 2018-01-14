@@ -1,13 +1,13 @@
-﻿namespace _01.LinkedListImplmplementation
+﻿using System;
+
+namespace _01.LinkedListImplmplementation
 {
     public class NodesList<T>
     {
-
+        // not fully implemented
         public ListNode<T> Head { get; set; }
 
-        public ListNode<T> First { get; set; }
-
-        public ListNode<T> Last { get; set; }
+        public ListNode<T> Tail { get; set; }
 
         public int Count { get; set; }
 
@@ -19,6 +19,37 @@
             node.Prev = newNode;
 
             this.Count++;
+        }
+
+        public void AddAfter(ListNode<T> newNode, ListNode<T> node)
+        {
+            newNode.Prev = node;
+            newNode.Next = node.Next;
+            newNode.Next.Prev = newNode;
+            node.Next = newNode;
+
+            this.Count++;
+        }
+
+        public void AddFirst(ListNode<T> node)
+        {
+            if (this.Head == null)
+            {
+                throw new ArgumentException("there is no first element");
+            }
+
+            AddBefore(this.Head, node);
+            this.Head = node;
+        }
+
+        public void AddLast(ListNode<T> node)
+        {
+            if (this.Head == null)
+            {
+                throw new ArgumentException("there is no first element");
+            }
+
+            AddBefore(this.Head, node);
         }
 
         public void Remove(ListNode<T> nodeToRemove)
@@ -39,5 +70,17 @@
 
             this.Count--;
         }
+
+        public void RemoveFirst()
+        {
+            if (this.Head == null)
+            {
+                throw new ArgumentException("there is no first element");
+            }
+
+            Remove(this.Head);
+        }
+
+        
     }
 }
