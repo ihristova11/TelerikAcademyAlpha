@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Combinatios
 {
-    public class Combinations
+    public class Program
     {
         static void Main()
         {
@@ -20,7 +20,6 @@ namespace Combinatios
 
         public static void GenerateCombination(int[] combinationStore, int counter, int startNumber, int endNumber, int combinationLen)
         {
-            //bottom of recursion
             if (counter >= combinationStore.Length)
             {
                 Console.WriteLine(string.Join(" ", combinationStore));
