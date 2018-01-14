@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Globalization;
 
 namespace _09.First50ElementsOfSequence
 {
