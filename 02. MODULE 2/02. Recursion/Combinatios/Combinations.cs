@@ -30,7 +30,7 @@ namespace Combinatios
                 for (int i = startNumber; i <= endNumber; i++)
                 {
                     combinationStore[counter] = i;
-                    GenerateCombination(combinationStore, counter + 1, i, endNumber, combinationLen);
+                    GenerateCombination(combinationStore, counter + 1, i + 1, endNumber, combinationLen);
                 }
             }
         }

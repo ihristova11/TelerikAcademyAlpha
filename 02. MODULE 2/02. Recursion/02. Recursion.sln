@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SimulationOfNestedLoops
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Judge Problems", "Judge Problems", "{4D82E322-27CF-48B8-8210-9BD4A610319D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinatios", "Combinatios\Combinatios.csproj", "{A776C1EB-19AE-40AD-8967-181C503A8953}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinatios\Combinations.csproj", "{A776C1EB-19AE-40AD-8967-181C503A8953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationsWithRepetitions", "CombinationsWithRepetitions\CombinationsWithRepetitions.csproj", "{80F552B6-BA34-4230-BDE1-76EBE02E5B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{A776C1EB-19AE-40AD-8967-181C503A8953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A776C1EB-19AE-40AD-8967-181C503A8953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A776C1EB-19AE-40AD-8967-181C503A8953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F552B6-BA34-4230-BDE1-76EBE02E5B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F552B6-BA34-4230-BDE1-76EBE02E5B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F552B6-BA34-4230-BDE1-76EBE02E5B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F552B6-BA34-4230-BDE1-76EBE02E5B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A776C1EB-19AE-40AD-8967-181C503A8953} = {4D82E322-27CF-48B8-8210-9BD4A610319D}
+		{80F552B6-BA34-4230-BDE1-76EBE02E5B0C} = {4D82E322-27CF-48B8-8210-9BD4A610319D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACEA6D8C-9F21-42F4-B0F8-24FEA7387FCB}
