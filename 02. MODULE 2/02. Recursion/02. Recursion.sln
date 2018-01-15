@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFactorial", "NFactorial\NF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveSudoku", "SolveSudoku\SolveSudoku.csproj", "{95024DDF-4101-401B-A5FB-AE538BAF7835}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Permutations", "04. Permutations\04. Permutations.csproj", "{6D6FA039-9EC1-43F9-B330-46CCA64696EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{95024DDF-4101-401B-A5FB-AE538BAF7835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95024DDF-4101-401B-A5FB-AE538BAF7835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95024DDF-4101-401B-A5FB-AE538BAF7835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6FA039-9EC1-43F9-B330-46CCA64696EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6FA039-9EC1-43F9-B330-46CCA64696EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6FA039-9EC1-43F9-B330-46CCA64696EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6FA039-9EC1-43F9-B330-46CCA64696EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
