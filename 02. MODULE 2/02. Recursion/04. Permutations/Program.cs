@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.SqlServer.Server;
 
 namespace _04.Permutations
 {
@@ -30,7 +29,7 @@ namespace _04.Permutations
                     mp[i] = k + 1;
                     Permute(i + 1, n, used, mp);
                     used[k] = false;
-                }
+                 }
             }
         }
 
