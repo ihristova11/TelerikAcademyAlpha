@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. PlayerRanking", "06. Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. UnitsOfWork", "07. UnitsOfWork\07. UnitsOfWork.csproj", "{1CB8AC63-1C9C-4A47-90FB-890CF4F883C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Slogan", "08. Slogan\08. Slogan.csproj", "{183B92BA-ED9B-4340-8B33-2C9417D09BCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1CB8AC63-1C9C-4A47-90FB-890CF4F883C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB8AC63-1C9C-4A47-90FB-890CF4F883C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB8AC63-1C9C-4A47-90FB-890CF4F883C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183B92BA-ED9B-4340-8B33-2C9417D09BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183B92BA-ED9B-4340-8B33-2C9417D09BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183B92BA-ED9B-4340-8B33-2C9417D09BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183B92BA-ED9B-4340-8B33-2C9417D09BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
