@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Wintellect.PowerCollections;
 
 namespace _06.PlayerRanking
@@ -25,15 +24,10 @@ namespace _06.PlayerRanking
 
             if (result == 0)
             {
-                result = this.Age.CompareTo(other.Age) * -1;
+                result = this.Age.CompareTo(other.Age);
             }
 
             return result;
-        }
-
-        public override string ToString()
-        {
-            return string.Format("{0}({1})", this.Name, this.Age);
         }
     }
 
@@ -43,7 +37,7 @@ namespace _06.PlayerRanking
         {
             BigList<Player> allPlayersRanklist = new BigList<Player>();
             Dictionary<string, SortedSet<Player>> typeToPlayerMap = new Dictionary<string, SortedSet<Player>>();
-            StringBuilder result = new StringBuilder();
+
             string line;
             while ((line = Console.ReadLine()) != "end")
             {
@@ -70,41 +64,24 @@ namespace _06.PlayerRanking
 
                         typeToPlayerMap[type].Add(player);
                         allPlayersRanklist.Insert(position - 1, player);
-                        result.AppendFormat("Added player {0} to position {1}", player.Name, position);
-                        result.AppendLine();
+                        Console.WriteLine(string.Format("Added player {0} to position {1}", player.Name, position));
                         break;
                     case "find": // find top 5 units
                         string findType = commandParameters[1];
 
                         if (typeToPlayerMap.ContainsKey(findType))
                         {
-                            var found = typeToPlayerMap[findType].Take(5);
-                            result.AppendFormat("Type {0}: {1}", findType, string.Join("; ", found));
-                            result.AppendLine();
+                            
                         }
                         else
                         {
-                           result.AppendFormat("Type {0}: ", findType);
-                            result.AppendLine();
+                            Console.WriteLine("Type {0}: ", findType);
                         }
                         break;
                     case "ranklist":
-                        int start = int.Parse(commandParameters[1]);
-                        int end = int.Parse(commandParameters[2]);
-                        int count = end - start + 1;
-                        var ranked = allPlayersRanklist.Range(start - 1, count);
-                        foreach (var pl in ranked)
-                        {
-                            result.AppendFormat("{0}. {1}; ", start++, pl);
-                        }
-
-                        string output = result.ToString().TrimEnd(';', ' ');
-                        result = new StringBuilder(output);
-                        result.AppendLine();
                         break;
                 }
             }
-            Console.WriteLine(result.ToString());
         }
     }
 }
