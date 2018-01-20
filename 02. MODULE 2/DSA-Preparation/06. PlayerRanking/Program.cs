@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Wintellect.PowerCollections;
 
 namespace _06.PlayerRanking
@@ -36,8 +37,8 @@ namespace _06.PlayerRanking
         static void Main()
         {
             BigList<Player> allPlayersRanklist = new BigList<Player>();
-            Dictionary<string, SortedSet<Player>> typeToPlayerMap = new Dictionary<string, SortedSet<Player>>();
-
+            Dictionary<string, OrderedSet<Player>> typeToPlayerMap = new Dictionary<string, OrderedSet<Player>>();
+            StringBuilder result = new StringBuilder();
             string line;
             while ((line = Console.ReadLine()) != "end")
             {
@@ -57,14 +58,32 @@ namespace _06.PlayerRanking
 
                         Player player = new Player(name, type, age);
 
-                        if (!typeToPlayerMap.ContainsKey(type))
+                        if (typeToPlayerMap.ContainsKey(type))
                         {
-                            typeToPlayerMap.Add(type, new SortedSet<Player>());
+                            if (typeToPlayerMap[type].Count == 5)
+                            {
+                                Player lastPlayer = typeToPlayerMap[type][4];
+                                if (lastPlayer.CompareTo(player) > 0)
+                                {
+                                    typeToPlayerMap[type].Remove(lastPlayer);
+                                    typeToPlayerMap[type].Add(player);
+                                }
+                            }
+                            else
+                            {
+                                typeToPlayerMap[type].Add(player);
+                            }
+                        }
+                        else
+                        {
+                            typeToPlayerMap[type] = new OrderedSet<Player>();
+                            typeToPlayerMap[type].Add(player);
                         }
 
-                        typeToPlayerMap[type].Add(player);
                         allPlayersRanklist.Insert(position - 1, player);
-                        Console.WriteLine(string.Format("Added player {0} to position {1}", player.Name, position));
+
+                        result.AppendFormat("Added player {0} to position {1}", player.Name, position);
+                        result.AppendLine();
                         break;
                     case "find": // find top 5 units
                         string findType = commandParameters[1];
