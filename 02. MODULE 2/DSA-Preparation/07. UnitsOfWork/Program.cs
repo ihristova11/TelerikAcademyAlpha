@@ -1,14 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _07.UnitsOfWork
 {
-    class Program
+    public class Unit : IComparable<Unit>
     {
-        static void Main(string[] args)
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int Attack { get; set; }
+
+        public int CompareTo(Unit other)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Program
+    {
+        static void Main()
         {
         }
     }
