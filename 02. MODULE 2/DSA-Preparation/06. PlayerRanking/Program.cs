@@ -70,7 +70,8 @@ namespace _06.PlayerRanking
 
                         typeToPlayerMap[type].Add(player);
                         allPlayersRanklist.Insert(position - 1, player);
-                        Console.WriteLine("Added player {0} to position {1}", player.Name, position);
+                        result.AppendFormat("Added player {0} to position {1}", player.Name, position);
+                        result.AppendLine();
                         break;
                     case "find": // find top 5 units
                         string findType = commandParameters[1];
@@ -78,11 +79,13 @@ namespace _06.PlayerRanking
                         if (typeToPlayerMap.ContainsKey(findType))
                         {
                             var found = typeToPlayerMap[findType].Take(5);
-                            Console.WriteLine("Type {0}: {1}", findType, string.Join("; ", found));
+                            result.AppendFormat("Type {0}: {1}", findType, string.Join("; ", found));
+                            result.AppendLine();
                         }
                         else
                         {
-                            Console.WriteLine("Type {0}: ", findType);
+                           result.AppendFormat("Type {0}: ", findType);
+                            result.AppendLine();
                         }
                         break;
                     case "ranklist":
@@ -96,11 +99,12 @@ namespace _06.PlayerRanking
                         }
 
                         string output = result.ToString().TrimEnd(';', ' ');
-                        Console.WriteLine(output);
-                        result.Clear();
+                        result = new StringBuilder(output);
+                        result.AppendLine();
                         break;
                 }
             }
+            Console.WriteLine(result.ToString());
         }
     }
 }
