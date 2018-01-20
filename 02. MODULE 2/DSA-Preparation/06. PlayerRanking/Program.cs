@@ -30,6 +30,11 @@ namespace _06.PlayerRanking
 
             return result;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}({1})", this.Name, this.Age);
+        }
     }
 
     public class Program
@@ -87,20 +92,42 @@ namespace _06.PlayerRanking
                         break;
                     case "find": // find top 5 units
                         string findType = commandParameters[1];
-
                         if (typeToPlayerMap.ContainsKey(findType))
                         {
-                            
+                            var players = typeToPlayerMap[findType];
+                            result.AppendFormat("Type {0}:", findType);
+                            foreach (Player p in players)
+                            {
+                                result.AppendFormat(" {0};", p);
+                            }
+
+                            result.Remove(result.Length - 1, 1);
+                            result.AppendLine();
                         }
                         else
                         {
-                            Console.WriteLine("Type {0}: ", findType);
+                            result.AppendFormat("Type {0}: ", findType);
+                            result.AppendLine();
                         }
                         break;
                     case "ranklist":
+                        int start = int.Parse(commandParameters[1]);
+                        int end = int.Parse(commandParameters[2]);
+                        int count = end - start + 1;
+                        var rankedPlayers = allPlayersRanklist.Range(start - 1, count);
+
+                        int playerPosition = start;
+                        foreach (Player p in rankedPlayers)
+                        {
+                            result.AppendFormat("{0}. {1}; ", playerPosition++, p);
+                        }
+
+                        result.Remove(result.Length - 2, 2);
+                        result.AppendLine();
                         break;
                 }
             }
+            Console.WriteLine(result.ToString());
         }
     }
 }
