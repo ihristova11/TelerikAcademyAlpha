@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Dijkstra", "02. Dijkstr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. TopologicalSorting", "03. TopologicalSorting\03. TopologicalSorting.csproj", "{3078C410-1FA7-4CF2-9C63-5E693FF989B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. LargestArea", "04. LargestArea\04. LargestArea.csproj", "{ABE90723-D510-460E-8A5B-23CC2C4F0498}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{3078C410-1FA7-4CF2-9C63-5E693FF989B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3078C410-1FA7-4CF2-9C63-5E693FF989B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3078C410-1FA7-4CF2-9C63-5E693FF989B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE90723-D510-460E-8A5B-23CC2C4F0498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE90723-D510-460E-8A5B-23CC2C4F0498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE90723-D510-460E-8A5B-23CC2C4F0498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE90723-D510-460E-8A5B-23CC2C4F0498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{78E761E8-6494-4710-B3C7-250C890E1F52} = {17C596EC-D7C3-4BA6-B68C-7B8A041EC29B}
 		{971041FA-0989-46A8-99A4-FD9B6B7312C5} = {17C596EC-D7C3-4BA6-B68C-7B8A041EC29B}
 		{3078C410-1FA7-4CF2-9C63-5E693FF989B4} = {17C596EC-D7C3-4BA6-B68C-7B8A041EC29B}
+		{ABE90723-D510-460E-8A5B-23CC2C4F0498} = {17C596EC-D7C3-4BA6-B68C-7B8A041EC29B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78E4FBDD-2A9A-4D3D-B3BF-580F312A80A0}
