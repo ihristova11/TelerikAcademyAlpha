@@ -44,6 +44,7 @@
     <Compile Include="IExtensionManager.cs" />
     <Compile Include="LogAnalyzer.cs" />
     <Compile Include="Mocks\AlwaysValidFakeExtensionManager.cs" />
+    <Compile Include="Mocks\FakeExtensionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
