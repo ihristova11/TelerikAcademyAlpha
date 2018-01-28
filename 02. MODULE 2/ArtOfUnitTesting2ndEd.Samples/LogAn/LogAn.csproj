@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileExtensionManager.cs" />
-    <Compile Include="IExtensionManager.cs" />
+    <Compile Include="Contracts\IExtensionManager.cs" />
     <Compile Include="LogAnalyzer.cs" />
     <Compile Include="Mocks\AlwaysValidFakeExtensionManager.cs" />
     <Compile Include="Mocks\FakeExtensionManager.cs" />
