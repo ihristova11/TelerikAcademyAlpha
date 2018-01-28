@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndirectedGraphImplementation", "UndirectedGraphImplementation\UndirectedGraphImplementation.csproj", "{52B4722A-982B-46F1-BED0-B1D05C511320}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Resources", "01. Resources\01. Resources.csproj", "{85E4A0D7-A653-45A0-A585-9D43BCA6B1EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{52B4722A-982B-46F1-BED0-B1D05C511320}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B4722A-982B-46F1-BED0-B1D05C511320}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B4722A-982B-46F1-BED0-B1D05C511320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E4A0D7-A653-45A0-A585-9D43BCA6B1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E4A0D7-A653-45A0-A585-9D43BCA6B1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E4A0D7-A653-45A0-A585-9D43BCA6B1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E4A0D7-A653-45A0-A585-9D43BCA6B1EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
