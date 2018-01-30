@@ -4,9 +4,11 @@ namespace LogAn.Mocks
 {
     public class FakeWebService : IWebService
     {
+        public string lastError;
+
         public void LogError(string message)
         {
-            throw new System.NotImplementedException();
+            this.lastError = message;
         }
     }
 }

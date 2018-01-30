@@ -7,18 +7,27 @@ namespace LogAn.UnitTests
     [TestFixture]
     public class LogAnalyzerTests
     {
+        //[Test]
+        //public void IsValidFileName_NameSupportedExtension_ReturnsTrue()
+        //{
+        //    FakeExtensionManager fake = new FakeExtensionManager();
+        //    fake.WillBeValid = true;
+        //    LogAnalyzer log = new LogAnalyzer(fake);
+
+        //    bool result = log.IsValidLogFileName("short.ext");
+
+        //    Assert.IsTrue(result);
+        //}
+
         [Test]
-        public void IsValidFileName_NameSupportedExtension_ReturnsTrue()
+        public void Analyze_TooShortFileName_CallsWebService()
         {
-            FakeExtensionManager fake = new FakeExtensionManager();
-            fake.WillBeValid = true;
-            LogAnalyzer log = new LogAnalyzer(fake);
+            FakeWebService fake = new FakeWebService();
+            LogAnalyzer log = new LogAnalyzer();
+            string tooShortName = "abc.txt";
 
-            bool result = log.IsValidLogFileName("short.ext");
-
-            Assert.IsTrue(result);
+            
         }
-
         //[Test]
         //public void IsValidLogFileName_BadExtension_ReturnsFalse()
         //{
