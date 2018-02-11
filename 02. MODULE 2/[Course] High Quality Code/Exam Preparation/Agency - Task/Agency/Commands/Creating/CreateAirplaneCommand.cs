@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Agency.Commands.Contracts;
-using Agency.Commands.Creating;
 using Agency.Core.Contracts;
 
-namespace Traveller.Commands.Creating
+namespace Agency.Commands.Creating
 {
     // TODO
     public class CreateAirplaneCommand :  ICommand

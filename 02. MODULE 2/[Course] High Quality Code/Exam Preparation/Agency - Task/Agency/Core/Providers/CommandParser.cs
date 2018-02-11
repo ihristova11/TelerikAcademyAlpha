@@ -40,8 +40,7 @@ namespace Agency.Core.Providers
             Assembly currentAssembly = this.GetType().GetTypeInfo().Assembly;
             var commandTypeInfo = currentAssembly.DefinedTypes
                 .Where(type => type.ImplementedInterfaces.Any(inter => inter == typeof(ICommand)))
-                .Where(type => type.Name.ToLower() == (commandName.ToLower() + "command"))
-                .SingleOrDefault();
+                .SingleOrDefault(type => type.Name.ToLower() == (commandName.ToLower() + "command"));
 
             if (commandTypeInfo == null)
             {

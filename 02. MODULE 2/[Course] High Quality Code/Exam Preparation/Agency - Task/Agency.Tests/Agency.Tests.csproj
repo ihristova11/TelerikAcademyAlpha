@@ -48,7 +48,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IO Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,58 +58,6 @@
       <Project>{37BA7D68-D803-4820-9586-8EFC016C9144}</Project>
       <Name>Agency</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Tests\test.001.in.txt" />
-    <Content Include="Tests\test.001.out.txt" />
-    <Content Include="Tests\test.002.in.txt" />
-    <Content Include="Tests\test.002.out.txt" />
-    <Content Include="Tests\test.003.in.txt" />
-    <Content Include="Tests\test.003.out.txt" />
-    <Content Include="Tests\test.004.in.txt" />
-    <Content Include="Tests\test.004.out.txt" />
-    <Content Include="Tests\test.005.in.txt" />
-    <Content Include="Tests\test.005.out.txt" />
-    <Content Include="Tests\test.006.in.txt" />
-    <Content Include="Tests\test.006.out.txt" />
-    <Content Include="Tests\test.007.in.txt" />
-    <Content Include="Tests\test.007.out.txt" />
-    <Content Include="Tests\test.008.in.txt" />
-    <Content Include="Tests\test.008.out.txt" />
-    <Content Include="Tests\test.009.in.txt" />
-    <Content Include="Tests\test.009.out.txt" />
-    <Content Include="Tests\test.010.in.txt" />
-    <Content Include="Tests\test.010.out.txt" />
-    <Content Include="Tests\test.011.in.txt" />
-    <Content Include="Tests\test.011.out.txt" />
-    <Content Include="Tests\test.012.in.txt" />
-    <Content Include="Tests\test.012.out.txt" />
-    <Content Include="Tests\test.013.in.txt" />
-    <Content Include="Tests\test.013.out.txt" />
-    <Content Include="Tests\test.014.in.txt" />
-    <Content Include="Tests\test.014.out.txt" />
-    <Content Include="Tests\test.015.in.txt" />
-    <Content Include="Tests\test.015.out.txt" />
-    <Content Include="Tests\test.016.in.txt" />
-    <Content Include="Tests\test.016.out.txt" />
-    <Content Include="Tests\test.017.in.txt" />
-    <Content Include="Tests\test.017.out.txt" />
-    <Content Include="Tests\test.018.in.txt" />
-    <Content Include="Tests\test.018.out.txt" />
-    <Content Include="Tests\test.019.in.txt" />
-    <Content Include="Tests\test.019.out.txt" />
-    <Content Include="Tests\test.020.in.txt" />
-    <Content Include="Tests\test.020.out.txt" />
-    <Content Include="Tests\test.021.in.txt" />
-    <Content Include="Tests\test.021.out.txt" />
-    <Content Include="Tests\test.022.in.txt" />
-    <Content Include="Tests\test.022.out.txt" />
-    <Content Include="Tests\test.023.in.txt" />
-    <Content Include="Tests\test.023.out.txt" />
-    <Content Include="Tests\test.024.in.txt" />
-    <Content Include="Tests\test.024.out.txt" />
-    <Content Include="Tests\test.025.in.txt" />
-    <Content Include="Tests\test.025.out.txt" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
