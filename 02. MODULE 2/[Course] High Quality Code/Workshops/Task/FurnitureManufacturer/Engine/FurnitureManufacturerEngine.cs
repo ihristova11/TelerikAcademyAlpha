@@ -7,13 +7,13 @@ namespace FurnitureManufacturer.Engine
 {
     public sealed class FurnitureManufacturerEngine : IFurnitureManufacturerEngine
     {
-        private readonly ICommandFactory commandFactory;
         private readonly IRenderer renderer;
+        private readonly ICommandFactory factory;
 
-        public FurnitureManufacturerEngine(ICommandFactory commandFactory, IRenderer renderer)
+        public FurnitureManufacturerEngine(IRenderer consoleRenderer, ICommandFactory factory)
         {
-            this.commandFactory = commandFactory;
-            this.renderer = renderer;
+            this.renderer = consoleRenderer;
+            this.factory = factory;
         }
 
         public void Start()
@@ -22,26 +22,28 @@ namespace FurnitureManufacturer.Engine
 
             try
             {
-                foreach (var line in this.renderer.Input())
+                foreach (var currentLine in this.renderer.Input())
                 {
-                    commandResults.Add(this.ProcessCommands(line));
+                    commandResults.Add(this.ProcessCommand(currentLine));
                 }
             }
             catch (Exception ex)
             {
                 commandResults.Add(ex.Message);
             }
-            
+
             this.renderer.Output(commandResults);
+
         }
-        
-        private string ProcessCommands(string commandLine)
+
+        private string ProcessCommand(string commandLine)
         {
             var commandParts = commandLine.Split(' ').ToList();
+
             var commandName = commandParts[0];
             var commandParameters = commandParts.Skip(1).ToList();
 
-            var command = this.commandFactory.GetCommand(commandName);
+            var command = this.factory.GetCommand(commandName.ToLower());
             return command.Execute(commandParameters);
         }
     }
