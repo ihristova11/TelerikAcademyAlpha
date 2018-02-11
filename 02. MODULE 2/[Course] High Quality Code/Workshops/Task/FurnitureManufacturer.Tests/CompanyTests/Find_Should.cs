@@ -20,5 +20,17 @@ namespace FurnitureManufacturer.Tests.CompanyTests
             // Act & Assert
             Assert.ThrowsException<ArgumentNullException>(() => sut.Find(model));
         }
+
+        [TestMethod]
+        public void ReturnNull_IfFurnitureNotFound()
+        {
+            var model = "model";
+            string name = "somecompanynamehere";
+            string registrationNumber = "1234567899";
+
+            var sut = new Company(name, registrationNumber);
+
+            Assert.IsTrue(null == sut.Find(model));
+        }
     }
 }
