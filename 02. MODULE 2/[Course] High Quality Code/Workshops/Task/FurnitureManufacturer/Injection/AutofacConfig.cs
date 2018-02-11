@@ -1,13 +1,11 @@
-﻿
-using System.Reflection;
+﻿using System.Reflection;
 using Autofac;
 using FurnitureManufacturer.Engine;
 using FurnitureManufacturer.Engine.Commands;
-using FurnitureManufacturer.Engine.Commands.Contracts;
 using FurnitureManufacturer.Engine.Commands.CompanyCommands;
 using FurnitureManufacturer.Engine.Factories;
 using FurnitureManufacturer.Interfaces.Engine;
-using ICommand = FurnitureManufacturer.Engine.Commands.Contracts;
+using ICommand = FurnitureManufacturer.Engine.Commands.Contracts.ICommand;
 using Module = Autofac.Module;
 
 namespace FurnitureManufacturer.Injection
@@ -32,13 +30,13 @@ namespace FurnitureManufacturer.Injection
             containerBuilder.RegisterType<CompanyFactory>().As<ICompanyFactory>()
                 .SingleInstance();
 
-            containerBuilder.RegisterType<CreateChairCommand>().Named<Engine.Commands.Contracts.ICommand>("createchair");
-            containerBuilder.RegisterType<CreateCompanyCommand>().Named<ICommand.ICommand>("createcompany");
-            containerBuilder.RegisterType<CreateTableCommand>().Named<ICommand.ICommand>("createtable");
-            containerBuilder.RegisterType<AddFurnitureToCompanyCommand>().Named<ICommand.ICommand>("addfurnituretocompany");
-            containerBuilder.RegisterType<FindFurnitureFromCompanyCommand>().Named<ICommand.ICommand>("findfurniturefromcompany");
-            containerBuilder.RegisterType<RemoveFurnitureFromCompanyCommand>().Named<ICommand.ICommand>("removefurniturefromcompany");
-            containerBuilder.RegisterType<ShowCompanyCatalogCommand>().Named<ICommand.ICommand>("showcompanycatalog");
+            containerBuilder.RegisterType<CreateChairCommand>().Named<ICommand>("createchair");
+            containerBuilder.RegisterType<CreateCompanyCommand>().Named<ICommand>("createcompany");
+            containerBuilder.RegisterType<CreateTableCommand>().Named<ICommand>("createtable");
+            containerBuilder.RegisterType<AddFurnitureToCompanyCommand>().Named<ICommand>("addfurnituretocompany");
+            containerBuilder.RegisterType<FindFurnitureFromCompanyCommand>().Named<ICommand>("findfurniturefromcompany");
+            containerBuilder.RegisterType<RemoveFurnitureFromCompanyCommand>().Named<ICommand>("removefurniturefromcompany");
+            containerBuilder.RegisterType<ShowCompanyCatalogCommand>().Named<ICommand>("showcompanycatalog");
 
             containerBuilder.RegisterType<FurnitureManufacturerEngine>().As<IFurnitureManufacturerEngine>()
             .SingleInstance();
