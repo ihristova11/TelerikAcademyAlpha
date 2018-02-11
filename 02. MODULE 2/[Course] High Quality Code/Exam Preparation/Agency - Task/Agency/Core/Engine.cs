@@ -1,56 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using Agency.Core.Contracts;
-using Agency.Core.Providers;
-using Agency.Models.Contracts;
-using Agency.Models.Vehicles.Contracts;
+using Bytes2you.Validation;
 
 namespace Agency.Core
 {
     public class Engine : IEngine
     {
-        private static IEngine instanceHolder;
+        private readonly IReader reader;
+        private readonly IWriter writer;
+        private readonly IParser parser;
 
         private const string TerminationCommand = "Exit";
-        private const string NullProvidersExceptionMessage = "cannot be null.";
 
-        // private because of Singleton design pattern
-        private Engine()
+        public  Engine(IReader reader, IWriter writer, IParser parser)
         {
-            this.Reader = new ConsoleReader();
-            this.Writer = new ConsoleWriter();
-            this.Parser = new CommandParser();
+            Guard.WhenArgument(reader, "reader is null").IsNull().Throw();
+            Guard.WhenArgument(writer, "writer is null").IsNull().Throw();
+            Guard.WhenArgument(parser, "parser is null").IsNull().Throw();
 
-            this.Vehicles = new List<IVehicle>();
-            this.Journeys = new List<IJourney>();
-            this.Tickets = new List<ITicket>();
+            this.reader = reader;
+            this.writer = writer;
+            this.parser = parser;
         }
-
-        public static IEngine Instance
-        {
-            get
-            {
-                if (instanceHolder == null)
-                {
-                    instanceHolder = new Engine();
-                }
-
-                return instanceHolder;
-            }
-        }
-
-        // Property dependencty injection not validated for simplicity
-        public IReader Reader { get; set; }
-
-        public IWriter Writer { get; set; }
-
-        public IParser Parser { get; set; }
-
-        public IList<IVehicle> Vehicles { get; private set; }
         
-        public IList<IJourney> Journeys { get; private set; }
-
-        public IList<ITicket> Tickets { get; private set; }
 
         public void Start()
         {
@@ -58,36 +30,34 @@ namespace Agency.Core
             {
                 try
                 {
-                    var commandAsString = this.Reader.ReadLine();
+                    var commandAsString = this.reader.ReadLine();
 
                     if (commandAsString.ToLower() == TerminationCommand.ToLower())
                     {
                         break;
                     }
 
-                    this.ProcessCommand(commandAsString);
+                    this.writer.WriteLine(this.ProcessCommand(commandAsString));
                 }
                 catch (Exception ex)
                 {
-                    this.Writer.WriteLine(ex.Message);
-                    //this.Writer.WriteLine("####################");
+                    this.writer.WriteLine(ex.Message);
                 }
             }
         }
 
-        private void ProcessCommand(string commandAsString)
+        private string ProcessCommand(string commandAsString)
         {
             if (string.IsNullOrWhiteSpace(commandAsString))
             {
                 throw new ArgumentNullException("Command cannot be null or empty.");
             }
 
-            var command = this.Parser.ParseCommand(commandAsString);
-            var parameters = this.Parser.ParseParameters(commandAsString);
+            var command = this.parser.ParseCommand(commandAsString);
+            var parameters = this.parser.ParseParameters(commandAsString);
 
             var executionResult = command.Execute(parameters);
-            this.Writer.WriteLine(executionResult);
-           // this.Writer.WriteLine("####################");
+            return executionResult;
         }
     }
 }

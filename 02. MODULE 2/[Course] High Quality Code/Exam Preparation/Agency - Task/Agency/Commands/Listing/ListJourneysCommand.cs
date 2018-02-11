@@ -7,18 +7,16 @@ namespace Agency.Commands.Creating
 {
     public class ListJourneysCommand : ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly IDataStore dataStore;
 
-        public ListJourneysCommand(IAgencyFactory factory, IEngine engine)
+        public ListJourneysCommand(IDataStore dataStore)
         {
-            this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
         {
-            var journeys = this.engine.Journeys;
+            var journeys = this.dataStore.Journeys;
 
             if (journeys.Count == 0)
             {

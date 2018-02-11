@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Bytes2you.Validation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a7d501dd757e0442, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bytes2you.Validation.2.0.0.0\lib\portable-win+net40+sl40+wp+Xbox40\Bytes2you.Validation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,8 +62,16 @@
     <Compile Include="Commands\Listing\ListJourneysCommand.cs" />
     <Compile Include="Commands\Listing\ListTicketsCommand.cs" />
     <Compile Include="Commands\Listing\ListVehiclesCommand.cs" />
-    <Compile Include="Core\Factories\IAgencyFactory.cs" />
-    <Compile Include="Core\Factories\AgencyFactory.cs" />
+    <Compile Include="Core\DataStore.cs" />
+    <Compile Include="Core\Factories\CommandFactory.cs" />
+    <Compile Include="Core\Factories\IJourneyFactory.cs" />
+    <Compile Include="Core\Factories\JourneyFactory.cs" />
+    <Compile Include="Core\Factories\ICommandFactory.cs" />
+    <Compile Include="Core\Contracts\IDataStore.cs" />
+    <Compile Include="Core\Factories\ITicketFactory.cs" />
+    <Compile Include="Core\Factories\IVehicleFactory.cs" />
+    <Compile Include="Core\Factories\TicketFactory.cs" />
+    <Compile Include="Core\Factories\VehicleFactory.cs" />
     <Compile Include="Core\Providers\DateTimeProvider.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IParser.cs" />
@@ -63,6 +81,8 @@
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\ConsoleReader.cs" />
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Core\Providers\Decorators\EngineDecorator.cs" />
+    <Compile Include="Injection\AutofacConfing.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Validator.cs" />
@@ -83,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

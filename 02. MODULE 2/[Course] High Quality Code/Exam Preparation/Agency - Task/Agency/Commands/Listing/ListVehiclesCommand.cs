@@ -7,18 +7,16 @@ namespace Agency.Commands.Creating
 {
     public class ListVehiclesCommand : ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly IDataStore dataStore;
 
-        public ListVehiclesCommand(IAgencyFactory factory, IEngine engine)
+        public ListVehiclesCommand(IDataStore dataStore)
         {
-            this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
         {
-            var vehicles = this.engine.Vehicles;
+            var vehicles = this.dataStore.Vehicles;
 
             if (vehicles.Count == 0)
             {

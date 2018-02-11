@@ -8,13 +8,14 @@ namespace Agency.Commands.Creating
 {
     public class CreateJourneyCommand : ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly IJourneyFactory factory;
+        private readonly IDataStore dataStore;
 
-        public CreateJourneyCommand(IAgencyFactory factory, IEngine engine)
+
+        public CreateJourneyCommand(IJourneyFactory factory, IDataStore dataStore)
         {
             this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
@@ -29,7 +30,7 @@ namespace Agency.Commands.Creating
                 startLocation = parameters[0];
                 destination = parameters[1];
                 distance = int.Parse(parameters[2]);
-                vehicle = this.engine.Vehicles[int.Parse(parameters[3])];
+                vehicle = this.dataStore.Vehicles[int.Parse(parameters[3])];
             }
             catch
             {
@@ -37,9 +38,9 @@ namespace Agency.Commands.Creating
             }
 
             var journey = this.factory.CreateJourney(startLocation, destination, distance, vehicle);
-            this.engine.Journeys.Add(journey);
+            this.dataStore.Journeys.Add(journey);
 
-            return $"Journey with ID {engine.Journeys.Count - 1} was created.";
+            return $"Journey with ID {this.dataStore.Journeys.Count - 1} was created.";
         }
     }
 }

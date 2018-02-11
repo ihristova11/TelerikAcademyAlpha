@@ -1,4 +1,8 @@
 ﻿using Agency.Core;
+using Agency.Core.Contracts;
+using Agency.Core.Providers.Decorators;
+using Agency.Injection;
+using Autofac;
 
 namespace Agency
 {
@@ -6,10 +10,10 @@ namespace Agency
     {
         public static void Main(string[] args)
         {
-            // Singleton design pattern
-            // Ensures that there is only one instance of Engine in existance
-            // Yo are already familiar with it, right?
-            var engine = Engine.Instance;
+            var builder = new ContainerBuilder();
+            builder.RegisterModule(new AutofacConfing());
+            var container = builder.Build();
+            var engine = container.Resolve<EngineDecorator>();
             engine.Start();
         }
     }

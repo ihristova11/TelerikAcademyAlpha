@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using Agency.Commands.Contracts;
 using Agency.Core.Contracts;
+using Agency.Core.Factories;
 using Agency.Models.Contracts;
-using Agency.Models.Vehicles.Contracts;
 
 namespace Traveller.Commands.Creating
 {
     public class CreateTicketCommand : ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly ITicketFactory factory;
+        private readonly IDataStore dataStore;
 
-        public CreateTicketCommand(IAgencyFactory factory, IEngine engine)
+        public CreateTicketCommand(ITicketFactory factory, IDataStore dataStore)
         {
             this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
@@ -25,7 +25,7 @@ namespace Traveller.Commands.Creating
 
             try
             {
-                journey = this.engine.Journeys[int.Parse(parameters[0])];
+                journey = this.dataStore.Journeys[int.Parse(parameters[0])];
                 administrativeCosts = decimal.Parse(parameters[1]);
             }
             catch
@@ -34,9 +34,9 @@ namespace Traveller.Commands.Creating
             }
 
             var ticket = this.factory.CreateTicket(journey, administrativeCosts);
-            this.engine.Tickets.Add(ticket);
+            this.dataStore.Tickets.Add(ticket);
 
-            return $"Ticket with ID {engine.Tickets.Count - 1} was created.";
+            return $"Ticket with ID {this.dataStore.Tickets.Count - 1} was created.";
         }
     }
 }

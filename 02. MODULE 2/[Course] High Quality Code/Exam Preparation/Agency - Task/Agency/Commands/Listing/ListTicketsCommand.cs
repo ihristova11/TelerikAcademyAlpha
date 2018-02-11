@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Agency.Commands.Contracts;
 using Agency.Core.Contracts;
 
@@ -8,18 +7,16 @@ namespace Agency.Commands.Creating
 {
     public class ListTicketsCommand : ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly IDataStore dataStore;
 
-        public ListTicketsCommand(IAgencyFactory factory, IEngine engine)
+        public ListTicketsCommand(IDataStore dataStore)
         {
-            this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
         {
-            var tickets = this.engine.Tickets;
+            var tickets = this.dataStore.Tickets;
 
             if (tickets.Count == 0)
             {

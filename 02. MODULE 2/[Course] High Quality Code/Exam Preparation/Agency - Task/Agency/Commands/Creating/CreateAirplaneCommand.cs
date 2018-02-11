@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using Agency.Commands.Contracts;
 using Agency.Core.Contracts;
+using Agency.Core.Factories;
 
 namespace Agency.Commands.Creating
 {
-    // TODO
     public class CreateAirplaneCommand :  ICommand
     {
-        private readonly IAgencyFactory factory;
-        private readonly IEngine engine;
+        private readonly IVehicleFactory factory;
+        private readonly IDataStore dataStore;
 
-        public CreateAirplaneCommand(IAgencyFactory factory, IEngine engine)
+        public CreateAirplaneCommand(IVehicleFactory factory, IDataStore dataStore)
         {
             this.factory = factory;
-            this.engine = engine;
+            this.dataStore = dataStore;
         }
 
         public string Execute(IList<string> parameters)
@@ -35,9 +35,9 @@ namespace Agency.Commands.Creating
             }
 
             var airplane = this.factory.CreateAirplane(passengerCapacity, pricePerKilometer, hasFreeFood);
-            this.engine.Vehicles.Add(airplane);
+            this.dataStore.Vehicles.Add(airplane);
 
-            return $"Vehicle with ID {engine.Vehicles.Count - 1} was created.";
+            return $"Vehicle with ID {this.dataStore.Vehicles.Count - 1} was created.";
         }
     }
 }
