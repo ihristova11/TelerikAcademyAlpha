@@ -48,7 +48,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CompanyTests\Add_Should.cs" />
+    <Compile Include="CompanyTests\Catalog_Should.cs" />
+    <Compile Include="CompanyTests\Find_Should.cs" />
+    <Compile Include="FurnitureManufacturerEngineTests\ProcessCommand_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

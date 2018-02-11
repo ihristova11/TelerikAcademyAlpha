@@ -14,10 +14,7 @@ namespace FurnitureManufacturer.Engine
             this.companies = new Dictionary<string, ICompany>();
             this.furniture = new Dictionary<string, IFurniture>();
         }
-
-        /// <summary>
-        /// Immutable collection, holding ICompany objects and their Name as key.
-        /// </summary>
+        
         public IDictionary<string, ICompany> Companies
         {
             get
@@ -26,10 +23,6 @@ namespace FurnitureManufacturer.Engine
             }
         }
         
-
-        /// <summary>
-        /// Immutable collection, holding IFurniture objects and their Model as key.
-        /// </summary>
         public IDictionary<string, IFurniture> Furnitures
         {
             get
