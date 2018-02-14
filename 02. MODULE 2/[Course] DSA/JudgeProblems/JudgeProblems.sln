@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceOfEqual", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSequence", "LongestIncreasingSequence\LongestIncreasingSequence.csproj", "{C0B677E7-470F-4FD9-9FCA-32A5BC0AD092}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitAsWord", "DigitAsWord\DigitAsWord.csproj", "{8F52705E-0E9C-4736-8736-34C2C412CDCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{C0B677E7-470F-4FD9-9FCA-32A5BC0AD092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B677E7-470F-4FD9-9FCA-32A5BC0AD092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B677E7-470F-4FD9-9FCA-32A5BC0AD092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
