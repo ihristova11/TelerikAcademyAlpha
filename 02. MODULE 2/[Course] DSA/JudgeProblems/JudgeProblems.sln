@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSumOf3x3", "MaxSumOf3x3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOfFive", "BiggestOfFive\BiggestOfFive.csproj", "{B7C1C848-C313-49ED-A859-5A64EDC9D194}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOfThree", "BiggestOfThree\BiggestOfThree.csproj", "{2FF4442B-3D91-4FB9-904B-F7FAF88C6BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B7C1C848-C313-49ED-A859-5A64EDC9D194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C1C848-C313-49ED-A859-5A64EDC9D194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C1C848-C313-49ED-A859-5A64EDC9D194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF4442B-3D91-4FB9-904B-F7FAF88C6BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF4442B-3D91-4FB9-904B-F7FAF88C6BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF4442B-3D91-4FB9-904B-F7FAF88C6BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF4442B-3D91-4FB9-904B-F7FAF88C6BB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
