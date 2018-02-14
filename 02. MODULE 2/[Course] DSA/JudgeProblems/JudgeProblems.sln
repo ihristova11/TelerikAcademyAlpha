@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapezoid", "Trapezoid\Trap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToHexadecimal", "DecimalToHexadecimal\DecimalToHexadecimal.csproj", "{B520DC87-6AD6-46E2-8A24-D96FC22FE905}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppearanceCount", "AppearanceCount\AppearanceCount.csproj", "{7A786E00-DBF8-4FD2-81E3-558617D4D9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargerThanNeighbours", "LargerThanNeighbours\LargerThanNeighbours.csproj", "{724956E9-3A07-47F5-9C94-EBDBFBCD5B3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +139,14 @@ Global
 		{B520DC87-6AD6-46E2-8A24-D96FC22FE905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B520DC87-6AD6-46E2-8A24-D96FC22FE905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B520DC87-6AD6-46E2-8A24-D96FC22FE905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A786E00-DBF8-4FD2-81E3-558617D4D9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A786E00-DBF8-4FD2-81E3-558617D4D9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A786E00-DBF8-4FD2-81E3-558617D4D9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A786E00-DBF8-4FD2-81E3-558617D4D9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724956E9-3A07-47F5-9C94-EBDBFBCD5B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724956E9-3A07-47F5-9C94-EBDBFBCD5B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724956E9-3A07-47F5-9C94-EBDBFBCD5B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724956E9-3A07-47F5-9C94-EBDBFBCD5B3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
