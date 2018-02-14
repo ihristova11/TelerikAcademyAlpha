@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayHello", "SayHello\SayHel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateAgain", "CalculateAgain\CalculateAgain.csproj", "{A44F8BA5-F743-46A5-8316-D0B4C138DF55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralMatrix", "SpiralMatrix\SpiralMatrix.csproj", "{9518A76F-041A-4B98-8984-7DC4D402ADCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceOfEqual", "LongestSequenceOfEqual\LongestSequenceOfEqual.csproj", "{AA842D72-85AA-4321-9202-19591147FD25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{A44F8BA5-F743-46A5-8316-D0B4C138DF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A44F8BA5-F743-46A5-8316-D0B4C138DF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A44F8BA5-F743-46A5-8316-D0B4C138DF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9518A76F-041A-4B98-8984-7DC4D402ADCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9518A76F-041A-4B98-8984-7DC4D402ADCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9518A76F-041A-4B98-8984-7DC4D402ADCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9518A76F-041A-4B98-8984-7DC4D402ADCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA842D72-85AA-4321-9202-19591147FD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA842D72-85AA-4321-9202-19591147FD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA842D72-85AA-4321-9202-19591147FD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA842D72-85AA-4321-9202-19591147FD25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
