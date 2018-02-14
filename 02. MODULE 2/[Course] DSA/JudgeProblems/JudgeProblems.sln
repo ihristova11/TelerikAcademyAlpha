@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestIncreasingSequence",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitAsWord", "DigitAsWord\DigitAsWord.csproj", "{8F52705E-0E9C-4736-8736-34C2C412CDCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSumOfSubsequence", "MaxSumOfSubsequence\MaxSumOfSubsequence.csproj", "{BF4C3628-2638-49BB-89A1-CA5D7BEE0237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F52705E-0E9C-4736-8736-34C2C412CDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4C3628-2638-49BB-89A1-CA5D7BEE0237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4C3628-2638-49BB-89A1-CA5D7BEE0237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4C3628-2638-49BB-89A1-CA5D7BEE0237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4C3628-2638-49BB-89A1-CA5D7BEE0237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
