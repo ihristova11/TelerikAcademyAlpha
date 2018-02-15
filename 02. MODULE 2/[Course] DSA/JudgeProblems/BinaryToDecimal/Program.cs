@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BinaryToDecimal
+class BinaryToDecimal
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        var s = Console.ReadLine(); 
+        long dec = 0;
+        for (int i = 0; i < s.Length; i++)
         {
+            if (s[s.Length - i - 1] == '0') continue;
+            dec += (long)Math.Pow(2, i);
         }
+
+        Console.WriteLine(dec);
     }
 }
