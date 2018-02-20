@@ -39,7 +39,6 @@ namespace _5.Swappings
 
             for (int i = 1; i <= n; i++)
             {
-
                 var node = new ListNode(i, prev);
                 prev = node;
                 if (head == null)
