@@ -57,3 +57,21 @@ WHERE ManagerID IS NULL
 
 --14. Write a SQL query to find all employees that have salary more than 50000. 
 --Order them in decreasing order by salary.
+SELECT *
+FROM Employees
+WHERE Salary >= 50000
+
+--15.Write a SQL query to find the top 5 best paid employees.
+SELECT TOP 5 CONCAT(FirstName, ' ', LastName) AS Employee
+FROM Employees
+ORDER BY Salary DESC
+
+--16. Write a SQL query to find all employees along with their address. 
+--Use inner join with ON clause.
+SELECT e.FirstName, e.LastName, e.AddressID, a.AddressID, a.AddressText
+FROM Employees e
+INNER JOIN Addresses a
+ON e.AddressID = a.AddressID
+
+--17. Write a SQL query to find all employees and their address. 
+--Use equijoins (conditions in the WHERE clause).
