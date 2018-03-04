@@ -120,3 +120,13 @@ SELECT CONCAT(e.FirstName,' ', e.LastName) AS Employee,
 FROM Employees e
 LEFT OUTER JOIN Employees m
 	ON e.ManagerID = m.EmployeeID
+
+--22. Write a SQL query to find the names of all employees 
+--from the departments "Sales" and "Finance" whose hire year is between 1995 and 2005.
+SELECT CONCAT(e.FirstName, ' ', e.LastName) AS Employee, e.HireDate, d.Name
+FROM Employees e
+JOIN Departments d
+	ON d.DepartmentID = e.DepartmentID
+WHERE d.Name IN ('Sales', 'Finance')
+    AND DATEPART(YEAR, e.HireDate) BETWEEN 1995 AND 2005
+ORDER BY e.HireDate
