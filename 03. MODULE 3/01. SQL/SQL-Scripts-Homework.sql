@@ -44,3 +44,16 @@ WHERE LastName LIKE '%ei%'
 SELECT Salary
 FROM Employees
 WHERE Salary BETWEEN 20000 AND 30000
+
+--12. Write a SQL query to find the names of all employees whose salary is 25000, 14000, 12500 or 23600.
+SELECT CONCAT(FirstName, ' ', LastName) AS Employee
+FROM Employees
+WHERE Salary = 25000 OR Salary = 14000 OR Salary= 12500 OR Salary = 23600
+
+--13. Write a SQL query to find all employees that do not have manager.
+SELECT *
+FROM Employees
+WHERE ManagerID IS NULL
+
+--14. Write a SQL query to find all employees that have salary more than 50000. 
+--Order them in decreasing order by salary.
