@@ -100,7 +100,25 @@ SELECT FORMAT(GETDATE(), 'dd.MM.yy HH:mm:ss:mm') AS Date
 
 --15. Write a SQL statement to create a table Users. 
 --Users should have username, password, full name and last login time.
---Choose appropriate data types for the table fields. Define a primary key column with a primary key constraint.
+--Choose appropriate data types for the table fields. 
+--Define a primary key column with a primary key constraint.
 --Define the primary key column as identity to facilitate inserting records.
 --Define unique constraint to avoid repeating usernames.
 --Define a check constraint to ensure the password is at least 5 characters long.
+CREATE TABLE Users(
+		Id int IDENTITY,
+		Username nvarchar(20) UNIQUE NOT NULL, 
+		UserPassword nvarchar(20), 
+		FullName nvarchar(40) NOT NULL,
+		LastLogin datetime,
+		CONSTRAINT PK_Users PRIMARY KEY(Id), 
+		CONSTRAINT PasswordMinLen Check ((DATALENGTH([UserPassword]) > 4))
+		)
+INSERT INTO Users(Username, UserPassword, FullName, LastLogin)
+		VALUES('IRINA', 'mynewpass', 'irina irina', GETDATE()),
+				('someone here', 'passhere', 'name name name', GETDATE() - 1)
+GO
+
+--16. Write a SQL statement to create a view that displays the users 
+--from the Users table that have been in the system today.
+--Test if the view works correctly.
