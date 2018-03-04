@@ -71,7 +71,18 @@ ORDER BY Salary DESC
 SELECT e.FirstName, e.LastName, e.AddressID, a.AddressID, a.AddressText
 FROM Employees e
 INNER JOIN Addresses a
-ON e.AddressID = a.AddressID
+	ON e.AddressID = a.AddressID
 
 --17. Write a SQL query to find all employees and their address. 
 --Use equijoins (conditions in the WHERE clause).
+SELECT *
+FROM Employees e
+JOIN Addresses a
+	ON e.AddressID = a.AddressID
+
+--18. Write a SQL query to find all employees along with their manager.
+SELECT e.EmployeeID, CONCAT(e.FirstName, ' ', e.LastName) AS Employee,
+				m.ManagerID, CONCAT(m.FirstName, ' ', m.LastName) AS Manager
+FROM Employees e
+JOIN Employees m
+	ON e.EmployeeID = m.EmployeeID
