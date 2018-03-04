@@ -18,5 +18,16 @@ FROM Employees
 --Consider that the mail domain is telerik.com. 
 --Emails should look like “John.Doe@telerik.com". 
 --The produced column should be named "Full Email Addresses".
+SELECT CONCAT(FirstName, '.', LastName, '@telerik.com') AS FullEmailAddresses
+FROM Employees
 
+--07. Write a SQL query to find all different employee salaries.
+SELECT DISTINCT Salary
+FROM Employees
 
+--08. Write a SQL query to find all information about the employees whose job title is “Sales Representative“.
+SELECT * 
+FROM Employees
+WHERE JobTitle = 'Sales Representative'
+
+--09. Write a SQL query to find the names of all employees whose first name starts with "SA".
