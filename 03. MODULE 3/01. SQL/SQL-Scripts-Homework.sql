@@ -31,3 +31,16 @@ FROM Employees
 WHERE JobTitle = 'Sales Representative'
 
 --09. Write a SQL query to find the names of all employees whose first name starts with "SA".
+SELECT *
+FROM Employees
+WHERE FirstName LIKE 'SA%'
+
+--10. Write a SQL query to find the names of all employees whose last name contains "ei".
+SELECT *
+FROM Employees
+WHERE LastName LIKE '%ei%'
+
+--11. Write a SQL query to find the salary of all employees whose salary is in the range [20000…30000].
+SELECT Salary
+FROM Employees
+WHERE Salary BETWEEN 20000 AND 30000
