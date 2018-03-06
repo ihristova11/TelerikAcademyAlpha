@@ -122,3 +122,57 @@ GO
 --16. Write a SQL statement to create a view that displays the users 
 --from the Users table that have been in the system today.
 --Test if the view works correctly.
+CREATE VIEW [Last Been Here] AS	
+SELECT *
+FROM Users 
+WHERE DATEPART(YEAR, LastLogin) <= DATEPART(YEAR, GETDATE())
+GO
+
+--17. Write a SQL statement to create a table Groups. 
+--Groups should have unique name (use unique constraint).
+--Define primary key and identity column.	
+CREATE TABLE Groups(
+			Id int IDENTITY,
+			Name nvarchar(20) UNIQUE,
+			CONSTRAINT PK_Groups PRIMARY KEY(Id)
+			)
+GO
+
+--18. Write a SQL statement to add a column GroupID to the table Users.
+--Fill some data in this new column and as well in the `Groups table.
+--Write a SQL statement to add a foreign key constraint between 
+--tables Users and Groups tables.
+ALTER TABLE Users
+	ADD GroupID int
+ALTER TABLE Users
+	ADD CONSTRAINT FK_Users_Groups FOREIGN KEY(GroupId)
+		REFERENCES Groups(Id)
+
+--19. Write SQL statements to insert several records in the Users and Groups tables.
+INSERT INTO Groups(Name)
+VALUES ('somegroup'),
+		('anothergroup')
+INSERT INTO Users(Username, UserPassword, FullName, LastLogin, GroupID)
+		VALUES('newnewrecord', 'mynewpass', 'irina irina', GETDATE(), 1)
+
+--20. Write SQL statements to update some of the records in the Users and Groups tables.
+UPDATE Users 
+SET Username = 'set the user here'
+WHERE Username = 'IRINA'
+
+--21. Write SQL statements to delete some of the records from the Users and Groups tables.
+DELETE 
+FROM Users
+WHERE Username = 'set the user here'
+
+--22. Write SQL statements to insert in the Users table the names of all employees 
+--from the Employees table.
+--Combine the first and last names as a full name.
+--For username use the first letter of the first name + the last name (in lowercase).
+--Use the same for the password, and NULL for last login time.
+INSERT INTO Users(FullName, Username, UserPassword)
+SELECT (e.FirstName + ' ' + e.LastName),
+		(SUBSTRING(e.FirstName, 0, 4) + LOWER(e.LastName)),
+		(SUBSTRING(e.FirstName, 0, 2) + LOWER(e.LastName))
+FROM Employees e
+
