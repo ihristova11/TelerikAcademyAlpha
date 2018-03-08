@@ -152,8 +152,8 @@ ALTER TABLE Users
 INSERT INTO Groups(Name)
 VALUES ('somegroup'),
 		('anothergroup')
-INSERT INTO Users(Username, UserPassword, FullName, LastLogin, GroupID)
-		VALUES('newnewrecord', 'mynewpass', 'irina irina', GETDATE(), 1)
+INSERT INTO Users(Username, UserPassword, FullName, LastLogin)
+		VALUES('newnewrecord', 'mynewpass', 'irina H', GETDATE())
 
 --20. Write SQL statements to update some of the records in the Users and Groups tables.
 UPDATE Users 
@@ -176,3 +176,8 @@ SELECT (e.FirstName + ' ' + e.LastName),
 		(SUBSTRING(e.FirstName, 0, 2) + LOWER(e.LastName))
 FROM Employees e
 
+--23. Write a SQL statement that changes the password to NULL 
+--for all users that have not been in the system since 10.03.2010.
+UPDATE Users
+SET UserPassword = NULL
+WHERE 
