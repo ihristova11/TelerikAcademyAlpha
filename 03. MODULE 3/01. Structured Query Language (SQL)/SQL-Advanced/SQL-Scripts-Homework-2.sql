@@ -187,3 +187,30 @@ DELETE FROM Users
 WHERE UserPassword IS NULL
 
 --25. Write a SQL query to display the average employee salary by department and job title.
+SELECT AVG(e.Salary) AS [Average salary], d.Name AS Department, e.JobTitle
+FROM Employees e
+JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle
+
+--26. Write a SQL query to display the minimal employee salary by department and 
+--job title along with the name of some of the employees that take it.
+SELECT MIN(e.Salary) AS [Average salary], 
+		d.Name AS [Department], 
+		e.JobTitle, 
+		e.FirstName, 
+		e.LastName
+FROM Employees e 
+JOIN Departments d 
+	ON e.DepartmentID = d.DepartmentID
+GROUP BY d.Name, e.JobTitle, e.FirstName, e.LastName
+
+--27. Write a SQL query to display the town where maximal number of employees work.
+SELECT TOP 1 t.Name, COUNT(t.Name) AS [Number of employees]
+FROM Employees e
+JOIN Addresses a
+	ON a.AddressID = e.AddressID
+JOIN Towns t
+	ON a.TownID = t.TownID
+GROUP BY t.Name
+ORDER BY [Number of employees] DESC
