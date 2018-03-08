@@ -214,3 +214,33 @@ JOIN Towns t
 	ON a.TownID = t.TownID
 GROUP BY t.Name
 ORDER BY [Number of employees] DESC
+
+--28. Write a SQL query to display the number of managers from each town.
+SELECT t.Name, COUNT(t.Name) AS [Number of managers]
+FROM Employees e
+JOIN Addresses a
+	ON e.AddressID = a.AddressID
+JOIN Towns t
+	ON t.TownID = a.TownID
+WHERE e.EmployeeID IN
+	(SELECT DISTINCT ManagerID FROM Employees)
+GROUP BY t.Name
+ORDER BY [Number of managers] DESC
+
+--29. Write a SQL to create table WorkHours to store work reports for each employee 
+--(employee id, date, task, hours, comments).
+--Don't forget to define identity, primary key and appropriate foreign key.
+--Issue few SQL statements to insert, update and delete of some data in the table.
+--Define a table WorkHoursLogs to track all changes in the WorkHours table with triggers.
+--For each change keep the old record data, the new record data 
+--and the command (insert / update / delete).
+CREATE TABLE [WorkHours](
+				Id int IDENTITY, 
+				EmployeeID int NOT NULL,
+				Date datetime, 
+				Task nvarchar(30),
+				Hours int,
+				Comments nvarchar(50), 
+				CONSTRAINT PK_WorkHours PRIMARY KEY(Id),
+				CONSTRAINT FK_Employees_WorkHours FOREIGN KEY(EmployeeID)
+					REFERENCES Employees(EmployeeID))
