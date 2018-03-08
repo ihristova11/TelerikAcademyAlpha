@@ -180,4 +180,10 @@ FROM Employees e
 --for all users that have not been in the system since 10.03.2010.
 UPDATE Users
 SET UserPassword = NULL
-WHERE 
+--WHERE DATEDIFF(DAY, LastLogin, CAST('2010-03-10' AS DATE)) > 0
+
+--24. Write a SQL statement that deletes all users without passwords (NULL password).
+DELETE FROM Users
+WHERE UserPassword IS NULL
+
+--25. Write a SQL query to display the average employee salary by department and job title.
