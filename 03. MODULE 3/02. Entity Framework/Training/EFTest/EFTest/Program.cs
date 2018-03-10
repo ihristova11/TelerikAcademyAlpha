@@ -10,14 +10,21 @@ namespace EFTest
         {
             using (var db = new TelerikAcademyEntities())
             {
-                var project = db.Projects
-                    .FirstOrDefault(pr => pr.ProjectID == 1);
-                Console.WriteLine(project.Name);
+                var town = new Town
+                {
+                    Name = "Lovech"
+                };
 
-                var employees = db.Employees
-                    .Select(e => e.EmployeeID < 5);
-                
-                    Console.WriteLine(string.Join(" ", employees));
+                var address = new Address
+                {
+                    AddressText = "tsentralna 150",
+                    Town = town
+                };
+
+                db.Towns.Add(town);
+                db.Addresses.Add(address);
+
+                db.SaveChanges();
             }
         }
     }
