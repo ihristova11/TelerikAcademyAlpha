@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtistsSystem.Models", "Art
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtistsSystem.Data", "ArtistsSystem.Data\ArtistsSystem.Data.csproj", "{33529F82-EFBA-4816-BA09-89966F92B4F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtistsSystem.ConsoleClient", "ArtistsSystem.ConsoleClient\ArtistsSystem.ConsoleClient.csproj", "{439EAFE9-D72C-47FE-A5B5-2C4C4FBB1301}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33529F82-EFBA-4816-BA09-89966F92B4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33529F82-EFBA-4816-BA09-89966F92B4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33529F82-EFBA-4816-BA09-89966F92B4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439EAFE9-D72C-47FE-A5B5-2C4C4FBB1301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439EAFE9-D72C-47FE-A5B5-2C4C4FBB1301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439EAFE9-D72C-47FE-A5B5-2C4C4FBB1301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439EAFE9-D72C-47FE-A5B5-2C4C4FBB1301}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
