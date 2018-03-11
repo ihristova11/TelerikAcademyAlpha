@@ -8,5 +8,9 @@ namespace ArtistsSystem.Data
         public virtual IDbSet<Album> Albums { get; set; }
 
         public virtual IDbSet<Song> Songs { get; set; }
+
+        public virtual IDbSet<Artist> Artists { get; set; }
+
+        public virtual IDbSet<Image> Images { get; set; }
     }
 }
