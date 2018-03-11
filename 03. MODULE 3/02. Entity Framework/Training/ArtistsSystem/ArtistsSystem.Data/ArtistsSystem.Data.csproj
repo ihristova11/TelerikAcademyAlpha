@@ -54,5 +54,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArtistsSystem.Models\ArtistsSystem.Models.csproj">
+      <Project>{a5cce417-1955-45a8-a5df-503647c6dd08}</Project>
+      <Name>ArtistsSystem.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

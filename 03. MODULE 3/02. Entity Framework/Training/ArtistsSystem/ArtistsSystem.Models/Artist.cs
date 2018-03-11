@@ -14,7 +14,5 @@
         public bool Gender { get; set; }
 
         public int Members { get; set; }
-
-
     }
 }

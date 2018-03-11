@@ -5,7 +5,7 @@ namespace ArtistsSystem.Data
 {
     public class ArtistsDbContext : DbContext
     {
-        public virtual IDbSet<Album> Albums { get; set; }
+        public virtual IDbSet<Album> Albums { get; set; } //best practice 
 
         public virtual IDbSet<Song> Songs { get; set; }
 
