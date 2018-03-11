@@ -17,8 +17,10 @@ namespace ArtistsSystem.ConsoleClient
                 Gender = GenderType.Female
             };
 
-            db.SaveChanges();
+            db.Artists.Add(artist);
 
+            db.SaveChanges();
+                
             Console.WriteLine(db.Artists.Count());
         }
     }
