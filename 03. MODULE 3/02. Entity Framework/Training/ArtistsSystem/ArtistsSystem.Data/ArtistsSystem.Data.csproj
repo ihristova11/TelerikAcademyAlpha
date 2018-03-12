@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtistsDbContext.cs" />
+    <Compile Include="Migrations\201803121357041_Irina.cs" />
+    <Compile Include="Migrations\201803121357041_Irina.Designer.cs">
+      <DependentUpon>201803121357041_Irina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +64,11 @@
       <Project>{a5cce417-1955-45a8-a5df-503647c6dd08}</Project>
       <Name>ArtistsSystem.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803121357041_Irina.resx">
+      <DependentUpon>201803121357041_Irina.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
