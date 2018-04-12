@@ -23,11 +23,62 @@ namespace _01.StudentsOrder
 
             for (int i = 0; i < countOfSeatChanges; i++)
             {
-                line = Console.ReadLine().Split(' ').ToArray();
-                var firstNode = line[0];
-                var secondNode = line[1];
+                var lineS = Console.ReadLine().Split(' ').ToArray();
+                var first = lineS[0];
+                var second = lineS[1];
+                var firstNode = linkedList.Find(first);
+                var secondNode = linkedList.Find(second);
 
-                linkedList.AddAfter(linkedList.Find(firstNode), linkedList.Find(secondNode));
+                if (secondNode.Next == null && firstNode.Previous == null)
+                {
+                    secondNode.Previous.Next = firstNode;
+                    firstNode.Previous.Previous = 
+                    secondNode.Previous = firstNode;
+                    firstNode.Next = secondNode;
+                }
+               else if (secondNode.Previous == null && firstNode.Next == null)
+                {
+                    firstNode.Previous.Next = null;
+                    firstNode.Previous = null;
+                    firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
+                }
+                else if (secondNode.Previous == null)
+                {
+                    firstNode.Next.Previous = firstNode.Previous;
+                    firstNode.Previous.Next = firstNode.Next;
+
+                    firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
+                }
+                else if (firstNode.Next == null)
+                {
+                    linkedList.DeleteNode(secondNode);
+
+                    linkedList.AddLast(secondNode);
+                }
+                else if (secondNode.Next == null)
+                {
+                    firstNode.Next.Previous = firstNode.Previous;
+                    firstNode.Previous.Next = firstNode.Next;
+
+                    secondNode.Previous.Next = firstNode;
+                    firstNode.Previous = secondNode.Previous;
+                    secondNode.Previous = firstNode;
+                    firstNode.Next = secondNode;
+                }
+                else
+                {
+                    secondNode.Previous.Next = secondNode.Next;
+                    secondNode.Next.Previous = secondNode.Previous;
+
+                    firstNode.Next.Previous = secondNode;
+                    secondNode.Next = firstNode.Next;
+
+                    secondNode.Previous = firstNode;
+                    firstNode.Next = secondNode;
+                }
+                //linkedList.Print();
             }
 
             linkedList.Print();
@@ -57,7 +108,6 @@ namespace _01.StudentsOrder
 
             public int Count { get; private set; }
 
-            // Създава елемент по стойност и го включва в началото на свързания списък
             public LinkedListNode<T> AddFirst(T value)
             {
                 LinkedListNode<T> node = new LinkedListNode<T>(value);
@@ -65,7 +115,6 @@ namespace _01.StudentsOrder
                 return node;
             }
 
-            // Включва елемент в началото на свързания списък
             public void AddFirst(LinkedListNode<T> node)
             {
                 if (node == null)
@@ -89,7 +138,6 @@ namespace _01.StudentsOrder
                 this.Count++;
             }
 
-            // Създава елемент по стойност и го включва в края на свързания списък
             public LinkedListNode<T> AddLast(T value)
             {
                 LinkedListNode<T> node = new LinkedListNode<T>(value);
@@ -97,7 +145,6 @@ namespace _01.StudentsOrder
                 return node;
             }
 
-            // Включва елемент в края на свързания списък
             public void AddLast(LinkedListNode<T> node)
             {
                 if (node == null)
@@ -121,7 +168,6 @@ namespace _01.StudentsOrder
                 this.Count++;
             }
 
-            // Създава елемент по стойност и го включва след даден елемент
             public LinkedListNode<T> AddAfter(LinkedListNode<T> afterNode, T value)
             {
                 LinkedListNode<T> node = new LinkedListNode<T>(value);
@@ -129,7 +175,6 @@ namespace _01.StudentsOrder
                 return node;
             }
 
-            // Включва след елемент
             public void AddAfter(LinkedListNode<T> afterNode, LinkedListNode<T> node)
             {
                 if (afterNode == null)
@@ -157,7 +202,6 @@ namespace _01.StudentsOrder
                 this.Count++;
             }
 
-            // Създава елемент по стойност и го включва преди даден елемент
             public LinkedListNode<T> AddBefore(LinkedListNode<T> beforeNode, T value)
             {
                 LinkedListNode<T> node = new LinkedListNode<T>(value);
@@ -165,7 +209,6 @@ namespace _01.StudentsOrder
                 return node;
             }
 
-            // Включва преди елемент
             public void AddBefore(LinkedListNode<T> beforeNode, LinkedListNode<T> node)
             {
                 if (beforeNode == null)
@@ -193,7 +236,6 @@ namespace _01.StudentsOrder
                 this.Count++;
             }
 
-            // Изтрива елемент на свързания списък
             public void DeleteNode(LinkedListNode<T> node)
             {
                 if (node == null)
@@ -226,7 +268,6 @@ namespace _01.StudentsOrder
                 this.Count--;
             }
 
-            // Изтрива първия срещнат елемент със стойност равна на подадената
             public void DeleteNode(T value)
             {
                 LinkedListNode<T> node = this.Find(value);
@@ -242,10 +283,8 @@ namespace _01.StudentsOrder
                 }
             }
 
-            // Връща първия срещнат елемент със стойност равна на подадената
             public LinkedListNode<T> Find(T value)
             {
-                // Списъкът е празен
                 if (this.First == null)
                 {
                     return null;
@@ -277,7 +316,6 @@ namespace _01.StudentsOrder
                 this.Count = 0;
             }
 
-            // Отпечатва елементите на свързания списък
             public void Print()
             {
                 LinkedListNode<T> current = this.First;
