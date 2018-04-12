@@ -1,17 +1,20 @@
-﻿namespace SumWithInduction
+﻿using System;
+
+namespace SumWithInduction
 {
     public class Program
     {
         static void Main()
         {
-            // p = n (n + 1) / 2
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Console.WriteLine(Sum(0, arr));
+        }
 
-            int start = 1;
-            int d = 1;
+        private static int Sum(int ind, int[] arr)
+        {
+            if (ind > arr.Length - 1) return 0;
 
-            // next = start + d
-
-
+            return arr[ind] + Sum(ind + 1, arr);
         }
     }
 }

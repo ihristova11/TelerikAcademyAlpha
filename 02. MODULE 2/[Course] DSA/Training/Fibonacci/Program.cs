@@ -4,19 +4,18 @@ namespace Fibonacci
 {
     public class Program
     {
-        static int result = 0;
-
         static void Main()
         {
-            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            Console.WriteLine(Sum(0, arr));
+            Console.Write("Please enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            Fibonacci(0, 1, 1, number);
+            Console.WriteLine();
         }
 
-        private static int Sum(int ind, int[] arr)
+        public static void Fibonacci(int a, int b, int counter, int number)
         {
-            if (ind > arr.Length - 1) return 0;
-            
-            return arr[ind] + Sum(ind + 1, arr);
+            Console.Write(a + " ");
+            if (counter < number) Fibonacci(b, a + b, counter + 1, number);
         }
     }
 }
