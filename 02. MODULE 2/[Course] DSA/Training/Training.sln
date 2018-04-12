@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchRecursive", "Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchIterative", "BinarySearchIterative\BinarySearchIterative.csproj", "{71DC99FC-98C1-4E5C-8030-CDE93892C583}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumWithInduction", "SumWithInduction\SumWithInduction.csproj", "{E29E3FA8-B705-4FD6-8F58-6BAD6BFB0D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{3BBC06AA-03E8-4312-9FDD-8757354D4C38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{71DC99FC-98C1-4E5C-8030-CDE93892C583}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DC99FC-98C1-4E5C-8030-CDE93892C583}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DC99FC-98C1-4E5C-8030-CDE93892C583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E29E3FA8-B705-4FD6-8F58-6BAD6BFB0D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E29E3FA8-B705-4FD6-8F58-6BAD6BFB0D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E29E3FA8-B705-4FD6-8F58-6BAD6BFB0D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E29E3FA8-B705-4FD6-8F58-6BAD6BFB0D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBC06AA-03E8-4312-9FDD-8757354D4C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBC06AA-03E8-4312-9FDD-8757354D4C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBC06AA-03E8-4312-9FDD-8757354D4C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBC06AA-03E8-4312-9FDD-8757354D4C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
