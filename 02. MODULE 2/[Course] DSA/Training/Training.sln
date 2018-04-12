@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinations\Combinations.csproj", "{2C2C68A5-2DC1-4953-A83B-A96FB7EB85F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Search\Search.csproj", "{66ABB324-AE5B-47B8-8E5D-22F5B1D81401}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchRecursive", "Search\BinarySearchRecursive.csproj", "{66ABB324-AE5B-47B8-8E5D-22F5B1D81401}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
