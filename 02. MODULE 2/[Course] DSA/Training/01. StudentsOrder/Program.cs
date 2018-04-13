@@ -34,66 +34,67 @@ namespace _01.StudentsOrder
 
                 if (firstNode.Previous == null && secondNode.Next == null)
                 {
-                    //secondNode.Previous.Next = firstNode; // zakacham predishniq na second s first
-                    //firstNode.Previous = secondNode.Previous;
+                    secondNode.Previous.Next = firstNode; // zakacham predishniq na second s first
+                    firstNode.Previous = secondNode.Previous;
 
-                    //secondNode.Previous = firstNode; // zakacham first i second
-                    //firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode; // zakacham first i second
+                    firstNode.Next = secondNode;
 
-                    linkedList.DeleteNode(firstNode);
-                    linkedList.AddBefore(linkedList.Last, first);
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddBefore(secondNode, first);
                 }
 
                 else if (secondNode.Previous == null && firstNode.Next == null) // second 0 0 0 0 first
                 {
-                    //firstNode.Previous.Next = null; // razkacham first
+                    firstNode.Previous.Next = null; // razkacham first
 
-                    //firstNode.Previous = null;
-                    //firstNode.Next = secondNode;
-                    //secondNode.Previous = firstNode;
+                    firstNode.Previous = null;
+                    firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
 
-                    linkedList.DeleteNode(linkedList.Last);
-                    linkedList.AddFirst(first);
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddFirst(first);
                 }
                 else if (secondNode.Previous == null) // second 0 0 0 first 0 0
                 {
-                    //firstNode.Next.Previous = firstNode.Previous; // razkacham first
-                    //firstNode.Previous.Next = firstNode.Next;
+                    firstNode.Next.Previous = firstNode.Previous; // razkacham first
+                    firstNode.Previous.Next = firstNode.Next;
 
-                    //firstNode.Previous = null;
-                    //firstNode.Next = secondNode;
-                    //secondNode.Previous = firstNode;
+                    firstNode.Previous = null;
+                    firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
 
-                    linkedList.DeleteNode(firstNode);
-                    linkedList.AddFirst(first);
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddFirst(first);
                 }
                 else if (firstNode.Next == null) //  0 0 second 0 0 first
                 {
-                    //firstNode.Previous.Next = null; // razkacham first
+                    firstNode.Previous.Next = null; // razkacham first
 
-                    //secondNode.Previous.Next = firstNode;
-                    //firstNode.Previous = secondNode.Previous;
+                    secondNode.Previous.Next = firstNode;
+                    firstNode.Previous = secondNode.Previous;
 
-                    //secondNode.Previous = firstNode;
-                    //firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
+                    firstNode.Next = secondNode;
 
-                    linkedList.DeleteNode(linkedList.Last);
-                    linkedList.AddBefore(secondNode, first);
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddBefore(secondNode, first);
                 }
                 else if (secondNode.Next == null) // 0 0 first 0 0 second
                 {
-                    //firstNode.Next.Previous = firstNode.Previous; // razkacham first
-                    //firstNode.Previous.Next = firstNode.Next;
+                    firstNode.Next.Previous = firstNode.Previous; // razkacham first
+                    firstNode.Previous.Next = firstNode.Next;
 
-                    //secondNode.Previous.Next = firstNode;
-                    //firstNode.Previous = secondNode.Previous;
+                    secondNode.Previous.Next = firstNode;
+                    firstNode.Previous = secondNode.Previous;
 
-                    //secondNode.Previous = firstNode;
-                    //firstNode.Next = secondNode;
-                    linkedList.DeleteNode(firstNode);
-                    linkedList.AddBefore(linkedList.Last, first);
+                    secondNode.Previous = firstNode;
+                    firstNode.Next = secondNode;
+
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddBefore(secondNode, first);
                 }
-                else if(secondNode.Previous == firstNode)
+                else if (secondNode.Previous == firstNode)
                 {
                     continue;
                 }
@@ -104,26 +105,34 @@ namespace _01.StudentsOrder
                 }
                 else //  0 0 first 0 0 second 0 0 | 0 0 second 0 0 first 0 0
                 {
-                    //firstNode.Previous.Next = firstNode.Next; // razkacham first
-                    //firstNode.Next.Previous = firstNode.Previous;
+                    firstNode.Previous.Next = firstNode.Next; // razkacham first
+                    firstNode.Next.Previous = firstNode.Previous;
 
-                    //secondNode.Previous.Next = firstNode;
-                    //firstNode.Previous = secondNode.Previous;
+                    secondNode.Previous.Next = firstNode;
+                    firstNode.Previous = secondNode.Previous;
 
-                    //firstNode.Next = secondNode;
-                    //secondNode.Previous = firstNode;
-                    linkedList.DeleteNode(firstNode);
+                    firstNode.Next = secondNode;
+                    secondNode.Previous = firstNode;
 
-                    linkedList.AddBefore(secondNode, first);
+                    //linkedList.DeleteNode(firstNode);
+                    //linkedList.AddBefore(secondNode, first);
                 }
 
 
-                Console.Write("------");
-                linkedList.Print();
+                //Console.Write("------");
+                //linkedList.Print();
             }
 
-            Console.WriteLine("finalllllllllllll");
-            linkedList.Print();
+
+            var curr = linkedList.First;
+            for (int k = 0; k < linkedList.Count - 1; k++)
+            {
+                Console.Write("{0} ", curr.Value);
+                curr = curr.Next;
+            }
+
+            Console.Write(curr.Value);
+            Console.WriteLine();
         }
     }
 
