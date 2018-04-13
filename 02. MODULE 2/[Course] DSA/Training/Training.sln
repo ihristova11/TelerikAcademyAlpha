@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Passwords", "04. Passwo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Portals", "08. Portals\08. Portals.csproj", "{A2BBE7F1-ACF4-4968-9E59-E04AD6E922C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004. Passwords", "004. Passwords\004. Passwords.csproj", "{4DD6E9CF-D465-46C7-9123-F2EA79CD60DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. GirlsGoneWild", "06. GirlsGoneWild\06. GirlsGoneWild.csproj", "{F4946FB1-A73D-4447-9AD1-A5E03820A53B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{A2BBE7F1-ACF4-4968-9E59-E04AD6E922C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BBE7F1-ACF4-4968-9E59-E04AD6E922C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2BBE7F1-ACF4-4968-9E59-E04AD6E922C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD6E9CF-D465-46C7-9123-F2EA79CD60DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD6E9CF-D465-46C7-9123-F2EA79CD60DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD6E9CF-D465-46C7-9123-F2EA79CD60DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD6E9CF-D465-46C7-9123-F2EA79CD60DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
