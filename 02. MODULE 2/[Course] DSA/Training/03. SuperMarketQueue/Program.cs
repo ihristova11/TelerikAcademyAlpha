@@ -9,7 +9,7 @@ namespace _03.SuperMarketQueue
     {
         private static BigList<string> queue = new BigList<string>();
         private static Dictionary<string, int> names = new Dictionary<string, int>();
-
+        private static StringBuilder result = new StringBuilder();
         public static void Main()
         {
             var input = Console.ReadLine();
@@ -30,7 +30,8 @@ namespace _03.SuperMarketQueue
                         }
 
                         names[nameToAppend]++;
-                        Console.WriteLine("OK");
+                        //Console.WriteLine("OK");
+                        result.AppendLine("OK");
                         break;
                     case "Insert":
                         var positionToInsert = int.Parse(commandParameters[1]);
@@ -45,11 +46,13 @@ namespace _03.SuperMarketQueue
                             }
 
                             names[nameToInsert]++;
-                            Console.WriteLine("OK");
+                            //Console.WriteLine("OK");
+                            result.AppendLine("OK");
                         }
                         else
                         {
-                            Console.WriteLine("Error");
+                        result.AppendLine("Error");
+                            //Console.WriteLine("Error");
                         }
                         break;
                     case "Find":
@@ -57,11 +60,13 @@ namespace _03.SuperMarketQueue
 
                         if (names.ContainsKey(nameToFind))
                         {
-                            Console.WriteLine(names[nameToFind]);
+                            //Console.WriteLine(names[nameToFind]);
+                            result.AppendLine(names[nameToFind].ToString());
                         }
                         else
                         {
-                            Console.WriteLine(0);
+                            //Console.WriteLine(0);
+                            result.AppendLine("0");
                         }
                         break;
                     case "Serve":
@@ -78,17 +83,21 @@ namespace _03.SuperMarketQueue
                             }
 
                             queue.RemoveRange(0, numberOfPeople);
-                            Console.WriteLine(sb.ToString().TrimEnd());
+                            result.AppendLine(sb.ToString().TrimEnd());
                         }
                         else
                         {
-                            Console.WriteLine("Error");
+                            //Console.WriteLine("Error");
+                            result.AppendLine("Error");
+
                         }
                         break;
                 }
 
                 input = Console.ReadLine();
             }
+
+            Console.WriteLine(result);
         }
     }
 }
