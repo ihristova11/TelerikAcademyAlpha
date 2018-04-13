@@ -23,8 +23,6 @@ namespace Combinations
 
             public static void GenerateCombination(int[] combinationStore, int counter, int startNumber, int endNumber, int combinationLen)
             {
-                if()
-
                 //bottom of recursion
                 if (counter >= combinationStore.Length)
                 {
