@@ -1,93 +1,88 @@
-﻿using System;
-using System.Linq;
-
-namespace _04.Passwords
+﻿namespace _004.Passwords
 {
-    public class Passwords
+    using System;
+
+    public class Program
     {
         private static char[] symbols;
-        private static int[] digits;
         private static int[] comb;
         private static int n;
         private static int k;
+        private static int counter = 0;
 
         public static void Main()
         {
-            var line = Console.ReadLine().Split(' ');
-            n = int.Parse(line[0]);
+            n = int.Parse(Console.ReadLine());
             comb = new int[n];
-            symbols = line[1].ToCharArray();
-            k = int.Parse(line[2]);
+            symbols = Console.ReadLine().ToCharArray();
+            k = int.Parse(Console.ReadLine());
 
-            digits = Enumerable.Range(1, 10).ToArray();
-            digits[9] = 0;
-
-            Recursion(0);
+            FindPossiblePasswords();
         }
 
-        private static void Recursion(int start)
+        private static void FindPossiblePasswords()
         {
-            if (n == start)
+            for (int i = 0; i < 10; i++)
             {
-                if (--k == 0) // only one -> to be printed
+                comb[0] = i;
+                FindCombinations(i, 0);
+            }
+        }
+
+        private static void FindCombinations(int currentDigit, int directionIndex)
+        {
+            if (directionIndex >= n)
+            {
+                return;
+            }
+
+            comb[directionIndex] = currentDigit;
+            if (directionIndex == n - 1)
+            {
+                counter++;
+                if (counter == k)
                 {
-                    Console.WriteLine(string.Join("", comb));
+                    Console.WriteLine(string.Join(string.Empty, comb).PadLeft(n, '0'));
+
+                    Environment.Exit(0);
                 }
 
                 return;
             }
 
-            if (start > 0)
+            if (symbols[directionIndex] == '=')
             {
-                if (symbols[start - 1] == '=')
+                FindCombinations(currentDigit, directionIndex + 1);
+            }
+            else if (symbols[directionIndex] == '>')
+            {
+                if (currentDigit == 0)
                 {
-                    comb[start] = comb[start - 1];
-                    Recursion(start + 1);
-
+                    return;
                 }
-                else if (symbols[start - 1] == '>')
+
+                FindCombinations(0, directionIndex + 1);
+
+                for (int i = currentDigit + 1; i < 10; i++)
                 {
-                    var s = comb[start - 1];
-
-                    if (s == 0)
-                    {
-                        return;
-                    }
-
-                    comb[start] = 0;
-                    Recursion(start + 1);
-
-                    int j = s;
-                    if (s == 0) j = n;
-
-                    for (; j < 9; j++)
-                    {
-                        comb[start] = digits[j];
-                        Recursion(start + 1);
-                    }
-                }
-                else if (symbols[start - 1] == '<')
-                {
-                    var s = comb[start - 1];
-
-                    if (s == 0) s = 10;
-
-                    for (int j = 0; j < s - 1; j++)
-                    {
-                        comb[start] = digits[j];
-                        Recursion(start + 1);
-                    }
+                    FindCombinations(i, directionIndex + 1);
                 }
             }
             else
             {
-                comb[start] = 0;
-                Recursion(start + 1);
-
-                for (int i = start; i < 9; i++)
+                if (currentDigit == 0)
                 {
-                    comb[start] = digits[i];
-                    Recursion(start + 1);
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        FindCombinations(i, directionIndex + 1);
+                    }
+                }
+                else
+                {
+                    for (int i = 1; i < currentDigit; i++)
+                    {
+                        FindCombinations(i, directionIndex + 1);
+                    }
                 }
             }
         }
