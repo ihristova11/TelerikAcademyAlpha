@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004. Passwords", "004. Pass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. GirlsGoneWild", "06. GirlsGoneWild\06. GirlsGoneWild.csproj", "{F4946FB1-A73D-4447-9AD1-A5E03820A53B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006. GirlsGoneWild", "006. GirlsGoneWild\006. GirlsGoneWild.csproj", "{D7371849-E275-4FC3-B782-7BFA13DB9EDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4946FB1-A73D-4447-9AD1-A5E03820A53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7371849-E275-4FC3-B782-7BFA13DB9EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7371849-E275-4FC3-B782-7BFA13DB9EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7371849-E275-4FC3-B782-7BFA13DB9EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7371849-E275-4FC3-B782-7BFA13DB9EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
