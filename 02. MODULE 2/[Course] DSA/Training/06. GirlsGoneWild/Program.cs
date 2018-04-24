@@ -9,34 +9,34 @@ namespace _06.GirlsGoneWild
     {
         private static SortedSet<string> results = new SortedSet<string>();
 
-        private static List<List<int>> combinationsOfPeople = new List<List<int>>();
-        private static List<List<char>> combinationsOfShirts = new List<List<char>>();
+        private static List<List<int>> peopleComb = new List<List<int>>();
+        private static List<List<char>> shirtsComb = new List<List<char>>();
 
         private static int[] combinations;
-        private static int numberOfPeople;
-        private static char[] shirtTypes;
+        private static int people;
+        private static char[] shirts;
 
         public static void Main()
         {
             combinations = new int[int.Parse(Console.ReadLine())];
-            shirtTypes = Console.ReadLine().ToCharArray().OrderBy(x => x).ToArray();
-            numberOfPeople = int.Parse(Console.ReadLine());
+            shirts = Console.ReadLine().ToCharArray().OrderBy(x => x).ToArray();
+            people = int.Parse(Console.ReadLine());
 
-            Comb(0, 0, combinations, (x) => combinationsOfPeople.Add(new List<int>(x)));
-            combinations = new int[shirtTypes.Length];
+            Comb(0, 0, combinations, (x) => peopleComb.Add(new List<int>(x)));
+            combinations = new int[shirts.Length];
             Comb(0, 0, combinations, (x) =>
             {
                 var list = new List<char>();
-                for (int i = 0; i < numberOfPeople; i++)
+                for (int i = 0; i < people; i++)
                 {
-                    list.Add(shirtTypes[x[i]]);
+                    list.Add(shirts[x[i]]);
                 }
-                combinationsOfShirts.Add(list);
+                shirtsComb.Add(list);
             });
 
-            foreach (var combinationOfPeople in combinationsOfPeople)
+            foreach (var combinationOfPeople in peopleComb)
             {
-                foreach (var combinationOfShirt in combinationsOfShirts)
+                foreach (var combinationOfShirt in shirtsComb)
                 {
                     var permutationsOfShirts = new List<char>(combinationOfShirt);
                     PermuteRep(permutationsOfShirts, 0, permutationsOfShirts.Count, (x) => MergeResult(combinationOfPeople, x));
@@ -55,7 +55,7 @@ namespace _06.GirlsGoneWild
 
         private static void Comb(int index, int start, int[] array, Action<int[]> action)
         {
-            if (index >= numberOfPeople)
+            if (index >= people)
             {
                 action(array);
             }

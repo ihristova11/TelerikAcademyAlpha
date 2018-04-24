@@ -36,21 +36,10 @@ namespace _001.StudentsOrder
                 var nodeB = nodes[b];
 
                 list.Remove(nodeA);
-                var newNodeA = new LinkedListNode<string>(a);
-                list.AddBefore(nodeB, newNodeA);
-                nodes.Remove(a);
-                nodes.Add(a, newNodeA);
+                list.AddBefore(nodeB, nodes[a]);
             }
 
-            var curr = list.First;
-            for (int i = 0; i < studentsCount - 1; i++)
-            {
-                Console.Write("{0} ", curr.Value);
-                curr = curr.Next;
-            }
-
-            Console.Write(curr.Value);
-            Console.WriteLine();
+            Console.WriteLine(string.Join(" ", list));
         }
     }
 }
