@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace _07.Horse
@@ -12,7 +11,7 @@ namespace _07.Horse
         private static int colS;
         private static int[] middleCol;
 
-        private const int TotalMoves = 8;
+        private const int max = 8;
         private static readonly int[] movesR = { 1, 1, -1, -1, 2, 2, -2, -2 };
         private static readonly int[] movesC = { 2, -2, 2, -2, 1, -1, 1, -1 };
         private static int[,] board;
@@ -56,7 +55,7 @@ namespace _07.Horse
                     middleCol[cell[0]] = board[cell[0], cell[1]];
                 }
 
-                for (int i = 0; i < TotalMoves; i++)
+                for (int i = 0; i < max; i++)
                 {
                     var newRow = cell[0] + movesR[i];
                     var newCol = cell[1] + movesC[i];
